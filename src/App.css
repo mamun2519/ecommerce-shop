@@ -1,7 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
+.banner{
+  background-image: url('../public/Assist/picture/banner3.jpg');
+  background-size: cover;
+  height: 600px;
 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
