@@ -11,6 +11,18 @@
   height: 600px;
 
 }
+.discount{
+  background-image: url('../public/Assist/picture/store_9.jpg');
+  background-size: cover
+}
+.discount1{
+  background-image: url('../public/Assist/picture/offer2.png');
+  background-size: cover
+}
+.discount2{
+  background-image: url('../public/Assist/picture/offer4.jpg');
+  background-size: cover
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
