@@ -7,7 +7,7 @@ const Facilitis = () => {
       return (
             <div className='grid lg:grid-cols-4 max-w-7xl m-auto px-2 my-10 gap-5 grid-cols-1 '>
                   <div>
-                        <div className='border  rounded-lg py-6 flex justify-center gap-5'>
+                        <div className='border shadow-lg rounded-lg py-6 flex justify-center gap-5'>
                               <div className=' flex items-center'>
                               <span className='text-4xl'><GiTakeMyMoney/></span>
                               </div>
@@ -18,7 +18,7 @@ const Facilitis = () => {
                         </div>
                   </div>
                   <div>
-                        <div className='border  rounded-lg py-6 flex justify-center gap-5'>
+                        <div className='border shadow-lg rounded-lg py-6 flex justify-center gap-5'>
                               <div className=' flex items-center'>
                               <span className='text-4xl'><MdOutlineSupportAgent/></span>
                               </div>
@@ -29,7 +29,7 @@ const Facilitis = () => {
                         </div>
                   </div>
                   <div>
-                        <div className='border  rounded-lg py-6 flex justify-center gap-5'>
+                        <div className='border shadow-lg rounded-lg py-6 flex justify-center gap-5'>
                               <div className=' flex items-center'>
                               <span className='text-4xl'><MdOutlineLocalShipping/></span>
                               </div>
@@ -40,7 +40,7 @@ const Facilitis = () => {
                         </div>
                   </div>
                   <div>
-                        <div className='border  rounded-lg py-6 flex justify-center gap-5'>
+                        <div className='border shadow-lg rounded-lg py-6 flex justify-center gap-5'>
                               <div className=' flex items-center'>
                               <span className='text-4xl'><MdPayment/></span>
                               </div>

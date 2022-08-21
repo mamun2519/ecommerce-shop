@@ -9,8 +9,8 @@ const Banner = () => {
                 <p className='text-2xl text-white mb-2'>Sales Offer</p>
                 </div>
                 <input className='h-14 w-[450px] outline-none rounded-lg px-4 ' placeholder='Search Your Product'  type="text" name="" id="" />
-                <button className='h-12 mt-1 bg-red-500 px-4 text-white rounded-lg absolute left-[585px]'>Search</button>
-                <span className='text-red-900'><BsSearch/></span>
+              <button className='h-12 mt-1 bg-red-500 px-4 text-white rounded-lg absolute left-[585px]'>Search</button>
+              
                 <div>
                 <p className='text-white mt-2 text-xl'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, officiis enim sunt eos ullam tempore.</p>
                

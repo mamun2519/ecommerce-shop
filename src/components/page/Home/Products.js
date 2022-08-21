@@ -8,7 +8,7 @@ const Products = () => {
       <h1 className="text-xl mb-5">Top Categories Products</h1>
       <div className="grid grid-cols-4 ">
         <div className="w-60  ">
-          <div className="card bg-base-100 border rounded-lg h-80">
+          <div className="card bg-base-100 border shadow-lg rounded-lg h-80">
             <div className="card-bod p-2">
               <div className="border-b px-4 ">
                 <p className="py-3">Home</p>
@@ -33,7 +33,7 @@ const Products = () => {
         </div>
         <div className="w-full col-span-3">
           <div className=" grid grid-cols-3 gap-5">
-            <div className="card  h-[410px]  bg-base-100 shadow-xl relative ">
+            <div className="card  h-[410px]  bg-base-100 shadow-lg relative ">
               <figure className="px-5 pt-5">
                 <img
                   src="https://www.graphixking.com/wp-content/uploads/2020/08/Software-Engineer-Black-Cotton-T-shirt.jpg"
@@ -65,7 +65,7 @@ const Products = () => {
               </div>
               
             </div>
-            <div className="card h-[410px] bg-base-100 shadow-xl relative ">
+            <div className="card h-[410px] bg-base-100 shadow-lg relative ">
               <figure className="px-5 pt-5">
                 <img
                   src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/151642341/original/ec88e1330b7577bb4b39c4f50fb05eedfc3ca2fb/create-an-awesome-tshirt-design-for-you.jpg"
@@ -97,7 +97,7 @@ const Products = () => {
               </div>
               
             </div>
-            <div className="card h-[410px] bg-base-100 shadow-xl relative ">
+            <div className="card h-[410px] bg-base-100 shadow-lg relative ">
               <figure className="px-5 pt-5">
                 <img
                   src="https://static-01.daraz.com.bd/p/0dcdbc879f87b8c7f66c10393b7a5788.jpg"
