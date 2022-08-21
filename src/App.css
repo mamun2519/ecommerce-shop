@@ -6,7 +6,7 @@
   text-align: center;
 }
 .banner{
-  background-image: url('../public/Assist/picture/banner3.jpg');
+  background-image: url('../public/Assist/picture/banner7.jpg');
   background-size: cover;
   height: 600px;
 
@@ -23,6 +23,12 @@
   background-image: url('../public/Assist/picture/offer4.jpg');
   background-size: cover
 }
+
+/* @media screen and (max-width: 480px) {
+  .search{
+    width: 300px;
+  }
+} */
 .App-logo {
   height: 40vmin;
   pointer-events: none;

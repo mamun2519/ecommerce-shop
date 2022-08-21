@@ -1,6 +1,8 @@
 import React from 'react';
+import Footer from '../Utilitis/Footer';
 import Navber from '../Utilitis/Navber';
 import Banner from './Banner';
+import Barnd from './Barnd';
 import Busness from './Busness';
 import Discount from './Discount';
 import Facilitis from './Facilitis';
@@ -19,6 +21,8 @@ const Home = () => {
                  <Products/>
                  <Reviews/>
                  <Busness/>
+                 <Barnd/>
+                 <Footer/>
                   
             </div>
       );

@@ -6,8 +6,8 @@ const Products = () => {
   return (
     <div className="max-w-7xl m-auto px-2 my-20">
       <h1 className="text-xl mb-5">Top Categories Products</h1>
-      <div className="grid grid-cols-4 ">
-        <div className="w-60  ">
+      <div className="grid lg:grid-cols-4  grid-cols-2">
+        <div className="w-60  mt-5">
           <div className="card bg-base-100 border shadow-lg rounded-lg h-80">
             <div className="card-bod p-2">
               <div className="border-b px-4 ">
@@ -32,13 +32,13 @@ const Products = () => {
           </div>
         </div>
         <div className="w-full col-span-3">
-          <div className=" grid grid-cols-3 gap-5">
-            <div className="card  h-[410px]  bg-base-100 shadow-lg relative ">
+          <div className=" grid lg:grid-cols-3 grid-cols-1  gap-5">
+            <div className="card  h-[420px]  bg-base-100 shadow-lg relative ">
               <figure className="px-5 pt-5">
                 <img
                   src="https://www.graphixking.com/wp-content/uploads/2020/08/Software-Engineer-Black-Cotton-T-shirt.jpg"
                   alt="Shoes"
-                  className="rounded-xl h-[175px] w-full"
+                  className="rounded-xl h-[185px] w-full"
                 />
               </figure>
               <div className="card-b  px-5 pt-3">
@@ -65,12 +65,12 @@ const Products = () => {
               </div>
               
             </div>
-            <div className="card h-[410px] bg-base-100 shadow-lg relative ">
+            <div className="card h-[420px] bg-base-100 shadow-lg relative ">
               <figure className="px-5 pt-5">
                 <img
                   src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/151642341/original/ec88e1330b7577bb4b39c4f50fb05eedfc3ca2fb/create-an-awesome-tshirt-design-for-you.jpg"
                   alt="Shoes"
-                  className="rounded-xl h-[175px] w-full"
+                  className="rounded-xl h-[185px] w-full"
                 />
               </figure>
               <div className="card-b  px-5 pt-3">
@@ -97,13 +97,13 @@ const Products = () => {
               </div>
               
             </div>
-            <div className="card h-[410px] bg-base-100 shadow-lg relative ">
+            <div className="card h-[420px] bg-base-100 shadow-lg relative ">
               <figure className="px-5 pt-5">
                 <img
                   src="https://static-01.daraz.com.bd/p/0dcdbc879f87b8c7f66c10393b7a5788.jpg"
                   alt="Shoes"
                   
-                  className="rounded-xl h-[175px] w-full"
+                  className="rounded-xl h-[185px] w-full"
                 />
               </figure>
               <div className="card-b  px-5 pt-3">
