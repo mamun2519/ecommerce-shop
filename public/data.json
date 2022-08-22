@@ -1,0 +1,123 @@
+[
+      {
+            "name": "All In One Shirt",
+            "description": "Man Fashion",
+            "price": 450,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/sWTMQPw/1661147284027.jpg"
+            },
+            "category": "T-shirts",
+            "Stock": 100
+            
+      },
+      {
+            "name": "Body Fit Shirt",
+            "description": "Man Fashion",
+            "price": 600,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/4ZPkccS/1661147284046.jpg"
+            },
+            "category": "T-shirts",
+            "Stock": 100
+
+            
+      },
+      {
+            "name": "Cool T Shirts",
+            "description": "Man Fashion",
+            "price": 390,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/JpvbdD8/1661147284067.jpg"
+            },
+            "category": "T-shirts",
+            "Stock": 100
+            
+      },
+      {
+            "name": "Cute T Shirt Bloue",
+            "description": "Man Fashion",
+            "price": 900,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/vjLFwjS/1661147284091.jpg"
+            },
+            "category": "T-shirts",
+            "Stock": 100
+            
+      },
+      {
+            "name": "Energie Shirt",
+            "description": "Man Fashion",
+            "price": 760,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/mS1f5rc/1661147284117.jpg"
+            },
+            "category": "T-shirts",
+            "Stock": 100
+            
+      },
+      {
+            "name": "Fitted T Shirt",
+            "description": "Man Fashion",
+            "price": 400,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/kXZGTFt/1661147284149.jpg"
+            },
+            "category": "T-shirts",
+            "Stock": 100
+            
+      },
+      {
+            "name": "My T Shirt",
+            "description": "Man Fashion",
+            "price": 620,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/m5r3LZL/1661147284180.jpg"
+            },
+            "category": "T-shirts",
+            "Stock": 100
+            
+      },
+      {
+            "name": "Sweat Shirt",
+            "description": "Man Fashion",
+            "price": 710,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/L9Fz83Z/1661147284214.jpg"
+            },
+            "category": "T-shirts",
+            "Stock": 100
+            
+      },
+      {
+            "name": "Smart T Shirt",
+            "description": "Man Fashion",
+            "price": 520,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/RyV5J15/1661147284245.jpg"
+            },
+            "category": "T-shirts",
+            "Stock": 100
+            
+      },
+      {
+            "name": "Crazy T Shirt",
+            "description": "Man Fashion",
+            "price": 380,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/Vm4PtBV/1661147284277.jpg"
+            },
+            "category": "T-shirts",
+            "Stock": 100
+            
+      }
+]
