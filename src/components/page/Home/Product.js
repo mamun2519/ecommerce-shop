@@ -5,7 +5,7 @@ import { GrView } from 'react-icons/gr';
 
 const Product = ({product}) => {
       const {name , description , price , images , _id} = product
-      console.log(product);
+ 
       return (
             <div className="card  h-[420px]  bg-base-100 shadow-lg relative ">
             <figure className="px-5 pt-5">

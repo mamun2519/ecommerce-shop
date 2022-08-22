@@ -119,5 +119,17 @@
             "category": "T-shirts",
             "Stock": 100
             
+      },
+      {
+            "name": "Smart Black Hudi",
+            "description": "Man Fashion",
+            "price": 1990,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/Vm4PtBV/1661147284277.jpg"
+            },
+            "category": "Smart Hudi",
+            "Stock": 100
+            
       }
 ]
