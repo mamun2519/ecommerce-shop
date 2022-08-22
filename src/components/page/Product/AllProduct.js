@@ -4,44 +4,51 @@ import { GrView } from "react-icons/gr";
 import { AiFillStar } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProduct } from "../Futurecher/Slice/productSlice";
-import Product from "./Product";
-import Catagory from "./Catagory";
-const Products = () => {
-  const [TshartCatagory, setTshartCatagory] = useState("T Shirt");
+import Product from "../Home/Product";
+import Pagination from "./Pagination";
+import Catagory from "../Home/Catagory";
+// import Product from "./Product";
+
+const AllProduct = () => {
+      const [TshartCatagory, setTshartCatagory] = useState("T Shirt");
   const [hudiCatagory, setHudiCatagory] = useState("Hudi");
-  const [shart, setshart] = useState(false);
-  const [hudi, sethudi] = useState(false);
+  const [shart , setshart] = useState(false)
+  const [hudi , sethudi] = useState(false)
   const product = useSelector((state) => state.products);
 
   const disPatch = useDispatch();
   useEffect(() => {
-    setshart(true);
+    setshart(true)
     disPatch(fetchProduct());
   }, []);
   const selectCatagoryHendeler = (s) => {
+   
     if (s === "T Shirt") {
       disPatch(fetchProduct(TshartCatagory));
-      setshart(true);
-      sethudi(false);
+      setshart(true)
+      sethudi(false)
     }
     if (s === "hudi") {
       disPatch(fetchProduct(hudiCatagory));
-      sethudi(true);
-      setshart(false);
+      sethudi(true)
+      setshart(false)
     }
-  };
 
-  return (
-    <div className="max-w-7xl m-auto px-2 my-20">
+  };
+      return (
+            <div className="max-w-7xl m-auto px-2 my-20">
       <h1 className="text-xl mb-5">Top Categories Products</h1>
       <div className="grid lg:grid-cols-4  grid-cols-2">
         <div className="w-60  mt-5">
           <div className="card bg-base-100  sticky top-0 border shadow-lg rounded-lg h-80">
+           
             <Catagory
-              selectCatagoryHendeler={selectCatagoryHendeler}
-              shart={shart}
-              hudi={hudi}
-            ></Catagory>
+            selectCatagoryHendeler={selectCatagoryHendeler}
+            shart={shart}
+            hudi={hudi}
+            >
+
+            </Catagory>
           </div>
         </div>
         <div className="w-full col-span-3">
@@ -56,15 +63,13 @@ const Products = () => {
               </>
             ) : null}
           </div>
-          <div className="text-right mt-5">
-            <button className=" bg-red-400 text-white rounded-lg px-3 py-2">
-              See All Product
-            </button>
+          <div className="text-center mt-10">
+            <Pagination/>
           </div>
         </div>
       </div>
     </div>
-  );
+      );
 };
 
-export default Products;
+export default AllProduct;

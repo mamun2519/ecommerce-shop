@@ -2,8 +2,10 @@ import React from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { FcLike } from 'react-icons/fc';
 import { GrView } from 'react-icons/gr';
+import { useNavigate } from 'react-router-dom';
 
 const Product = ({product}) => {
+  const navigate = useNavigate()
       const {name , description , price , images , _id} = product
  
       return (
@@ -32,7 +34,7 @@ const Product = ({product}) => {
               </div>
               
               <div className="mt-5 flex gap-3">
-              <button className=" px-4 w-1/2 py-2 bg-red-400 rounded-lg text-white ">Buy Now</button>
+              <button onClick={() => navigate(`/productInfo/${_id}`)} className=" px-4 w-1/2 py-2 bg-red-400 rounded-lg text-white ">Buy Now</button>
               <button className=" px-4 py-2 text-xl bg-base-200 rounded-lg text-white"><span className=""><FcLike/></span></button>
               <button className=" px-4 py-2 text-xl bg-base-200 text-red-400 rounded-lg"><span className=""><GrView/></span></button>
               </div>

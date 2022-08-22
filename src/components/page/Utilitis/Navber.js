@@ -1,11 +1,14 @@
 import React from "react";
 import Banner from "../Home/Banner";
-
+import {NavLink} from 'react-router-dom'
 const Navber = () => {
   const navber = (
     <>
       <li>
-        <a>Home</a>
+        < NavLink to='/'>Home</ NavLink>
+      </li>
+      <li>
+        < NavLink to='/view/all/product'>Shopping</ NavLink>
       </li>
       <li>
         <a>About</a>

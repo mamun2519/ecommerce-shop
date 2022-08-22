@@ -1,6 +1,5 @@
 import React from 'react';
 import Footer from '../Utilitis/Footer';
-import Navber from '../Utilitis/Navber';
 import Banner from './Banner';
 import Barnd from './Barnd';
 import Busness from './Busness';
@@ -14,7 +13,7 @@ const Home = () => {
             <div>
                  
                  
-                  <Navber/>
+                 
                   <Banner/>
                   <Facilitis/>
                   <Discount/>
