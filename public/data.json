@@ -109,14 +109,14 @@
             
       },
       {
-            "name": "Crazy T Shirt",
+            "name": "Cool Hudi",
             "description": "Man Fashion",
-            "price": 380,
+            "price": 2190,
             "images":{
                 "public_id": "xxx",
                 "url": "https://i.ibb.co/Vm4PtBV/1661147284277.jpg"
             },
-            "category": "T-shirts",
+            "category": "Smart Hudi",
             "Stock": 100
             
       },

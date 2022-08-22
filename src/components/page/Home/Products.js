@@ -6,25 +6,30 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchProduct } from "../Futurecher/Slice/productSlice";
 import Product from "./Product";
 const Products = () => {
-  const [TshartCatagory, setTshartCatagory] = useState();
-  const [hudiCatagory, setHudiCatagory] = useState();
+  const [TshartCatagory, setTshartCatagory] = useState("T Shirt");
+  const [hudiCatagory, setHudiCatagory] = useState("Hudi");
+  const [shart , setshart] = useState(false)
+  const [hudi , sethudi] = useState(false)
   const product = useSelector((state) => state.products);
 
   const disPatch = useDispatch();
   useEffect(() => {
+    setshart(true)
     disPatch(fetchProduct());
   }, []);
   const selectCatagoryHendeler = (s) => {
+   
     if (s === "T Shirt") {
-      const tshart = document.getElementById("tShart").innerText;
-      setTshartCatagory(tshart);
       disPatch(fetchProduct(TshartCatagory));
+      setshart(true)
+      sethudi(false)
     }
     if (s === "hudi") {
-      const hudi = document.getElementById("hudi").innerText;
-      setHudiCatagory(hudi);
-      disPatch(fetchProduct(hudiCatagory));
+      disPatch(fetchProduct(hudiCatagory ));
+      sethudi(true)
+      setshart(false)
     }
+
   };
 
   return (
@@ -36,25 +41,29 @@ const Products = () => {
             <div className="card-bod p-2  ">
               <div
                 onClick={() => selectCatagoryHendeler("T Shirt")}
-                className="border-b px-4 cursor-pointer"
+                className={
+                  shart
+                    ? "bg-red-400  rounded-lg border-b   px-4 text-white cursor-pointer"
+                    : "py-3 border-b  px-4 cursor-pointer"
+                }
               >
                 <p id="tShart" className="py-3">
-                  T Shirt
+                  T Shirts
                 </p>
               </div>
               <div
                 onClick={() => selectCatagoryHendeler("hudi")}
                 className={
-                  hudiCatagory
+                  hudi
                     ? "bg-red-400 py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
                     : "py-3 border-b  px-4 cursor-pointer"
                 }
               >
                 <p id="hudi" className="py-c">
-                  Hudi
+                Smart Boy Hudi
                 </p>
               </div>
-              <div className="border-b  px-4 bg-red-400 rounded-lg text-white">
+              <div className="border-b  px-4  text-white">
                 <p className="py-3">Home</p>
               </div>
               <div className="border-b  px-4">

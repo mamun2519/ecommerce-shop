@@ -7,8 +7,13 @@ const initistialProductState = {
       error: ''
 }
 
-export const fetchProduct = createAsyncThunk('/products/fetch' , (catagory) =>{
+export const fetchProduct = createAsyncThunk('/products/fetch' , (catagory , search) =>{
       console.log(catagory);
+      // if(!search){
+      //       return axios.get(`http://localhost:5000/product/get?name=${search}`)
+      // .then((res) => res.data)
+
+      // }
       if(catagory){
             return axios.get(`http://localhost:5000/product/get?keyword=${catagory}`)
       .then((res) => res.data)
