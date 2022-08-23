@@ -1,6 +1,6 @@
 import React from "react";
 
-const Catagory = ({ selectCatagoryHendeler, shart, hudi }) => {
+const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
   return (
     <div className="card-bod p-2  ">
       <div
@@ -36,7 +36,12 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi }) => {
       <div className="border-b  px-4">
         <p className="py-3">Home</p>
       </div>
-      <div className="  px-4">
+      <div  onClick={() => selectCatagoryHendeler("all")}
+        className={
+          viewAll
+            ? "bg-red-400 py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
+            : "py-3 border-b  px-4 cursor-pointer"
+        }>
         <p className="py-3">Vrew All Catagory</p>
       </div>
     </div>

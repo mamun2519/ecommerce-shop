@@ -12,8 +12,10 @@ import Catagory from "../Home/Catagory";
 const AllProduct = () => {
       const [TshartCatagory, setTshartCatagory] = useState("T Shirt");
   const [hudiCatagory, setHudiCatagory] = useState("Hudi");
+  const [viewAllCatagory, setviewAllCatagory] = useState("all");
   const [shart , setshart] = useState(false)
   const [hudi , sethudi] = useState(false)
+  const [viewAll, setviewAll] = useState(false);
   const product = useSelector((state) => state.products);
 
   const disPatch = useDispatch();
@@ -27,11 +29,21 @@ const AllProduct = () => {
       disPatch(fetchProduct(TshartCatagory));
       setshart(true)
       sethudi(false)
+      setviewAll(false)
     }
     if (s === "hudi") {
       disPatch(fetchProduct(hudiCatagory));
       sethudi(true)
       setshart(false)
+      setviewAll(false)
+    }
+    if(s === "all"){
+      disPatch(fetchProduct(viewAllCatagory));
+      setviewAll(true)
+      sethudi(false);
+      setshart(false);
+      
+
     }
 
   };
@@ -46,6 +58,7 @@ const AllProduct = () => {
             selectCatagoryHendeler={selectCatagoryHendeler}
             shart={shart}
             hudi={hudi}
+            viewAll={viewAll}
             >
 
             </Catagory>

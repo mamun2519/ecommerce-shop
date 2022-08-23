@@ -6,11 +6,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchProduct } from "../Futurecher/Slice/productSlice";
 import Product from "./Product";
 import Catagory from "./Catagory";
+import { useNavigate } from "react-router-dom";
 const Products = () => {
+  const navigate = useNavigate()
   const [TshartCatagory, setTshartCatagory] = useState("T Shirt");
   const [hudiCatagory, setHudiCatagory] = useState("Hudi");
+  const [viewAllCatagory, setviewAllCatagory] = useState("all");
   const [shart, setshart] = useState(false);
   const [hudi, sethudi] = useState(false);
+  const [viewAll, setviewAll] = useState(false);
   const product = useSelector((state) => state.products);
 
   const disPatch = useDispatch();
@@ -23,11 +27,21 @@ const Products = () => {
       disPatch(fetchProduct(TshartCatagory));
       setshart(true);
       sethudi(false);
+      setviewAll(false)
     }
     if (s === "hudi") {
       disPatch(fetchProduct(hudiCatagory));
       sethudi(true);
       setshart(false);
+      setviewAll(false)
+    }
+    if(s === "all"){
+      disPatch(fetchProduct(viewAllCatagory));
+      setviewAll(true)
+      sethudi(false);
+      setshart(false);
+      
+
     }
   };
 
@@ -41,6 +55,7 @@ const Products = () => {
               selectCatagoryHendeler={selectCatagoryHendeler}
               shart={shart}
               hudi={hudi}
+              viewAll={viewAll}
             ></Catagory>
           </div>
         </div>
@@ -57,7 +72,7 @@ const Products = () => {
             ) : null}
           </div>
           <div className="text-right mt-5">
-            <button className=" bg-red-400 text-white rounded-lg px-3 py-2">
+            <button onClick={()=> navigate("/view/all/product")} className=" bg-red-400 text-white rounded-lg px-3 py-2">
               See All Product
             </button>
           </div>
