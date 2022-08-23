@@ -1,8 +1,14 @@
 import React from "react";
 import Banner from "../Home/Banner";
 import {NavLink} from 'react-router-dom'
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { signOut } from "firebase/auth";
 const Navber = () => {
+  const [user, loadings, error]= useAuthState(auth)
+  
   const navber = (
+    
     <>
       <li>
         < NavLink to='/'>Home</ NavLink>
@@ -50,13 +56,13 @@ const Navber = () => {
                 {navber}
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+            <a className="btn btn-ghost normal-case text-xl">Smart Ecommarce</a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0">{navber}</ul>
           </div>
           <div className="navbar-end">
-            <div className="dropdown dropdown-end">
+            <div className="dropdown dropdown-end px-2">
               <label tabindex="0" className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
                   <img src="https://placeimg.com/80/80/people" />
@@ -75,11 +81,16 @@ const Navber = () => {
                 <li>
                   <a>Settings</a>
                 </li>
-                <li>
-                  <a>Logout</a>
+                <li >
+                  <a onClick={() => signOut(auth)}>Logout</a>
                 </li>
               </ul>
             </div>
+           {!user &&   <button className="px-4 py-2 bg-red-400 rounded-lg text-white"><NavLink to='/login'>Login</NavLink></button>}
+           
+           
+
+            
           </div>
         </div>
       </div>
