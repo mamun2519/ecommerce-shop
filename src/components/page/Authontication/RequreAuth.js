@@ -6,7 +6,7 @@ import Loading from '../Utilitis/Loading';
 const RequreAuth = ({children}) => {
       const [user , lodaing] = useAuthState(auth)
       const location = useLocation()
-
+     
       if(lodaing){
             return <Loading></Loading>
       }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiLockOpenAlt } from "react-icons/bi";
@@ -12,10 +12,17 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { postUser } from "../Futurecher/Slice/createUserSlice";
 const Reg = () => {
-  const [user, loadings, error] = useAuthState(auth);
-  const navigate = useNavigate();
+  const [avatar, setAvatar] = useState("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SPHGbT7zpUnQWxX6G23hhBVjxxAioJDoSNePax1i6FPVuO1bD2NweVg44RenkPB3vTI&usqp=CAU");
 
+  const users = useSelector((state) => state.user);
+  console.log(users);
+  const [user, loadings, error] = useAuthState(auth);
+  
+  const navigate = useNavigate();
+  const disPatch = useDispatch();
   const {
     register,
     formState: { errors },
@@ -27,10 +34,21 @@ const Reg = () => {
   // update fofile hook
   const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
   const [updateProfile, updating, Uerror] = useUpdateProfile(auth);
+
+  if(user?.photoURL){
+    setAvatar(user)
+  }
   const onSubmit = async (data) => {
     console.log(data);
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
+    
+    const myForm = new FormData();
+
+    myForm.append("name", data.name);
+    myForm.append("email", data.email);
+    myForm.append("avatar", avatar);
+    disPatch(postUser(myForm ));
   };
 
   // const [token] = useToken(Cuser || Guser )
@@ -43,7 +61,16 @@ const Reg = () => {
       </p>
     );
   }
-  if (user) {
+  if (user || Guser) {
+    // if(Guser){
+    //   console.log(Guser);
+    //   const myForm = new FormData();
+    // myForm.append("name", Guser.user?.displayName);
+    // myForm.append("email", Guser.user?.email);
+    // myForm.append("avatar", Guser.user?.photoURL);
+    // disPatch(postUser(myForm));
+
+    // }
     navigate("/");
   }
 
