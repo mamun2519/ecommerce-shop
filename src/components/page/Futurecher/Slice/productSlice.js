@@ -8,7 +8,7 @@ const initistialProductState = {
 };
 
 export const fetchProduct = createAsyncThunk("/products/fetch", (catagory) => {
-  console.log(typeof catagory === "number");
+ 
   if (typeof catagory == "number") {
     return axios
       .get(`http://localhost:5000/product/get?page=${catagory}`)

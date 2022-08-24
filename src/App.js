@@ -16,7 +16,9 @@ function App() {
         <Route path='/view/all/product' element={<RequreAuth>
           <AllProduct/>
         </RequreAuth>}/>
-        <Route path='/productInfo/:id' element={<ProductInfo/>}/>
+        <Route path='/productInfo/:id' element={<RequreAuth>
+          <ProductInfo/>
+        </RequreAuth>}/>
         <Route path='/login' element={<Login/>}/>
 
        

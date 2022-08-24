@@ -5,9 +5,9 @@ import { fetchProduct } from '../Futurecher/Slice/productSlice';
 const Pagination = () => {
     const disPatch = useDispatch();
     const product = useSelector((state) => state.products);
-    console.log(product)
+    // console.log(product)
     const [prePage , setPrePage] = useState(1)
-    console.log(typeof prePage );
+    // console.log(typeof prePage );
 
     const previousPageHendeler = () =>{
         if(prePage > 1){

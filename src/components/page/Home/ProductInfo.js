@@ -1,17 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchSingleProduct } from "../Futurecher/Slice/singleProductSlice";
+import { addToCart, deleteToCart } from "../Futurecher/Slice/cartSlice";
 
 const ProductInfo = () => {
+  // const carts = useSelector((state) => state.cart.cart)
+  // console.log(carts);
   const { id } = useParams();
   const disPatch = useDispatch();
   const product = useSelector((state) => state.product);
-  console.log(product.product.product);
-  // const {name , description , images , numOfReviews , ratings , price } = product?.product?.product
   useEffect(() => {
     disPatch(fetchSingleProduct(id));
   }, []);
+
+  const addedToCartHendeler = () => {
+    const myCart = [];
+    console.log(myCart);
+    const shoppingCart = {
+      name: product?.product?.product?.name,
+      images: product?.product?.product?.images[0].url,
+      description: product?.product?.product?.description,
+      price: product?.product?.product?.price,
+      id: product?.product?.product?._id,
+    };
+    disPatch(addToCart(shoppingCart));
+    // disPatch(deleteToCart("63031e2ec2bd1439b439c426"))
+  };
 
   return (
     <div className="max-w-7xl m-auto">
@@ -142,12 +157,18 @@ const ProductInfo = () => {
                     </p>
                     <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                       <p>text</p>
+                      <h1>
+                        Avalible Quentity: {product?.product?.product?.Stock}
+                      </h1>
                     </div>
                     <div class="flex">
                       <span class="title-font font-medium text-2xl text-gray-900">
-                        ${product?.product?.product?.price}
+                        {product?.product?.product?.price}$ BDT
                       </span>
-                      <button class="flex ml-auto text-white bg-red-400 rounded-lg px-6 py-3">
+                      <button
+                        onClick={() => addedToCartHendeler()}
+                        class="flex ml-auto text-white bg-red-400 rounded-lg px-6 py-3"
+                      >
                         Add To card
                       </button>
                       <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
