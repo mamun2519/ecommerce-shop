@@ -2,13 +2,13 @@ import { createSlice , createAsyncThunk} from '@reduxjs/toolkit'
 import axios from 'axios'
 
 const inititialUserState = {
-      user: [],
+      user: {},
       loading: false,
       error: ''
 }
 
 export const postUser = createAsyncThunk('/user/post' , (userData) =>{
-      const config = { headers: { "Content-Type": "application/json" } };
+      const config = { headers: { "Content-Type": "multipart/form-data" } };
     return axios.post(`http://localhost:5000/user/create` , userData, config)
     .then((res) => res.data)
 })
@@ -29,7 +29,7 @@ export const userSlice = createSlice({
             })
             builder.addCase(postUser.rejected , (state , action)=> {
                   state.loading = false
-                  state.user = []
+                  state.user = {}
                   state.error = action.error.message
             })
       }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiLockOpenAlt } from "react-icons/bi";
 import SocialLogin from "./SocialLogin";
@@ -11,7 +11,12 @@ import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
+import sendToken from "../Utilitis/sendToken";
 const Log = () => {
+  const [token, setToken] = useState("");
+  const [avatar, setAvatar] = useState(
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SPHGbT7zpUnQWxX6G23hhBVjxxAioJDoSNePax1i6FPVuO1bD2NweVg44RenkPB3vTI&usqp=CAU"
+  );
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
   const [signInWithEmailAndPassword, users, loading, errorss] =
@@ -25,9 +30,13 @@ const Log = () => {
   } = useForm();
   const onSubmit = (data) => {
     signInWithEmailAndPassword(data.email, data.password);
+    const myForm = new FormData();
+    myForm.append("email", data.email);
+    myForm.append("avatar", avatar);
+    sendToken(myForm);
+    setToken(localStorage.getItem("UserToken"));
   };
 
-  //   const [token] = useToken(user || Guser )
   // google login hook
   const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
 
@@ -37,7 +46,16 @@ const Log = () => {
       <p className="text-red-500">{error?.message || Gerror?.message}</p>
     );
   }
-  if (user) {
+  if (Guser) {
+    const myForm = new FormData();
+    myForm.append("name", Guser.user?.displayName);
+    myForm.append("email", Guser.user?.email);
+    myForm.append("avatar", Guser.user?.photoURL);
+    sendToken(myForm);
+    setToken(localStorage.getItem("UserToken"));
+  }
+
+  if (token || user) {
     navigate(from, { replace: true });
     // navigate("/")
   }

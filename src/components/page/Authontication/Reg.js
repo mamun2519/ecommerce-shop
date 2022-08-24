@@ -14,15 +14,19 @@ import auth from "../../../firebase.init";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { postUser } from "../Futurecher/Slice/createUserSlice";
-const Reg = () => {
-  const [avatar, setAvatar] = useState("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SPHGbT7zpUnQWxX6G23hhBVjxxAioJDoSNePax1i6FPVuO1bD2NweVg44RenkPB3vTI&usqp=CAU");
+import axios from "axios";
+import Loading from "../Utilitis/Loading";
+import sendToken from "../Utilitis/sendToken";
 
-  const users = useSelector((state) => state.user);
-  console.log(users);
+const Reg = () => {
+  const [token, setToken] = useState("");
+  const [avatar, setAvatar] = useState(
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SPHGbT7zpUnQWxX6G23hhBVjxxAioJDoSNePax1i6FPVuO1bD2NweVg44RenkPB3vTI&usqp=CAU"
+  );
+
   const [user, loadings, error] = useAuthState(auth);
-  
+
   const navigate = useNavigate();
-  const disPatch = useDispatch();
   const {
     register,
     formState: { errors },
@@ -34,24 +38,20 @@ const Reg = () => {
   // update fofile hook
   const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
   const [updateProfile, updating, Uerror] = useUpdateProfile(auth);
+  const users = useSelector((state) => state.user);
 
-  if(user?.photoURL){
-    setAvatar(user)
-  }
   const onSubmit = async (data) => {
     console.log(data);
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    
-    const myForm = new FormData();
 
+    const myForm = new FormData();
     myForm.append("name", data.name);
     myForm.append("email", data.email);
     myForm.append("avatar", avatar);
-    disPatch(postUser(myForm ));
+    sendToken(myForm);
+    setToken(localStorage.getItem("UserToken"));
   };
-
-  // const [token] = useToken(Cuser || Guser )
 
   let errorMessage;
   if (Cerror || Uerror || Gerror) {
@@ -61,16 +61,17 @@ const Reg = () => {
       </p>
     );
   }
-  if (user || Guser) {
-    // if(Guser){
-    //   console.log(Guser);
-    //   const myForm = new FormData();
-    // myForm.append("name", Guser.user?.displayName);
-    // myForm.append("email", Guser.user?.email);
-    // myForm.append("avatar", Guser.user?.photoURL);
-    // disPatch(postUser(myForm));
 
-    // }
+  if (Guser) {
+    const myForm = new FormData();
+    myForm.append("name", Guser.user?.displayName);
+    myForm.append("email", Guser.user?.email);
+    myForm.append("avatar", Guser.user?.photoURL);
+    sendToken(myForm);
+    setToken(localStorage.getItem("UserToken"));
+  }
+
+  if (token) {
     navigate("/");
   }
 
@@ -104,7 +105,7 @@ const Reg = () => {
             )}
           </label>
         </div>
-        <div className="relative mt-4">
+        <div className="relative mt-2">
           <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
             <AiOutlineMail />
           </div>
@@ -138,7 +139,7 @@ const Reg = () => {
           </label>
         </div>
 
-        <div class="mt-4">
+        <div class="mt-2">
           <div class="flex items-center justify-between relative">
             <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
               <BiLockOpenAlt />
@@ -173,7 +174,7 @@ const Reg = () => {
           </label>
         </div>
 
-        <div class="mt-6">
+        <div class="mt-4">
           <input
             type="submit"
             value="Regestion"
