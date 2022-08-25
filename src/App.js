@@ -7,12 +7,14 @@ import Navber from '../src/components/page/Utilitis/Navber';
 import AllProduct from './components/page/Product/AllProduct';
 import Login from './components/page/Authontication/Login';
 import RequreAuth from './components/page/Authontication/RequreAuth';
+import Cart from './components/page/Cart/Cart';
 function App() {
   return (
     <div className="">
        <Navber/>
             <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/cart' element={<Cart/>}/>
         <Route path='/view/all/product' element={<RequreAuth>
           <AllProduct/>
         </RequreAuth>}/>
