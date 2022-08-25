@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { deleteToCart } from '../Futurecher/Slice/cartSlice';
 
 const CartRow = ({cart}) => {
-      const {name , images , price , totalPrice , quentity} = cart
+  const disPatch = useDispatch();
+  const [calculatePrice , setCalculatePrice] = useState([])
+  const {name , images , price , totalPrice , quentity , id} = cart
+ 
+
+  
+      
+      console.log(calculatePrice)
+
+      const deleteCartItem = () =>{
+         disPatch(deleteToCart(id))
+      }
       return (
             <tr >
             <td class="p-2 ">
@@ -31,7 +44,7 @@ const CartRow = ({cart}) => {
             </td>
             <td class="p-2">
               <div class="flex justify-center">
-                <button>
+                <button onClick={()=>deleteCartItem()}>
                   <svg
                     class="w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1"
                     fill="none"

@@ -5,8 +5,7 @@ import { fetchSingleProduct } from "../Futurecher/Slice/singleProductSlice";
 import { addToCart, deleteToCart } from "../Futurecher/Slice/cartSlice";
 
 const ProductInfo = () => {
-  // const carts = useSelector((state) => state.cart.cart)
-  // console.log(carts);
+
   const [quentity , setQuentity] = useState(1)
   const { id } = useParams();
   const disPatch = useDispatch();
