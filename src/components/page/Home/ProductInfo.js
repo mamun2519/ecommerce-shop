@@ -7,6 +7,7 @@ import { addToCart, deleteToCart } from "../Futurecher/Slice/cartSlice";
 const ProductInfo = () => {
   // const carts = useSelector((state) => state.cart.cart)
   // console.log(carts);
+  const [quentity , setQuentity] = useState(1)
   const { id } = useParams();
   const disPatch = useDispatch();
   const product = useSelector((state) => state.product);
@@ -15,18 +16,35 @@ const ProductInfo = () => {
   }, []);
 
   const addedToCartHendeler = () => {
-    const myCart = [];
-    console.log(myCart);
+    const totalPrice = parseInt(quentity) * parseInt(product?.product?.product?.price)
     const shoppingCart = {
       name: product?.product?.product?.name,
       images: product?.product?.product?.images[0].url,
       description: product?.product?.product?.description,
       price: product?.product?.product?.price,
       id: product?.product?.product?._id,
+     quentity,
+     totalPrice 
     };
     disPatch(addToCart(shoppingCart));
     // disPatch(deleteToCart("63031e2ec2bd1439b439c426"))
   };
+
+  const increaseQuentity = () =>{
+    setQuentity(quentity + 1)
+
+  }
+  const decreaseQuentity = () =>{
+    if(quentity > 1){
+      setQuentity(quentity - 1)
+
+    }
+    else{
+      alert("sorry")
+    }
+    
+
+  }
 
   return (
     <div className="max-w-7xl m-auto">
@@ -155,8 +173,18 @@ const ProductInfo = () => {
                       fam indxgo juitle austin listicle pour-over, neutra jean
                       shorts keytar banjo tattooed umami cardigan.
                     </p>
-                    <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                      <p>text</p>
+                    <div class="lg:flex block mt-6 justify-between items-center pb-5 border-b-2 border-gray-100 mb-5">
+                    <div>
+                    <button onClick={()=>decreaseQuentity()} className="bg-red-300 rounded p-2 text-white px-5">-</button>
+                  <div className="px-2 inline">
+                  <div className="w-[50px] h-[40px] inline py-2 mt-2 bg-white border rounded-md focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40">
+                    <span className="px-4">{quentity}</span>
+                    
+ 
+                  </div>
+                  </div>
+                  <button onClick={()=>increaseQuentity()} className="bg-red-300 rounded p-2 text-white px-5">+</button>
+                    </div>
                       <h1>
                         Avalible Quentity: {product?.product?.product?.Stock}
                       </h1>
