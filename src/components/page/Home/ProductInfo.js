@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchSingleProduct } from "../Futurecher/Slice/singleProductSlice";
-import { addToCart, deleteToCart } from "../Futurecher/Slice/cartSlice";
+import { addToCart } from "../Futurecher/Slice/cartSlice";
 
 const ProductInfo = () => {
 
@@ -26,7 +26,7 @@ const ProductInfo = () => {
      totalPrice 
     };
     disPatch(addToCart(shoppingCart));
-    // disPatch(deleteToCart("63031e2ec2bd1439b439c426"))
+   
   };
 
   const increaseQuentity = () =>{
