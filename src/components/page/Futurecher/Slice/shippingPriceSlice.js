@@ -5,9 +5,14 @@ const shippingPrice = JSON.parse(perseShipingPrice);
 
 const perseTotalCost = localStorage.getItem("TotalCost");
 const totalPrice = JSON.parse(perseTotalCost);
+
+const perseDiscount = localStorage.getItem("Discount");
+const discount = JSON.parse(perseDiscount);
+
 const shippingPriceInitialState = {
   shipping: shippingPrice || 0,
-  totalCost: totalPrice || 0
+  totalCost: totalPrice || 0,
+  discount: discount || 0
 };
 
 const shippingPriceSlice = createSlice({
@@ -24,11 +29,6 @@ const shippingPriceSlice = createSlice({
       state.shipping = getShippingPrice || 0;
     },
 
-//     getShippingPrice: (state) => {
-//       const perseShippingPrice = localStorage.getItem("ShippingPrice");
-//       const getShippingPrice = JSON.parse(perseShippingPrice);
-//       state.shipping = getShippingPrice || 0;
-//     },
 
     calculatetTotalTotalCost: (state , action) => {
       const subTotalPrice = action.payload
@@ -38,10 +38,22 @@ const shippingPriceSlice = createSlice({
       const parseTotalCost = localStorage.getItem("TotalCost")
       const getTotalCost = JSON.parse(parseTotalCost)
       state.totalCost = getTotalCost
+    },
+    promoDiscount: (state , action)=>{
+      const discountPrice = action.payload
+      localStorage.setItem("Discount" , JSON.stringify(discountPrice))
+      state.discount = discountPrice
+
+      const perseTotalCost = localStorage.getItem("TotalCost");
+      const Price = JSON.parse(perseTotalCost);
+      const totalPrice = parseInt(Price) - parseInt( discountPrice)
+      localStorage.setItem("TotalCost" , JSON.stringify(totalPrice))
+      state.totalCost = totalPrice
 
     }
+
   },
 });
 
-export const { addToShippingPrice , calculatetTotalTotalCost } = shippingPriceSlice.actions;
+export const { addToShippingPrice , calculatetTotalTotalCost ,  promoDiscount} = shippingPriceSlice.actions;
 export default shippingPriceSlice.reducer;
