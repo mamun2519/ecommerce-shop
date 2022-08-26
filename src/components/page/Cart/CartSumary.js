@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToShippingPrice } from "../Futurecher/Slice/SubTotalPriceSlice";
+import { addToShippingPrice, calculatetTotalTotalCost } from "../Futurecher/Slice/shippingPriceSlice";
+
 
 const CartSumary = () => {
   const cart = useSelector((state) => state.cart.cart);
- 
   const subTotal = useSelector((state) => state.subTotal.subTotal);
+  const shippingPrice = useSelector((state) => state.shipping.shipping);
+  const totalCost = useSelector((state) => state.shipping.totalCost);
   const selectRef = useRef()
   const [delivary , setDelivary] = useState()
   const disPatch = useDispatch();
@@ -17,11 +19,11 @@ const CartSumary = () => {
 
  useEffect(()=>{
   const shippingPrice = parseInt(selectRef?.current?.value)
-  localStorage.setItem("ShippingPrice", JSON.stringify(shippingPrice));
-  //  disPatch(addToShippingPrice(shippingPrice))
+   disPatch(addToShippingPrice(shippingPrice))
+   disPatch(calculatetTotalTotalCost(subTotal))
  
 
- },[delivary])
+ },[delivary , shippingPrice , cart , subTotal])
 
 
 
@@ -69,7 +71,7 @@ const CartSumary = () => {
         <div className="pt-4 border-t border-gray-100 mt-8">
           <div className=" flex justify-between">
             <p className="font-semibold">TOTAL COST</p>
-            <p className="font-semibold">680 BDT</p>
+            <p className="font-semibold">{totalCost} BDT</p>
           </div>
 
           <div class="mt-6">
