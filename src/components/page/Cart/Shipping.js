@@ -7,7 +7,10 @@ import { Country, State, City }  from 'country-state-city';
 
 const Shipping = () => {
       const [country , setCoutry] = useState("")
-      // console.log(Country.getAllCountries().map((con) => console.log(con.name)));
+      const [state , setState] = useState("")
+      console.log(country ,state)
+    console.log(City.getCitiesOfState(country , state))
+    console.log(City?.getCitiesOfState(country , state))
       const {
             register,
             formState: { errors },
@@ -122,7 +125,7 @@ const Shipping = () => {
               }
 
             })}
-            value={country}
+            // value={country}
             onChange={(e)=> setCoutry(e.target.value)}
             type="text"
             placeholder="Country"
@@ -130,7 +133,7 @@ const Shipping = () => {
           >
           <option value="">Country</option>
             {Country && 
-            Country.getAllCountries().map((con) =>  <option key={con.isoCode} value={con?.name}>{con?.name}</option> 
+            Country.getAllCountries().map((con) =>  <option key={con.isoCode} value={con.isoCode}>{con?.name}</option> 
            
 
             )}
@@ -155,17 +158,27 @@ const Shipping = () => {
           state
           </label>
 
-          <input
+          <select
             {...register("state", {
               required: {
                 value: true,
                 message: "State is Required",
               },
             })}
+            // value={state}
+            onChange={(e)=> setState(e.target.value)}
             type="text"
             placeholder="State"
             class="block pl-12 w-full px-4 py-2 mt-2  bg-white border rounded-md   outline-none  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring focus:ring-opacity-40"
-          />
+          >
+            <option value="">State</option>
+            {State &&
+                    State.getStatesOfCountry(country).map((item) => (
+                      <option key={item.isoCode} value={item.isoCode}>
+                        {item.name}
+                      </option>
+                    ))}
+            </select>
           <label class="label">
             {errors.state?.type === "required" && (
               <span className="text-red-500">{errors.state.message}</span>
@@ -180,7 +193,7 @@ const Shipping = () => {
           City
           </label>
 
-          <input
+          <select
             {...register("city", {
               required: {
                 value: true,
@@ -191,7 +204,19 @@ const Shipping = () => {
             type="text"
             placeholder="City"
             class="block pl-12 w-full px-4 py-2 mt-2  bg-white border rounded-md   outline-none  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring focus:ring-opacity-40"
-          />
+          >
+{/* getAllCities */}
+<option value="">City</option>
+            {
+                    City?.getCitiesOfState(country , state).map((item) => (
+                      <option key={item.isoCode} value={item.isoCode}>
+                        {item.name}
+                      </option>
+                    ))}
+
+   </select>
+    
+     
 
           <label class="label">
             {errors.city?.type === "required" && (
