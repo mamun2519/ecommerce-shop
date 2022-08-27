@@ -9,6 +9,8 @@ import Login from './components/page/Authontication/Login';
 import RequreAuth from './components/page/Authontication/RequreAuth';
 import Cart from './components/page/Cart/Cart';
 import ChackOut from './components/page/Cart/ChackOut';
+import OrderReview from './components/page/Cart/OrderReview';
+import Payment from './components/page/Cart/Payment';
 function App() {
   return (
     <div className="">
@@ -17,6 +19,8 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/chackout' element={<ChackOut/>}/>
+        <Route path='/chackout/orderReview' element={<OrderReview/>}/>
+        <Route path='/chackout/orderReview/payment' element={<Payment/>}/>
         <Route path='/view/all/product' element={<RequreAuth>
           <AllProduct/>
         </RequreAuth>}/>
