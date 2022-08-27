@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToShippingPrice, calculatetTotalTotalCost, promoDiscount } from "../Futurecher/Slice/shippingPriceSlice";
-
+import {useNavigate} from 'react-router-dom'
 
 const CartSumary = () => {
   const cart = useSelector((state) => state.cart.cart);
@@ -13,6 +13,7 @@ const CartSumary = () => {
   const [delivary , setDelivary] = useState()
   const disPatch = useDispatch();
   const [promoCode , setPromoCode] = useState("")
+  const navigate = useNavigate()
   
  const selectDelivaryHendeler = (e)=>{
   setDelivary(e.target.value)
@@ -47,6 +48,7 @@ const CartSumary = () => {
     const shippingPrice = parseInt(selectRef?.current?.value)
      disPatch(addToShippingPrice(shippingPrice))
      disPatch(calculatetTotalTotalCost(subTotal))
+     setPromoCode("")
    
   
    },[delivary , shippingPrice , cart , subTotal ])
@@ -108,8 +110,10 @@ const CartSumary = () => {
           </div>
 
           <div class="mt-6">
-            <button class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-red-400 rounded-md">
-              CheckOut{" "}
+            <button
+            onClick={()=>navigate('/chackout')}
+             class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-red-400 rounded-md">
+              CheckOut
             </button>
           </div>
         </div>
