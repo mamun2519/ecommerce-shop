@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiOutlineMail } from "react-icons/ai";
-import { BiLockOpenAlt } from "react-icons/bi";
+
 import { CgProfile } from "react-icons/cg";
 import { Country, State, City } from "country-state-city";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch,} from "react-redux";
 import { sendShipingInfoLocalSorage } from "../Futurecher/Slice/shippingPriceSlice";
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";

@@ -4,7 +4,7 @@ import { deleteToCart } from '../Futurecher/Slice/cartSlice';
 
 const CartRow = ({cart}) => {
   const disPatch = useDispatch();
-  const {name , images , price , totalPrice , quentity , id} = cart
+  const {name , image , price , totalPrice , quentity , id} = cart
  
 
 
@@ -17,7 +17,7 @@ const CartRow = ({cart}) => {
             <td class="p-2 ">
               <div class="avatar ">
                 <div class="w-16 rounded-xl">
-                  <img src={images} />
+                  <img src={image} />
                 </div>
               </div>
             </td>

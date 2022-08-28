@@ -31,7 +31,11 @@ const subTotalPriceSlice = createSlice({
       const getCart = JSON.parse(perseCart);
       state.cart = getCart || 0;
     },
+    clearSubTotal: (state) => {
+      state.subTotal = 0
+
+    }
 });
 
-export const { addToSbTotal, getToSubTotal } = subTotalPriceSlice.actions;
+export const { addToSbTotal, getToSubTotal ,clearSubTotal} = subTotalPriceSlice.actions;
 export default subTotalPriceSlice.reducer;

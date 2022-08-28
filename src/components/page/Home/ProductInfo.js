@@ -6,7 +6,7 @@ import { addToCart } from "../Futurecher/Slice/cartSlice";
 
 const ProductInfo = () => {
 
-  const [quentity , setQuentity] = useState(1)
+  const [quantity , setquantity] = useState(1)
   const { id } = useParams();
   const disPatch = useDispatch();
   const product = useSelector((state) => state.product);
@@ -15,27 +15,28 @@ const ProductInfo = () => {
   }, []);
 
   const addedToCartHendeler = () => {
-    const totalPrice = parseInt(quentity) * parseInt(product?.product?.product?.price)
+    const totalPrice = parseInt(quantity) * parseInt(product?.product?.product?.price)
     const shoppingCart = {
       name: product?.product?.product?.name,
-      images: product?.product?.product?.images[0].url,
+      image: product?.product?.product?.images[0].url,
       description: product?.product?.product?.description,
       price: product?.product?.product?.price,
       id: product?.product?.product?._id,
-     quentity,
+     quantity,
+     product: product?.product?.product?._id,
      totalPrice 
     };
     disPatch(addToCart(shoppingCart));
    
   };
 
-  const increaseQuentity = () =>{
-    setQuentity(quentity + 1)
+  const increasequantity = () =>{
+    setquantity(quantity + 1)
 
   }
-  const decreaseQuentity = () =>{
-    if(quentity > 1){
-      setQuentity(quentity - 1)
+  const decreasequantity = () =>{
+    if(quantity > 1){
+      setquantity(quantity - 1)
 
     }
     else{
@@ -174,18 +175,18 @@ const ProductInfo = () => {
                     </p>
                     <div class="lg:flex block mt-6 justify-between items-center pb-5 border-b-2 border-gray-100 mb-5">
                     <div>
-                    <button onClick={()=>decreaseQuentity()} className="bg-red-300 rounded p-2 text-white px-5">-</button>
+                    <button onClick={()=>decreasequantity()} className="bg-red-300 rounded p-2 text-white px-5">-</button>
                   <div className="px-2 inline">
                   <div className="w-[50px] h-[40px] inline py-2 mt-2 bg-white border rounded-md focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40">
-                    <span className="px-4">{quentity}</span>
+                    <span className="px-4">{quantity}</span>
                     
  
                   </div>
                   </div>
-                  <button onClick={()=>increaseQuentity()} className="bg-red-300 rounded p-2 text-white px-5">+</button>
+                  <button onClick={()=>increasequantity()} className="bg-red-300 rounded p-2 text-white px-5">+</button>
                     </div>
                       <h1>
-                        Avalible Quentity: {product?.product?.product?.Stock}
+                        Avalible quantity: {product?.product?.product?.Stock}
                       </h1>
                     </div>
                     <div class="flex">

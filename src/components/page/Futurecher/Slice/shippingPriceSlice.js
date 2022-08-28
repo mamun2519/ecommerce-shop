@@ -56,10 +56,16 @@ const shippingPriceSlice = createSlice({
       const shippingInfo = action.payload
       localStorage.setItem("ShippingInfo", JSON.stringify(shippingInfo))
 
+    },
+    clearShippingTotalCostDiscount: (state) => {
+      state.shipping = 0
+      state.totalCost = 0
+      state.discount = 0
+
     }
 
   },
 });
 
-export const { addToShippingPrice , calculatetTotalTotalCost ,  promoDiscount , sendShipingInfoLocalSorage} = shippingPriceSlice.actions;
+export const { addToShippingPrice , calculatetTotalTotalCost ,  promoDiscount , sendShipingInfoLocalSorage , clearShippingTotalCostDiscount} = shippingPriceSlice.actions;
 export default shippingPriceSlice.reducer;
