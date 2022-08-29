@@ -37,5 +37,5 @@ const subTotalPriceSlice = createSlice({
     }
 });
 
-export const { addToSbTotal, getToSubTotal ,clearSubTotal} = subTotalPriceSlice.actions;
+export const { addToSbTotal, getToSubTotal , clearSubTotal} = subTotalPriceSlice.actions;
 export default subTotalPriceSlice.reducer;

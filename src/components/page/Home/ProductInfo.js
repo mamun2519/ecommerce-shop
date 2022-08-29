@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchSingleProduct } from "../Futurecher/Slice/singleProductSlice";
 import { addToCart } from "../Futurecher/Slice/cartSlice";
+import Loading from "../Utilitis/Loading";
 
 const ProductInfo = () => {
 
@@ -48,7 +49,7 @@ const ProductInfo = () => {
 
   return (
     <div className="max-w-7xl m-auto">
-      {product.loading && <p>Loading</p>}
+      {product.loading && <p><Loading></Loading></p>}
       {!product.loading && product.error ? <p>{product.error}</p> : ""}
       {!product.loading && product?.product?.product ? (
         <div class="card w-full bg-base-100 shadow border mt-10">

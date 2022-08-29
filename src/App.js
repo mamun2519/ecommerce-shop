@@ -12,6 +12,9 @@ import ChackOut from './components/page/Cart/ChackOut';
 import OrderReview from './components/page/Cart/OrderReview';
 import Payment from './components/page/Cart/Payment';
 import PaymentSuccess from './components/page/Cart/PaymentSuccess';
+import Dashboard from './components/page/Dashboard/Dashboard'
+import ShowMessage from './components/page/Dashboard/ShowMessage';
+import Myorder from './components/page/Dashboard/Myorder';
 function App() {
   return (
     <div className="">
@@ -20,6 +23,11 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/chackout' element={<ChackOut/>}/>
+       <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+       <Route  index element={<ShowMessage/>}></Route>
+       <Route  path='/dashboard/myorders' element={<Myorder/>}></Route>
+       </Route>
+        
         <Route path='/chackout/orderReview' element={<OrderReview/>}/>
         <Route path='/chackout/orderReview/payment' element={<Payment/>}/>
         <Route path='/chackout/orderReview/payment/success' element={<PaymentSuccess/>}/>

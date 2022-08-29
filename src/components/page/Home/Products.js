@@ -7,6 +7,7 @@ import { fetchProduct } from "../Futurecher/Slice/productSlice";
 import Product from "./Product";
 import Catagory from "./Catagory";
 import { useNavigate } from "react-router-dom";
+import Loading from "../Utilitis/Loading";
 const Products = () => {
   const navigate = useNavigate()
   const [TshartCatagory, setTshartCatagory] = useState("T Shirt");
@@ -61,7 +62,7 @@ const Products = () => {
         </div>
         <div className="w-full col-span-3">
           <div className=" grid lg:grid-cols-3 grid-cols-1  gap-5">
-            {product.loading && <p>Loading</p>}
+            {product.loading && <div className=" flex  justify-end"><Loading></Loading></div>}
             {!product.loading && product.error ? <p>{product.error}</p> : ""}
             {!product.loading && !product.error ? (
               <>

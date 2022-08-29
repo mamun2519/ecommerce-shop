@@ -20,12 +20,13 @@ const Navber = () => {
       <li>
         < NavLink to='/view/all/product'>Shopping</ NavLink>
       </li>
-      <li>
+      {/* <li>
         <a>About</a>
-      </li>
-      <li>
-        <a>Deshboard</a>
-      </li>
+      </li> */}
+      {user && <li>
+      < NavLink to='/dashboard'>Dashboard</ NavLink>
+      </li>}
+      
       <li>
         <a>Blog</a>
       </li>

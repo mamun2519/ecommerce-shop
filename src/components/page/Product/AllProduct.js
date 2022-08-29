@@ -7,6 +7,7 @@ import { fetchProduct } from "../Futurecher/Slice/productSlice";
 import Product from "../Home/Product";
 import Pagination from "./Pagination";
 import Catagory from "../Home/Catagory";
+import Loading from "../Utilitis/Loading";
 // import Product from "./Product";
 
 const AllProduct = () => {
@@ -66,7 +67,7 @@ const AllProduct = () => {
         </div>
         <div className="w-full col-span-3">
           <div className=" grid lg:grid-cols-3 grid-cols-1  gap-5">
-            {product.loading && <p>Loading</p>}
+            {product.loading && <Loading></Loading>}
             {!product.loading && product.error ? <p>{product.error}</p> : ""}
             {!product.loading && !product.error ? (
               <>

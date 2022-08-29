@@ -5,11 +5,16 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 import { useSelector } from "react-redux";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
 const CheckoutForm = () => {
+  // const [email, setEmail] = useState('');
   const stripe = useStripe();
   const elements = useElements();
   const totalCost = useSelector((state) => state.shipping.totalCost);
-
+  // const [user] = useAuthState(auth)
+  
+ const [payment , setPayment] = useState(false)
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   
@@ -65,14 +70,13 @@ const CheckoutForm = () => {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-       
         // Make sure to change this to your payment completion page
         return_url: "http://localhost:3000/chackout/orderReview/payment/success",
+        // receipt_email: email,
+      
       },
       
-   
     });
-    
    
     // This point will only be reached if there is an immediate error when
     // confirming the payment. Otherwise, your customer will be redirected to
@@ -84,11 +88,11 @@ const CheckoutForm = () => {
     } else {
       setMessage("An unexpected error occurred.");
     }
-
-    setIsLoading(false);
-    
-    
+    setPayment(true)
+    setIsLoading(false); 
   };
+
+  
 
   return (
     <>
@@ -100,7 +104,20 @@ const CheckoutForm = () => {
             </div>
 
             <form className="mt-7" id="payment-form" onSubmit={handleSubmit}>
-              <PaymentElement id="payment-element" />
+           
+            {/* <input
+        id="email"
+        type="text"
+        className="block w-full px-4 py-2 mt-2  bg-white border rounded-md   outline-none  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring focus:ring-opacity-40"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Enter email address"
+      /> */}
+      <div className="mt-3">
+      <PaymentElement id="payment-element" />
+
+      </div>
+              
               <div className="text-center">
                   {/* Show any error or success messages */}
               {message && (
