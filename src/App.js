@@ -15,6 +15,7 @@ import PaymentSuccess from './components/page/Cart/PaymentSuccess';
 import Dashboard from './components/page/Dashboard/Dashboard'
 import ShowMessage from './components/page/Dashboard/ShowMessage';
 import Myorder from './components/page/Dashboard/Myorder';
+import OrderReceipt from './components/page/Dashboard/OrderReceipt';
 function App() {
   return (
     <div className="">
@@ -26,6 +27,7 @@ function App() {
        <Route path='/dashboard' element={<Dashboard></Dashboard>}>
        <Route  index element={<ShowMessage/>}></Route>
        <Route  path='/dashboard/myorders' element={<Myorder/>}></Route>
+       <Route path='/dashboard/myorders/orderReceipt' element={<OrderReceipt/>}></Route>
        </Route>
         
         <Route path='/chackout/orderReview' element={<OrderReview/>}/>
