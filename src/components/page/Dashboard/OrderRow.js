@@ -1,9 +1,9 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom'
 const OrderRow = ({order}) => {
-      const {orderItems, totalPrice , orderStatus} =  order
+      const {orderItems, totalPrice , orderStatus , _id} =  order
       const navigate = useNavigate()
-      console.log(orderItems);
+   
     
       return (
             <tr>
@@ -26,7 +26,7 @@ const OrderRow = ({order}) => {
             </td>
             <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
              
-             <button onClick={()=> navigate("orderReceipt")} className='px-6 py-1 bg-red-500 text-white rounded-lg'>view Receipt</button>
+             <button onClick={()=> navigate(`orderReceipt/${_id}`)} className='px-6 py-1 bg-red-500 text-white rounded-lg'>view Receipt</button>
             </td>
             <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
             <button>

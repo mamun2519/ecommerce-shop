@@ -27,7 +27,7 @@ function App() {
        <Route path='/dashboard' element={<Dashboard></Dashboard>}>
        <Route  index element={<ShowMessage/>}></Route>
        <Route  path='/dashboard/myorders' element={<Myorder/>}></Route>
-       <Route path='/dashboard/myorders/orderReceipt' element={<OrderReceipt/>}></Route>
+       <Route path='/dashboard/myorders/orderReceipt/:id' element={<OrderReceipt/>}></Route>
        </Route>
         
         <Route path='/chackout/orderReview' element={<OrderReview/>}/>
