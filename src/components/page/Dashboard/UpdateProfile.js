@@ -1,41 +1,89 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { BiLockOpenAlt } from "react-icons/bi";
 import auth from "../../../firebase.init";
 import { useForm } from "react-hook-form";
+import { AiFillCamera } from "react-icons/ai";
 const UpdateProfile = () => {
   const [user] = useAuthState(auth);
+  const [cover , setCover] = useState("https://cdn.digitbin.com/wp-content/uploads/Why-I-am-Seeing-Blank-Facebook-Profile-and-How-to-Fix-it.jpg")
+  const [profile , setProfile] = useState("https://www.valleverdecountryclub.com/wp-content/uploads/2022/04/istockphoto-610003972-612x612-2.jpg")
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const onSubmit = (data) => {}
+  
+  const changeCoverPictureHendeler = (e) =>{
+    const reader = new FileReader()
+    reader.onload = () =>{
+      if(reader.readyState ===2){
+        setCover(reader.result)
+
+      }
+    }
+    reader.readAsDataURL(e.target.files[0])
+  }
+  const changeProfilePictureHendeler = (e) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (reader.readyState === 2) {
+        setProfile(reader.result);
+      }
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  };
+  const onSubmit = (data) => {
+    console.log(data);
+  }
+
+  console.log(cover)
   return (
     <div className="mb-20 px-4 lg:px-0">
       <div className="w-full lg:w-9/12 mx-auto border  shadow-md rounded-lg p-5">
-        <div className=" ">
+        <div className="">
+       
           <img
-            className="rounded-xl relative h-[150px] lg:h-[250px] w-full "
-            src="https://149369349.v2.pressablecdn.com/wp-content/uploads/2012/10/twitter-cover.jpg"
+            className="rounded-xl relative h-[150px] object-cover lg:h-[250px] w-full "
+            src={cover}
             alt=""
           />
+
         </div>
+        <div className="h-50 relative">
+       
+        <div className="px-[15px] py-2 text-xl bg-base-200 rounded-lg text-black w-12 absolute top-[-60px] right-[20px] z-1">
+          <input onChange={(e)=>changeCoverPictureHendeler(e)} type="file" name="image-uplode" id="input" hidden />
+          <label htmlFor="input" className=" ">
+          <span className=""><span className=""><AiFillCamera /></span></span>
+          </label>
+        </div>
+        </div>
+     
         <div className="mt-2">
-          <p className="pl-[165px] text-xl font-medium">{user?.displayName}</p>
-          <p className="pl-[165px] text-sm">Update Photo And Personal Details</p>
+          <p className="pl-[190px] text-xl font-medium">{user?.displayName}</p>
+          <p className="pl-[190px] text-sm">Update Photo And Personal Details</p>
         </div>
-        <div className="">
-          <div class="avatar online">
+     
+        <div className="h-14 relative">
+          <div class="avatar online ">
             <div class="w-28 rounded-full absolute top-[-150px] lg:top-[-110px] left-10">
-              <img className=""  src="https://images.pexels.com/photos/1323206/pexels-photo-1323206.jpeg?cs=srgb&dl=pexels-mixu-1323206.jpg&fm=jpg" />
+              <img className=""  src={profile} />
+          
             </div>
           </div>
-        
+    
+        <div className="px-[10px] py-2 text-xl bg-base-200 rounded-lg text-black w-10 absolute top-[-68px] lg:top-[-48px] left-[130px]">
+          <input onChange={(e) => changeProfilePictureHendeler(e)} type="file" name="image-uplode" id="profile" hidden />
+          <label htmlFor="profile" className=" ">
+          <span className=""><span className=""><AiFillCamera /></span></span>
+          </label>
+        </div>
 
         </div>
       
-        <div className="mt-5">
+         <form onSubmit={handleSubmit(onSubmit)}>
+         <div className="">
           <div className=" grid grid-cols-3">
             <div className="flex  items-center py-0">
               <p>Username</p>
@@ -180,7 +228,7 @@ const UpdateProfile = () => {
                   {...register("univercity", {
                     required: {
                       value: true,
-                      message: "Password is Required",
+                      message: "Univercity is Required",
                     }
                   })}
                   type="text"
@@ -231,7 +279,7 @@ const UpdateProfile = () => {
             <div className="mt-5  py-0">
               <div>
               <p>Alternative Contect Email</p>
-              <p className="text-sm ">Enter On Allternative email if you like to be contact by defarnt Email</p>
+              {/* <p className="text-sm ">Enter On Allternative email if you like to be contact by defarnt Email</p> */}
               
               </div>
               
@@ -262,9 +310,15 @@ const UpdateProfile = () => {
                 </label>
               </div>
             </div>
+
+           
           </div>
+          <div className="text-center">
+              <input type='submit' value="Save" className="bg-red-500 px-6 py-2 rounded-lg text-white"/>
+            </div>
           
         </div>
+         </form>
       </div>
     </div>
   );

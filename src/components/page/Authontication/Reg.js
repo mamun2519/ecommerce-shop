@@ -21,8 +21,9 @@ import sendToken from "../Utilitis/sendToken";
 const Reg = () => {
   const [token, setToken] = useState("");
   const [avatar, setAvatar] = useState(
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SPHGbT7zpUnQWxX6G23hhBVjxxAioJDoSNePax1i6FPVuO1bD2NweVg44RenkPB3vTI&usqp=CAU"
+    "https://www.valleverdecountryclub.com/wp-content/uploads/2022/04/istockphoto-610003972-612x612-2.jpg"
   );
+  const [cover , setCover] = useState("https://cdn.digitbin.com/wp-content/uploads/Why-I-am-Seeing-Blank-Facebook-Profile-and-How-to-Fix-it.jpg")
 
   const [user, loadings, error] = useAuthState(auth);
 
@@ -49,6 +50,7 @@ const Reg = () => {
     myForm.append("name", data.name);
     myForm.append("email", data.email);
     myForm.append("avatar", avatar);
+    myForm.append("cover", cover);
     sendToken(myForm);
     setToken(localStorage.getItem("UserToken"));
   };
@@ -67,6 +69,7 @@ const Reg = () => {
     myForm.append("name", Guser.user?.displayName);
     myForm.append("email", Guser.user?.email);
     myForm.append("avatar", Guser.user?.photoURL);
+    myForm.append("cover", cover)
     sendToken(myForm);
     setToken(localStorage.getItem("UserToken"));
   }
