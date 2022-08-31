@@ -5,6 +5,7 @@ import ShowMessage from "./ShowMessage";
 const Myorder = () => {
   const [myOrder , setMyOrder] = useState([])
   const userId = localStorage.getItem("UserId")
+  let [isOpen, setIsOpen] = useState(false)
   useEffect(() => {
    
       fetch(`http://localhost:5000/order/myOrder/${userId}`)
@@ -16,8 +17,8 @@ const Myorder = () => {
   }, [])
   console.log(myOrder)
   return (
-    <div>
-      <div>
+    <div className={isOpen ? " blur-lg" : ""}>
+      <div >
             <ShowMessage/>
       </div>
       <section class="py-1 bg-blueGray-50">
@@ -62,7 +63,10 @@ const Myorder = () => {
                 </thead>
 
                 <tbody>
-                  {myOrder?.map((order) => <OrderRow key={order._id} order={order}></OrderRow>)}
+                  {myOrder?.map((order) => <OrderRow
+                  isOpen={isOpen}
+                  setIsOpen={setIsOpen}
+                   key={order._id} order={order}></OrderRow>)}
                   
                   
                 </tbody>
@@ -72,7 +76,7 @@ const Myorder = () => {
         </div>
         <footer class="relative  pb-6">
           <div class="container mx-auto px-4">
-            Dear Coustomer , Please cheack Our Order Respit full order information
+          Dear customer, complete details of your order are in order receipt. Please check it out.
           </div>
         </footer>
       </section>

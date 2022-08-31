@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom'
-const OrderRow = ({order}) => {
+import DeleteModal from './DeleteModal';
+const OrderRow = ({order ,setIsOpen , isOpen}) => {
       const {orderItems, totalPrice , orderStatus , _id} =  order
       const navigate = useNavigate()
-   
-    
+
+ 
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+    const deletehendeler = (id) => {
+      console.log(id);
+    }
+
+  
+ 
       return (
-            <tr>
-                  
+            <tr >
             <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
              {/* {orderItems?.map((item) => item.name)} */}
              {orderItems[0].name}
@@ -29,7 +42,8 @@ const OrderRow = ({order}) => {
              <button onClick={()=> navigate(`orderReceipt/${_id}`)} className='px-6 py-1 bg-red-500 text-white rounded-lg'>view Receipt</button>
             </td>
             <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-            <button>
+           
+            <button onClick={()=> deletehendeler(_id)}>
                   <svg
                     class="w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1"
                     fill="none"
@@ -47,6 +61,13 @@ const OrderRow = ({order}) => {
                 </button>
                 
             </td>
+            {isOpen && <DeleteModal
+            closeModal={closeModal}
+            isOpen={isOpen}
+            openModal={openModal}
+
+          
+            ></DeleteModal>}
           </tr>
       );
 };
