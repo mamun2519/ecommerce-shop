@@ -124,8 +124,8 @@ const Dashboard = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <NavLink
+                     to="review"
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
                       <span class="text-gray-600">
@@ -144,12 +144,12 @@ const Dashboard = () => {
                           ></path>
                         </svg>
                       </span>
-                      <span>Notifications</span>
-                    </a>
+                      <span className=" font-medium">Add Review</span>
+                    </NavLink>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <NavLink
+                     to="help-center"
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
                       <span class="text-gray-600">
@@ -168,38 +168,12 @@ const Dashboard = () => {
                           ></path>
                         </svg>
                       </span>
-                      <span>Personal messages</span>
-                    </a>
-                  </li>
-                 
-
-                  <li>
-                    <a
-                      href=""
-                      class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
-                    >
-                      <span class=" text-gray-600">
-                        <svg
-                          class="h-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                          />
-                        </svg>
-                      </span>
-                      <span>My wishlist</span>
-                    </a>
+                      <span className=" font-medium">Help Center & Chat</span>
+                    </NavLink>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <NavLink
+                     to="manageOrder"
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
                       <span class="text-gray-600">
@@ -214,37 +188,18 @@ const Dashboard = () => {
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                            d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
                           ></path>
                         </svg>
                       </span>
-                      <span>Settings</span>
-                    </a>
+                      <span className=" font-medium">Manage Order</span>
+                    </NavLink>
                   </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
-                    >
-                      <span class="text-gray-600">
-                        <svg
-                          class="h-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                          />
-                        </svg>
-                      </span>
-                      <span>Change password</span>
-                    </a>
-                  </li>
+                 
+
+                 
+                 
+                
                   <li>
                     <a
                       href="#"

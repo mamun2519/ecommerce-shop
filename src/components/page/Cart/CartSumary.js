@@ -53,7 +53,7 @@ const CartSumary = () => {
   
    },[delivary , shippingPrice , cart , subTotal ])
   return (
-    <div class="card w-full sticky top-0 bg-base-100 border shadow-xl">
+    <div class="card w-full sticky top-0 bg-base-100 border shadow-md ">
       <div class="p-4">
         <div className="pb-4 border-b border-gray-100">
           <p className="font-semibold">Order Summary</p>

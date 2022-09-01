@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { FaGraduationCap } from "react-icons/fa";
-
+import { NavLink } from "react-router-dom";
 const MyProfile = () => {
   const [user] = useAuthState(auth);
+  const userId = localStorage.getItem("UserId")
+  const [myProfile , setMyProfile] = useState({})
+
+  useEffect(()=>{
+    fetch(`http://localhost:5000/user/single/${userId}`)
+    .then(res => res.json())
+    .then(data => setMyProfile(data?.user))
+  },[])
   return (
     <div className="mb-20 px-4 lg:px-0">
       <div>
@@ -12,7 +20,7 @@ const MyProfile = () => {
           <div className="">
             <img
               className="rounded-xl relative h-[150px] object-cover lg:h-[250px] w-full "
-              src="https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg"
+              src={myProfile?.cover?.url}
               alt=""
             />
           </div>
@@ -20,7 +28,7 @@ const MyProfile = () => {
 
           <div className="mt-2">
             <p className="pl-[165px] text-xl font-medium">
-              {user?.displayName}
+              {user?.displayName} ({myProfile?.username})
             </p>
           </div>
 
@@ -29,17 +37,19 @@ const MyProfile = () => {
               <div class="w-28 rounded-full absolute top-[-110px] lg:top-[-110px] left-10">
                 <img
                   className=""
-                  src="https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg"
+                  src={myProfile?.avatar?.url}
                 />
               </div>
             </div>
           </div>
-
+        
           <div className=" flex justify-center">
             <p className="lg:w-4/12  text-center   font-sans">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic,
-              expedita?
+              {myProfile?.bio}
             </p>
+          </div>
+          <div className="flex justify-center mt-3"> 
+            <NavLink to='/dashboard/updateProfile' className="bg-red-500 text-white px-6 py-1  rounded-lg">Edit Profile</NavLink>
           </div>
           <div className="mt-5 flex justify-center">
             <div>
@@ -49,9 +59,9 @@ const MyProfile = () => {
                 </span>
                 <span className="">
                
-                  Studied At
-                  <span>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing.
+                  Studied At{" "}
+                  <span className=" font-medium">
+                    {myProfile?.univercity}
                   </span>
                 </span>
               </div>
@@ -61,8 +71,8 @@ const MyProfile = () => {
                 </span>
               <span className="">
                 Profession At{" "}
-                <span>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing.
+                <span className=" font-medium">
+                {myProfile?.profession}
                 </span>
               </span>
               </div>
@@ -72,8 +82,8 @@ const MyProfile = () => {
                 </span>
               <span className="">
               Job Title At{" "}
-                <span>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing.
+                <span className=" font-medium">
+                {myProfile?.jobtitle}
                 </span>
               </span>
               </div>
@@ -83,8 +93,8 @@ const MyProfile = () => {
                 </span>
               <span className="">
               Date Of Biths At{" "}
-                <span>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing.
+                <span className=" font-medium">
+                {myProfile?.birthday}
                 </span>
               </span>
               </div>
@@ -94,8 +104,8 @@ const MyProfile = () => {
                 </span>
               <span className="">
               Alternative Contect Email At{" "}
-                <span>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing.
+                <span className=" font-medium">
+                {myProfile?.alternativEmail}
                 </span>
               </span>
               </div>
@@ -105,8 +115,8 @@ const MyProfile = () => {
                 </span>
               <span className="">
               Joining Date At{" "}
-                <span>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing.
+                <span className=" font-medium">
+                {myProfile?.createdAt}
                 </span>
               </span>
               </div>

@@ -20,7 +20,7 @@ const Cart = () => {
             <div className=" col-span-2 ">
               <section class="antialiased  text-gray-600" x-data="app">
                 <div class="flex flex-col justify-center h-full">
-                  <div class="w-full  bg-white shadow-lg rounded-xl border border-gray-200">
+                  <div class="w-full  bg-white shadow-md rounded-xl border border-gray-200">
                     <header class="px-5 py-4 border-b border-gray-100">
                       <div class="font-semibold flex   justify-between text-gray-800">
                         <p>Shoping Cart</p>

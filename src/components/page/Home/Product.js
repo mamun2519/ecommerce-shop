@@ -9,7 +9,7 @@ const Product = ({product}) => {
       const {name , description , price , images , _id} = product
  
       return (
-            <div className="card  h-[420px]  bg-base-100 shadow-lg relative ">
+            <div className="card  h-[420px]  bg-base-100 shadow-md border relative ">
             <figure className="px-5 pt-5">
               <img
                 src={images[0].url}

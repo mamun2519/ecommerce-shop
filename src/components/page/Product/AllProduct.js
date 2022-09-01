@@ -53,7 +53,7 @@ const AllProduct = () => {
       <h1 className="text-xl mb-5">Top Categories Products</h1>
       <div className="grid lg:grid-cols-4  grid-cols-2">
         <div className="w-60  mt-5">
-          <div className="card bg-base-100  sticky top-0 border shadow-lg rounded-lg h-80">
+          <div className="card bg-base-100  sticky top-0 border shadow-md rounded-lg h-80">
            
             <Catagory
             selectCatagoryHendeler={selectCatagoryHendeler}
