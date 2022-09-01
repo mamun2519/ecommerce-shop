@@ -17,6 +17,8 @@ import ShowMessage from './components/page/Dashboard/ShowMessage';
 import Myorder from './components/page/Dashboard/Myorder';
 import OrderReceipt from './components/page/Dashboard/OrderReceipt';
 import UpdateProfile from './components/page/Dashboard/UpdateProfile';
+import MyProfile from './components/page/Dashboard/MyProfile';
+import { ToastContainer } from 'react-toastify';
 function App() {
   return (
     <div className="">
@@ -29,6 +31,7 @@ function App() {
        <Route  index element={<ShowMessage/>}></Route>
        <Route  path='/dashboard/myorders' element={<Myorder/>}></Route>
        <Route  path='/dashboard/updateProfile' element={<UpdateProfile/>}></Route>
+       <Route  path='/dashboard/myProfile' element={<MyProfile/>}></Route>
        <Route path='/dashboard/myorders/orderReceipt/:id' element={<OrderReceipt/>}></Route>
        </Route>
         
@@ -45,6 +48,7 @@ function App() {
 
        
       </Routes>
+      <ToastContainer ></ToastContainer>
   
     </div>
   );

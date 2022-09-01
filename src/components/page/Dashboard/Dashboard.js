@@ -76,8 +76,8 @@ const Dashboard = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <NavLink
+                     to="myProfile"
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
                       <span class="text-gray-600">
@@ -96,8 +96,8 @@ const Dashboard = () => {
                           />
                         </svg>
                       </span>
-                      <span>My profile</span>
-                    </a>
+                      <span className=" font-medium">My profile</span>
+                    </NavLink>
                   </li>
                   <li>
                     <NavLink
