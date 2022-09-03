@@ -22,6 +22,7 @@ import { ToastContainer } from 'react-toastify';
 import Chat from './components/page/Dashboard/Chat';
 import Review from '../src/components/page/Dashboard/Review'
 import ManageOrder from './components/page/Dashboard/ManageOrder';
+import OrderShipped from './components/page/Dashboard/OrderShipped'
 function App() {
   return (
     <div className="">
@@ -38,6 +39,7 @@ function App() {
        <Route  path='/dashboard/help-center' element={<Chat/>}></Route>
        <Route  path='/dashboard/review' element={<Review/>}></Route>
        <Route  path='/dashboard/manageOrder' element={<ManageOrder/>}></Route>
+       <Route  path='/dashboard/manageOrder/OrderShipped/:id' element={<OrderShipped/>}></Route>
        <Route path='/dashboard/myorders/orderReceipt/:id' element={<OrderReceipt/>}></Route>
        </Route>
         

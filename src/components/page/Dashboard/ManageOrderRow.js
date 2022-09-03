@@ -1,8 +1,9 @@
 import React from 'react';
-
+import {useNavigate} from "react-router-dom"
 const ManageOrderRow = ({order}) => {
-      console.log(order);
-      const {user , orderItems , totalPrice , paymentInfo , orderStatus} = order
+  const navigate = useNavigate()
+    
+      const {user , orderItems , totalPrice , paymentInfo , orderStatus , _id} = order
       return (
             <tr >
             <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
@@ -24,7 +25,7 @@ const ManageOrderRow = ({order}) => {
             </td>
             <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
              
-             <button  className='px-6 py-1 bg-red-500 text-white rounded-lg'>Shipped Now</button>
+             <button onClick={()=>navigate(`/dashboard/manageOrder/OrderShipped/${_id}`)}  className='px-6 py-1 bg-red-500 text-white rounded-lg'>Shipped Now</button>
             </td>
             <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
            

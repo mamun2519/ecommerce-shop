@@ -10,6 +10,7 @@ const initistialManageOrderState = {
 export const fetchManageOrder = createAsyncThunk(
   "/manageOrders/fetch",
   (catagory) => {
+    console.log(catagory);
     if (typeof catagory == "number") {
       return axios
         .get(`http://localhost:5000/order?page=${catagory}`)
