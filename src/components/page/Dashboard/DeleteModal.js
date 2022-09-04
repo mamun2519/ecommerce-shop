@@ -1,9 +1,9 @@
 import { Dialog, Transition } from '@headlessui/react';
 import React from 'react';
 import { Fragment } from 'react'
-const DeleteModal = ({closeModal , openModal , isOpen , order}) => {
-  const {_id} = order
-  console.log(_id);
+const DeleteModal = ({closeModal , openModal , isOpen , id}) => {
+
+ 
       return (
             <div>
             
@@ -39,7 +39,7 @@ const DeleteModal = ({closeModal , openModal , isOpen , order}) => {
                     className="text-lg font-medium flex justify-center leading-6 text-gray-900"
                   >
                     Are You Sure Deleted Order ?
-                  {_id}
+                  {id}
                   </Dialog.Title>
                  
 
