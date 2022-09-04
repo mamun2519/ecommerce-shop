@@ -17,7 +17,7 @@ const User = () => {
     disPatch(fetchUser(searchText));
   };
 
-  console.log(user);
+  
   return (
     <div>
       <section class="py-1 bg-blueGray-50">

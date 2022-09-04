@@ -3,12 +3,16 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Fragment } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiLockOpenAlt } from "react-icons/bi";
+import { toast } from "react-toastify";
+import auth from "../../../firebase.init";
 
 const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
   const [user, setUser] = useState({});
   const [role, setRole] = useState("");
+  const [users, lodaing] = useAuthState(auth);
   useEffect(() => {
     fetch(`http://localhost:5000/user/single/${id}`)
       .then((res) => res.json())
@@ -18,7 +22,26 @@ const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
   const selectUserRole = (e) => {
     setRole(e.target.value);
   };
-  console.log(role);
+
+  console.log(user);
+  const makeUserAdminHendeler = (user) => {
+    fetch(
+      `http://localhost:5000/user/admin/${user?.email}?roleAction=${role}`,
+      {
+        method: "PUT",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("UserToken")}`,
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.admin.matchedCount > 0) {
+          toast("Admin Make Successfull");
+          closeModal();
+        }
+      });
+  };
   return (
     <div>
       <Transition appear show={isOpen} as={Fragment}>
@@ -107,7 +130,10 @@ const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
                       </div>
 
                       <div class="mt-6">
-                        <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-red-400 rounded-md">
+                        <button
+                          onClick={() => makeUserAdminHendeler(user)}
+                          className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-red-400 rounded-md"
+                        >
                           Make Admin
                         </button>
                       </div>
