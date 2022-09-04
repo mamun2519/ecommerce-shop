@@ -1,30 +1,13 @@
 import React from "react";
-import { useState } from "react";
-import MakeAdminModal from "./MakeAdminModal";
 
-const UserRow = ({ user }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { name, email, role, avatar, _id } = user;
-  const [userId, setUserId] = useState("");
-  console.log(user);
-  const makeAdminModal = (id) => {
-    setUserId(id);
-    openModal();
-  };
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
-
+const ManageProductRow = ({ product }) => {
+  const { name, price, Stock, images, category, description } = product;
   return (
     <tr className="border-b">
       <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
         <div class="avatar">
           <div class="w-12 rounded-xl">
-            <img src={avatar?.url} />
+            <img src={images[0]?.url} />
           </div>
         </div>
       </th>
@@ -32,18 +15,16 @@ const UserRow = ({ user }) => {
         {name}
       </th>
       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-        {email}
+        {category}
       </td>
       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-        {role}
+        {price}
       </td>
       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-        <button
-          onClick={() => makeAdminModal(_id)}
-          className="px-6 py-1 bg-red-500 text-white rounded-lg"
-        >
-          create Admin
-        </button>
+        {Stock}
+      </td>
+      <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+        {description}
       </td>
 
       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
@@ -64,16 +45,16 @@ const UserRow = ({ user }) => {
           </svg>
         </button>
       </td>
-      {isOpen && (
-        <MakeAdminModal
-          closeModal={closeModal}
-          isOpen={isOpen}
-          openModal={openModal}
-          id={userId}
-        ></MakeAdminModal>
-      )}
+      {/* {isOpen && <MakeAdminModal
+            closeModal={closeModal}
+            isOpen={isOpen}
+            openModal={openModal}
+            id={userId}
+
+          
+            ></MakeAdminModal>} */}
     </tr>
   );
 };
 
-export default UserRow;
+export default ManageProductRow;

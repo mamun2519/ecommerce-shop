@@ -8,6 +8,7 @@ import shppingPriceReducer from '../shippingPriceSlice'
 import clientSecretReducer from '../clientScritSlice.js'
 import manageOrderReducer from '../manageOrderSlice'
 import userReducer from '../userSlice'
+import adminsReducer from '../getallAdminSlice'
 export default configureStore({
   reducer: {
       products: productReducer,
@@ -18,6 +19,7 @@ export default configureStore({
       shipping: shppingPriceReducer,
       clientSecret: clientSecretReducer,
       orders: manageOrderReducer,
-      users: userReducer
+      users: userReducer,
+      admins: adminsReducer 
   },
 })

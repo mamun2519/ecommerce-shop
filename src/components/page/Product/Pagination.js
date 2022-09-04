@@ -49,14 +49,17 @@ const Pagination = () => {
         }
         if(page == 3){
             setPrePage(page)
+            disPatch(fetchProduct(page))
            
         }
         if(page == 4){
             setPrePage(page)
+            disPatch(fetchProduct(page))
            
         }
         if(page == 5){
             setPrePage(page)
+            disPatch(fetchProduct(page))
            
         }
        

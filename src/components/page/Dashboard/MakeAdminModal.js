@@ -6,13 +6,17 @@ import { Fragment } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiLockOpenAlt } from "react-icons/bi";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
+import { fetchAdmin } from "../Futurecher/Slice/getallAdminSlice";
+import { fetchUser } from "../Futurecher/Slice/userSlice";
 
 const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
   const [user, setUser] = useState({});
   const [role, setRole] = useState("");
   const [users, lodaing] = useAuthState(auth);
+  const disPatch = useDispatch();
   useEffect(() => {
     fetch(`http://localhost:5000/user/single/${id}`)
       .then((res) => res.json())
@@ -37,6 +41,8 @@ const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.admin.matchedCount > 0) {
+          disPatch(fetchUser());
+          disPatch(fetchAdmin());
           toast("Admin Make Successfull");
           closeModal();
         }
