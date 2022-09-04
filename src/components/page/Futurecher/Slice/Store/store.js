@@ -7,6 +7,7 @@ import subtotalReducer from '../SubTotalPriceSlice'
 import shppingPriceReducer from '../shippingPriceSlice'
 import clientSecretReducer from '../clientScritSlice.js'
 import manageOrderReducer from '../manageOrderSlice'
+import userReducer from '../userSlice'
 export default configureStore({
   reducer: {
       products: productReducer,
@@ -16,6 +17,7 @@ export default configureStore({
       subTotal: subtotalReducer,
       shipping: shppingPriceReducer,
       clientSecret: clientSecretReducer,
-      orders: manageOrderReducer
+      orders: manageOrderReducer,
+      users: userReducer
   },
 })
