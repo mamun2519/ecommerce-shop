@@ -25,6 +25,7 @@ import ManageOrder from './components/page/Dashboard/ManageOrder';
 import OrderShipped from './components/page/Dashboard/OrderShipped'
 import User from './components/page/Dashboard/User';
 import ManageProduct from './components/page/Dashboard/ManageProduct';
+import AddProduct from './components/page/Dashboard/AddProduct';
 function App() {
   return (
     <div className="">
@@ -43,6 +44,7 @@ function App() {
        <Route  path='/dashboard/manageOrder' element={<ManageOrder/>}></Route>
        <Route  path='/dashboard/user' element={<User/>}></Route>
        <Route  path='/dashboard/manageProduct' element={<ManageProduct/>}></Route>
+       <Route  path='/dashboard/productAdd' element={<AddProduct/>}></Route>
        <Route  path='/dashboard/manageOrder/OrderShipped/:id' element={<OrderShipped/>}></Route>
        <Route path='/dashboard/myorders/orderReceipt/:id' element={<OrderReceipt/>}></Route>
        </Route>

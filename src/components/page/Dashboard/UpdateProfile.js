@@ -25,7 +25,6 @@ const UpdateProfile = () => {
     }
   }, [userId]);
 
-  console.log(userId);
   const {
     register,
     formState: { errors },

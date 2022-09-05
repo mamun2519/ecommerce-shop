@@ -18,6 +18,7 @@ const ManageProduct = () => {
     disPatch(fetchProduct(searchProduct));
   };
 
+  console.log(product)
   return (
     <div>
       <section class="py-1 bg-blueGray-50">
