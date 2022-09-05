@@ -12,11 +12,15 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import sendToken from "../Utilitis/sendToken";
+import { useDispatch } from "react-redux";
+import { fetchUserAvater } from "../Futurecher/Slice/userProSlice";
 const Log = () => {
+  const disPatch = useDispatch()
   const [token, setToken] = useState("");
   const [avatar, setAvatar] = useState(
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SPHGbT7zpUnQWxX6G23hhBVjxxAioJDoSNePax1i6FPVuO1bD2NweVg44RenkPB3vTI&usqp=CAU"
   );
+  const [cover , setCover] = useState("https://cdn.digitbin.com/wp-content/uploads/Why-I-am-Seeing-Blank-Facebook-Profile-and-How-to-Fix-it.jpg")
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
   const [signInWithEmailAndPassword, users, loading, errorss] =
@@ -33,8 +37,9 @@ const Log = () => {
     const myForm = new FormData();
     myForm.append("email", data.email);
     myForm.append("avatar", avatar);
-    sendToken(myForm);
+    sendToken(myForm );
     setToken(localStorage.getItem("UserToken"));
+    disPatch(fetchUserAvater(localStorage.getItem("UserId")))
   };
 
   // google login hook
@@ -46,17 +51,21 @@ const Log = () => {
       <p className="text-red-500">{error?.message || Gerror?.message}</p>
     );
   }
+  const userId = localStorage.getItem("UserId");
   if (Guser) {
     const myForm = new FormData();
-    myForm.append("name", Guser.user?.displayName);
-    myForm.append("email", Guser.user?.email);
-    myForm.append("avatar", Guser.user?.photoURL);
+    myForm.append("name", user?.displayName);
+    myForm.append("email", user?.email);
+    myForm.append("avatar", user?.photoURL);
+    myForm.append("cover", cover);
     sendToken(myForm);
     setToken(localStorage.getItem("UserToken"));
+    
   }
 
   if (token || user) {
     navigate(from, { replace: true });
+    disPatch(fetchUserAvater(userId))
     // navigate("/")
   }
 

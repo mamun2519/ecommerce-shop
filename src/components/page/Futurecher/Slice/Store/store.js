@@ -9,6 +9,7 @@ import clientSecretReducer from '../clientScritSlice.js'
 import manageOrderReducer from '../manageOrderSlice'
 import userReducer from '../userSlice'
 import adminsReducer from '../getallAdminSlice'
+import avatarProfileReducer from '../userProSlice'
 export default configureStore({
   reducer: {
       products: productReducer,
@@ -20,6 +21,7 @@ export default configureStore({
       clientSecret: clientSecretReducer,
       orders: manageOrderReducer,
       users: userReducer,
-      admins: adminsReducer 
+      admins: adminsReducer,
+      avatar: avatarProfileReducer
   },
 })

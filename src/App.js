@@ -26,7 +26,9 @@ import OrderShipped from './components/page/Dashboard/OrderShipped'
 import User from './components/page/Dashboard/User';
 import ManageProduct from './components/page/Dashboard/ManageProduct';
 import AddProduct from './components/page/Dashboard/AddProduct';
+import RequreAdmin from './components/page/Authontication/RequreAdmin';
 function App() {
+  
   return (
     <div className="">
        <Navber/>
@@ -34,17 +36,67 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/chackout' element={<ChackOut/>}/>
-       <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+       <Route path='/dashboard' element={
+        <RequreAuth>
+          <Dashboard/>
+        </RequreAuth>
+       }>
        <Route  index element={<ShowMessage/>}></Route>
        <Route  path='/dashboard/myorders' element={<Myorder/>}></Route>
-       <Route  path='/dashboard/updateProfile' element={<UpdateProfile/>}></Route>
-       <Route  path='/dashboard/myProfile' element={<MyProfile/>}></Route>
-       <Route  path='/dashboard/help-center' element={<Chat/>}></Route>
-       <Route  path='/dashboard/review' element={<Review/>}></Route>
-       <Route  path='/dashboard/manageOrder' element={<ManageOrder/>}></Route>
-       <Route  path='/dashboard/user' element={<User/>}></Route>
-       <Route  path='/dashboard/manageProduct' element={<ManageProduct/>}></Route>
-       <Route  path='/dashboard/productAdd' element={<AddProduct/>}></Route>
+       <Route  path='/dashboard/updateProfile' element={
+         <RequreAuth>
+               <UpdateProfile/>
+         </RequreAuth>
+      }></Route>
+       <Route  path='/dashboard/myProfile' element={
+       <RequreAuth>
+        <MyProfile/>
+       </RequreAuth>
+       }></Route>
+       <Route  path='/dashboard/help-center' element={
+         <RequreAuth>
+          <Chat/>
+         </RequreAuth>
+       
+       }></Route>
+       <Route  path='/dashboard/review' element={
+          <RequreAuth>
+          <Review/>
+          </RequreAuth>
+        
+       }></Route>
+       <Route  path='/dashboard/manageOrder' element={
+        <RequreAuth>
+        <RequreAdmin>
+        <ManageOrder/>
+        </RequreAdmin>
+        </RequreAuth>
+      }></Route>
+       <Route  path='/dashboard/user' element={
+
+        <RequreAuth>
+        <RequreAdmin>
+        <User/>
+        </RequreAdmin>
+        </RequreAuth>
+       }></Route>
+       <Route  path='/dashboard/manageProduct' element={
+        <RequreAuth>
+        <RequreAdmin>
+        <ManageProduct/>
+        </RequreAdmin>
+        </RequreAuth>
+       
+       }></Route>
+       <Route  path='/dashboard/productAdd' element={
+        <RequreAuth>
+        <RequreAdmin>
+        <AddProduct/>
+        </RequreAdmin>
+        </RequreAuth>
+       
+       
+       }></Route>
        <Route  path='/dashboard/manageOrder/OrderShipped/:id' element={<OrderShipped/>}></Route>
        <Route path='/dashboard/myorders/orderReceipt/:id' element={<OrderReceipt/>}></Route>
        </Route>

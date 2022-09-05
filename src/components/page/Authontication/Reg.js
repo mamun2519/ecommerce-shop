@@ -12,7 +12,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, } from "react-redux";
 import { postUser } from "../Futurecher/Slice/createUserSlice";
 import axios from "axios";
 import Loading from "../Utilitis/Loading";
@@ -42,7 +42,6 @@ const Reg = () => {
   const users = useSelector((state) => state.user);
 
   const onSubmit = async (data) => {
-    console.log(data);
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
 
@@ -51,7 +50,7 @@ const Reg = () => {
     myForm.append("email", data.email);
     myForm.append("avatar", avatar);
     myForm.append("cover", cover);
-    sendToken(myForm);
+    sendToken(myForm );
     setToken(localStorage.getItem("UserToken"));
   };
 
@@ -66,9 +65,9 @@ const Reg = () => {
 
   if (Guser) {
     const myForm = new FormData();
-    myForm.append("name", Guser.user?.displayName);
-    myForm.append("email", Guser.user?.email);
-    myForm.append("avatar", Guser.user?.photoURL);
+    myForm.append("name", user?.displayName);
+    myForm.append("email", user?.email);
+    myForm.append("avatar", user?.photoURL);
     myForm.append("cover", cover)
     sendToken(myForm);
     setToken(localStorage.getItem("UserToken"));

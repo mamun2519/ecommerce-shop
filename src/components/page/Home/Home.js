@@ -9,11 +9,11 @@ import Products from './Products';
 import Reviews from './Reviews';
 
 const Home = () => {
+      
       return (
             <div>
                  
-                 
-                 
+              
                   <Banner/>
                   <Facilitis/>
                   <Discount/>

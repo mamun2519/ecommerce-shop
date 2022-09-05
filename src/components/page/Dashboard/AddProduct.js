@@ -14,7 +14,7 @@ const AddProduct = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const userId = localStorage.getItem("UserId")
+  const userId = localStorage.getItem("UserId");
   const onSubmit = async (data) => {
     const myForm = new FormData();
     myForm.append("name", data.name);
@@ -24,7 +24,7 @@ const AddProduct = () => {
     myForm.append("price", data.price);
     myForm.append("brand", data.brand);
     myForm.append("user", userId);
-    myForm.append("images", productPictue,);
+    myForm.append("images", productPictue);
     await axios({
       method: "post",
       url: "http://localhost:5000/product/add",
@@ -32,14 +32,11 @@ const AddProduct = () => {
       headers: { "Content-Type": "multipart/form-data" },
     })
       .then((res) => {
-        toast(res.message)
+        toast(res.message);
       })
       .catch((err) => {
         console.log(err);
       });
-
-      console.log(data);
-   
   };
 
   const ProductPictureHendeler = (e) => {
@@ -55,31 +52,6 @@ const AddProduct = () => {
   return (
     <div className="mb-20 px-4 lg:px-0">
       <div className="w-full  mx-auto border  shadow-md rounded-lg p-5">
-        {/* <div className="h-14 relative">
-                <div class="avatar online ">
-                  <div class="w-28 rounded-full absolute top-[-150px] lg:top-[-110px] left-10">
-                    <img className="" src={profile} />
-                  </div>
-                </div>
-      
-                <div className="px-[10px] py-2 text-xl bg-base-200 rounded-lg text-black w-10 absolute top-[-68px] lg:top-[-48px] left-[130px]">
-                  <input
-                    onChange={(e) => changeProfilePictureHendeler(e)}
-                    type="file"
-                    name="image-uplode"
-                    id="profile"
-                    hidden
-                  />
-                  <label htmlFor="profile" className=" ">
-                    <span className="">
-                      <span className="">
-                        <AiFillCamera />
-                      </span>
-                    </span>
-                  </label>
-                </div>
-              </div> */}
-
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="">
             <div className=" grid grid-cols-3">
@@ -280,7 +252,7 @@ const AddProduct = () => {
                 </div>
               </div>
             </div>
-           
+
             <div className=" grid grid-cols-3 mt-">
               <div className="mt-5  py-0">
                 <div>
@@ -310,31 +282,31 @@ const AddProduct = () => {
                     htmlFor={!productPictue && "product-img"}
                     className=" "
                   >
-                    <div >
+                    <div>
                       {!productPictue && (
                         <div className="h-44 w-72 border rounded-md flex justify-center  items-center">
-                        <div className=" ">
-                          <span className="text-6xl text-gray-700">
-                            <MdAddPhotoAlternate />
-                          </span>
-                        </div>
+                          <div className=" ">
+                            <span className="text-6xl text-gray-700">
+                              <MdAddPhotoAlternate />
+                            </span>
+                          </div>
                         </div>
                       )}
                       {productPictue && (
                         <div className="h-44 w-72 border rounded-md flex justify-center  items-center">
-                        <div className="h-44 w-72 relative">
-                          <img
-                            className="h-44 w-72 p-1 rounded-lg"
-                            src={productPictue}
-                            alt="productPicure"
-                          />
-                          <span
-                            onClick={() => setProductPicture("")}
-                            className=" absolute text-2xl top-[5px] text-red-500 right-[5px] cursor-pointer"
-                          >
-                            <TiDelete />
-                          </span>
-                        </div>
+                          <div className="h-44 w-72 relative">
+                            <img
+                              className="h-44 w-72 p-1 rounded-lg"
+                              src={productPictue}
+                              alt="productPicure"
+                            />
+                            <span
+                              onClick={() => setProductPicture("")}
+                              className=" absolute text-2xl top-[5px] text-red-500 right-[5px] cursor-pointer"
+                            >
+                              <TiDelete />
+                            </span>
+                          </div>
                         </div>
                       )}
                     </div>

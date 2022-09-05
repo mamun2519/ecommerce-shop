@@ -1,11 +1,18 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 import { Outlet } from "react-router-dom";
 
-import {NavLink, useNavigate} from 'react-router-dom'
+import {NavLink,} from 'react-router-dom'
+import auth from "../../../firebase.init";
+import useAdmins from "../Authontication/useAdmin";
 const Dashboard = () => {
+  const [user] = useAuthState(auth)
+  const [admin] = useAdmins(user)
+ 
 
-  // max-w-7xl m-auto px-2
+
   return (
     <div className="">
       <div class="drawer drawer-mobile">
@@ -172,7 +179,9 @@ const Dashboard = () => {
                     </NavLink>
                   </li>
                  
-                  <li>
+                 {
+                  admin && <>
+                   <li>
                     <NavLink
                      to="manageOrder"
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
@@ -268,13 +277,15 @@ const Dashboard = () => {
                       <span className=" font-medium">User</span>
                     </NavLink>
                   </li>
+                  </>
+                 }
 
                  
                  
                 
-                  <li>
-                    <a
-                      href="#"
+                  <li onClick={() => signOut(auth)}>
+                    <span
+                    
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
                       <span class="text-gray-600">
@@ -293,8 +304,8 @@ const Dashboard = () => {
                           />
                         </svg>
                       </span>
-                      <span>Logout</span>
-                    </a>
+                      <span className="">Logout</span>
+                    </span>
                   </li>
                 </ul>
               </div>
