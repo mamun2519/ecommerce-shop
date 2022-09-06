@@ -8,6 +8,7 @@ import { Tab } from "@headlessui/react";
 import ProductReview from "./ProductReview";
 import AddProductReview from "./AddProductReview";
 import ProductDetails from "./ProductDetails";
+import { toast } from "react-toastify";
 const ProductInfo = () => {
   const [quantity, setquantity] = useState(1);
   const { id } = useParams();
@@ -31,6 +32,7 @@ const ProductInfo = () => {
       totalPrice,
     };
     disPatch(addToCart(shoppingCart));
+    toast("Thank You Product Added To Cart")
   };
 
   const increasequantity = () => {
@@ -48,9 +50,7 @@ const ProductInfo = () => {
       name: "Product Info",
       content: (
         <div>
-          <ProductDetails
-          product={product}
-          ></ProductDetails>
+          <ProductDetails product={product}></ProductDetails>
         </div>
       ),
     },
@@ -58,9 +58,7 @@ const ProductInfo = () => {
       name: "Product Review",
       content: (
         <div>
-          <ProductReview
-          product={product}
-          ></ProductReview>
+          <ProductReview product={product}></ProductReview>
         </div>
       ),
     },
@@ -68,7 +66,7 @@ const ProductInfo = () => {
       name: "Add Review",
       content: (
         <div>
-          <AddProductReview></AddProductReview>
+          <AddProductReview product={product}></AddProductReview>
         </div>
       ),
     },
@@ -86,8 +84,8 @@ const ProductInfo = () => {
         <div class="card w-full bg-base-100 shadow border mt-10">
           <div class="card-body ">
             <section class="text-gray-600 body-font overflow-hidden">
-              <div class="container px-5 py- mx-auto">
-                <div class="lg:w-4/5 w-full  mx-auto flex flex-wrap">
+              <div class="container lg:px-5 py- lg:mx-auto">
+                <div class="lg:w-4/5 sm:w-full  lg:mx-auto flex flex-wrap">
                   <img
                     alt="ecommerce"
                     class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
@@ -158,7 +156,7 @@ const ProductInfo = () => {
                         >
                           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                         </svg>
-                        <span class="text-gray-600 ml-3">4 Reviews</span>
+                        <span class="text-gray-600 ml-3">{product?.product?.product?.numOfReviews} Reviews</span>
                       </span>
                       <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
                         <a class="text-gray-500">
@@ -258,18 +256,18 @@ const ProductInfo = () => {
             </section>
             <div className="border-t mt-10">
               <div>
-                <div className="flex justify-center  px-4">
+                <div className="flex justify-center  lg:px-4">
                   <div class="card w-full bg-base-100  ">
                     <div class="card-body p-4">
                       <Tab.Group>
-                        <Tab.List className="flex gap-10 py-[4px] bg-slate-100 px-[4px] border rounded-lg  mx-auto justify-center">
+                        <Tab.List className="lg:flex text-center gap-10 py-[4px] bg-slate-100 lg:px-[4px] border rounded-lg   lg:mx-auto justify-center">
                           {Tabs.map((item, index) => (
                             <Tab
                               key={index}
                               className={({ selected }) => (
                                 "w-full relative  px-4 py-2.5 focus:outline-none whitespace-nowrap",
                                 selected
-                                  ? "transition duration-500 py-[5px] px-6 bg-red-400 text-white rounded-lg "
+                                  ? "transition duration-500 py-[5px] px-6 bg-red-400  text-white rounded-lg "
                                   : "  py-[5px] px-6"
                               )}
                             >
