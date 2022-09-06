@@ -14,10 +14,10 @@ const ProductDetails = ({ product }) => {
 
       {!product.loading && product?.product?.product ? (
         <div className="col-span-2">
-          <div className="relative   min-w-0 break-words bg-white w-full shadow-md border rounded">
-            <div className="p-5">
-              <h1 className=" font-medium text-2xl">Product Information</h1>
-              <div className=" grid grid-cols-2 gap-10 mt-2">
+          <div className="relative   min-w-0 break-words bg-white w-full ">
+            <div className="">
+              <h1 className="font-medium text-2xl">Product Information</h1>
+              <div className=" grid grid-cols-2 gap-10 mt-4">
                 <div>
                   <p>Product Name</p>
                 </div>

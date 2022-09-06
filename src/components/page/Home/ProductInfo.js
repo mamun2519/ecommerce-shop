@@ -58,7 +58,9 @@ const ProductInfo = () => {
       name: "Product Review",
       content: (
         <div>
-          <ProductReview></ProductReview>
+          <ProductReview
+          product={product}
+          ></ProductReview>
         </div>
       ),
     },
@@ -73,7 +75,7 @@ const ProductInfo = () => {
   ];
 
   return (
-    <div className="max-w-7xl m-auto pb-10">
+    <div className="max-w-7xl m-auto pb-10 px-4">
       {product.loading && (
         <p>
           <Loading></Loading>
@@ -85,7 +87,7 @@ const ProductInfo = () => {
           <div class="card-body ">
             <section class="text-gray-600 body-font overflow-hidden">
               <div class="container px-5 py- mx-auto">
-                <div class="lg:w-4/5 mx-auto flex flex-wrap">
+                <div class="lg:w-4/5 w-full  mx-auto flex flex-wrap">
                   <img
                     alt="ecommerce"
                     class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
@@ -254,7 +256,7 @@ const ProductInfo = () => {
                 </div>
               </div>
             </section>
-            <div className="border-t mt-5">
+            <div className="border-t mt-10">
               <div>
                 <div className="flex justify-center  px-4">
                   <div class="card w-full bg-base-100  ">
