@@ -4,10 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchSingleProduct } from "../Futurecher/Slice/singleProductSlice";
 import { addToCart } from "../Futurecher/Slice/cartSlice";
 import Loading from "../Utilitis/Loading";
-
+import { Tab } from "@headlessui/react";
+import ProductReview from "./ProductReview";
+import AddProductReview from "./AddProductReview";
+import ProductDetails from "./ProductDetails";
 const ProductInfo = () => {
-
-  const [quantity , setquantity] = useState(1)
+  const [quantity, setquantity] = useState(1);
   const { id } = useParams();
   const disPatch = useDispatch();
   const product = useSelector((state) => state.product);
@@ -16,44 +18,71 @@ const ProductInfo = () => {
   }, []);
 
   const addedToCartHendeler = () => {
-    const totalPrice = parseInt(quantity) * parseInt(product?.product?.product?.price)
+    const totalPrice =
+      parseInt(quantity) * parseInt(product?.product?.product?.price);
     const shoppingCart = {
       name: product?.product?.product?.name,
       image: product?.product?.product?.images[0].url,
       description: product?.product?.product?.description,
       price: product?.product?.product?.price,
       id: product?.product?.product?._id,
-     quantity,
-     product: product?.product?.product?._id,
-     totalPrice 
+      quantity,
+      product: product?.product?.product?._id,
+      totalPrice,
     };
     disPatch(addToCart(shoppingCart));
-   
   };
 
-  const increasequantity = () =>{
-    setquantity(quantity + 1)
-
-  }
-  const decreasequantity = () =>{
-    if(quantity > 1){
-      setquantity(quantity - 1)
-
+  const increasequantity = () => {
+    setquantity(quantity + 1);
+  };
+  const decreasequantity = () => {
+    if (quantity > 1) {
+      setquantity(quantity - 1);
+    } else {
+      alert("sorry");
     }
-    else{
-      alert("sorry")
-    }
-    
-
-  }
+  };
+  const Tabs = [
+    {
+      name: "Product Info",
+      content: (
+        <div>
+          <ProductDetails
+          product={product}
+          ></ProductDetails>
+        </div>
+      ),
+    },
+    {
+      name: "Product Review",
+      content: (
+        <div>
+          <ProductReview></ProductReview>
+        </div>
+      ),
+    },
+    {
+      name: "Add Review",
+      content: (
+        <div>
+          <AddProductReview></AddProductReview>
+        </div>
+      ),
+    },
+  ];
 
   return (
-    <div className="max-w-7xl m-auto">
-      {product.loading && <p><Loading></Loading></p>}
+    <div className="max-w-7xl m-auto pb-10">
+      {product.loading && (
+        <p>
+          <Loading></Loading>
+        </p>
+      )}
       {!product.loading && product.error ? <p>{product.error}</p> : ""}
       {!product.loading && product?.product?.product ? (
         <div class="card w-full bg-base-100 shadow border mt-10">
-          <div class="card-body">
+          <div class="card-body ">
             <section class="text-gray-600 body-font overflow-hidden">
               <div class="container px-5 py- mx-auto">
                 <div class="lg:w-4/5 mx-auto flex flex-wrap">
@@ -175,17 +204,25 @@ const ProductInfo = () => {
                       shorts keytar banjo tattooed umami cardigan.
                     </p>
                     <div class="lg:flex block mt-6 justify-between items-center pb-5 border-b-2 border-gray-100 mb-5">
-                    <div>
-                    <button onClick={()=>decreasequantity()} className="bg-red-300 rounded p-2 text-white px-5">-</button>
-                  <div className="px-2 inline">
-                  <div className="w-[50px] h-[40px] inline py-2 mt-2 bg-white border rounded-md focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40">
-                    <span className="px-4">{quantity}</span>
-                    
- 
-                  </div>
-                  </div>
-                  <button onClick={()=>increasequantity()} className="bg-red-300 rounded p-2 text-white px-5">+</button>
-                    </div>
+                      <div>
+                        <button
+                          onClick={() => decreasequantity()}
+                          className="bg-red-300 rounded p-2 text-white px-5"
+                        >
+                          -
+                        </button>
+                        <div className="px-2 inline">
+                          <div className="w-[50px] h-[40px] inline py-2 mt-2 bg-white border rounded-md focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40">
+                            <span className="px-4">{quantity}</span>
+                          </div>
+                        </div>
+                        <button
+                          onClick={() => increasequantity()}
+                          className="bg-red-300 rounded p-2 text-white px-5"
+                        >
+                          +
+                        </button>
+                      </div>
                       <h1>
                         Avalible quantity: {product?.product?.product?.Stock}
                       </h1>
@@ -217,6 +254,41 @@ const ProductInfo = () => {
                 </div>
               </div>
             </section>
+            <div className="border-t mt-5">
+              <div>
+                <div className="flex justify-center  px-4">
+                  <div class="card w-full bg-base-100  ">
+                    <div class="card-body p-4">
+                      <Tab.Group>
+                        <Tab.List className="flex gap-10 py-[4px] bg-slate-100 px-[4px] border rounded-lg  mx-auto justify-center">
+                          {Tabs.map((item, index) => (
+                            <Tab
+                              key={index}
+                              className={({ selected }) => (
+                                "w-full relative  px-4 py-2.5 focus:outline-none whitespace-nowrap",
+                                selected
+                                  ? "transition duration-500 py-[5px] px-6 bg-red-400 text-white rounded-lg "
+                                  : "  py-[5px] px-6"
+                              )}
+                            >
+                              {index < Tabs.length - 1 && (
+                                <span className=" absolute right-0 w-[1px] h-6 top-1/2 -translate-y-1/2 bg-gray-100" />
+                              )}
+                              <span className="text-xl">{item.name}</span>
+                            </Tab>
+                          ))}
+                        </Tab.List>
+                        <Tab.Panels className="pt-5">
+                          {Tabs.map((item, index) => (
+                            <Tab.Panel>{item.content}</Tab.Panel>
+                          ))}
+                        </Tab.Panels>
+                      </Tab.Group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       ) : (
