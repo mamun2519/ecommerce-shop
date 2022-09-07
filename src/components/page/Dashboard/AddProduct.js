@@ -5,10 +5,12 @@ import { useForm } from "react-hook-form";
 import { BiLockOpenAlt } from "react-icons/bi";
 import { MdAddPhotoAlternate } from "react-icons/md";
 import { TiDelete } from "react-icons/ti";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const AddProduct = () => {
   const [productPictue, setProductPicture] = useState("");
+  const navigate = useNavigate()
   const {
     register,
     formState: { errors },
@@ -331,6 +333,9 @@ const AddProduct = () => {
             </div>
           </div>
         </form>
+      </div>
+      <div className="mt-5">
+            <button onClick={()=>navigate('/dashboard/manageProduct')} className="bg-red-500 text-white px-6 py-2 rounded-lg">Back</button>
       </div>
     </div>
   );

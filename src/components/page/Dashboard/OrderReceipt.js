@@ -1,13 +1,14 @@
 import html2canvas from "html2canvas";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import auth from "../../../firebase.init";
 
 const OrderReceipt = () => {
   const [user] = useAuthState(auth);
   const [order, setOrder] = useState({});
   const { id } = useParams();
+  const navigate = useNavigate()
   useEffect(() => {
     fetch(`http://localhost:5000/order/${id}`)
       .then((res) => res.json())
@@ -177,13 +178,17 @@ const OrderReceipt = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-10">
+      <div className="text-center mt-5">
         <button
           onClick={() => dewenlodeReciptHendeler()}
           className=" bg-slate-300 py-1 px-4 rounded"
         >
           Download Receipt
         </button>
+      </div>
+
+      <div>
+            <button onClick={()=>navigate('/dashboard/myorders')} className="bg-red-500 text-white px-6 py-2 rounded-lg">Back</button>
       </div>
     </div>
   );

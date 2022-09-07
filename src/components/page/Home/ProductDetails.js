@@ -2,7 +2,7 @@ import React from "react";
 import Loading from "../Utilitis/Loading";
 
 const ProductDetails = ({ product }) => {
-      console.log(product);
+
   return (
     <div className="lg:w-4/5 mx-auto  grid grid-cols-2">
       {product.loading && (

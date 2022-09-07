@@ -19,7 +19,7 @@ const Myorder = () => {
   return (
     <div className={isOpen ? " blur-lg" : ""}>
       <div >
-            <ShowMessage/>
+            <ShowMessage myOrder={myOrder}/>
       </div>
       <section class="py-1 bg-blueGray-50">
         <div class="w-full  mb-12 xl:mb-0 px-4 mt-5">

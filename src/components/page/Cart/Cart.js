@@ -13,23 +13,23 @@ const Cart = () => {
   },[cart])
  
   return (
-    <div className="max-w-7xl m-auto px-2 mt-10">
+    <div className="max-w-7xl m-auto px-4 mt-10">
       <div class="">
         <div class="">
           <div className=" grid gird-cols-1 lg:grid-cols-3 gap-5">
-            <div className=" col-span-2 ">
+            <div className=" lg:col-span-2 ">
               <section class="antialiased  text-gray-600" x-data="app">
                 <div class="flex flex-col justify-center h-full">
-                  <div class="w-full  bg-white shadow-md rounded-xl border border-gray-200">
+                  <div class="lg:w-full w-96 bg-white shadow-md rounded-xl border border-gray-200">
                     <header class="px-5 py-4 border-b border-gray-100">
                       <div class="font-semibold flex   justify-between text-gray-800">
-                        <p>Shoping Cart</p>
+                        <p>Shopping Cart</p>
                         <p>{cart.length} Items</p>
                       </div>
                     </header>
 
-                    <div class="overflow-x-auto p-3">
-                      <table class="table-auto w-full">
+                    <div class="block w-full overflow-x-auto p-3">
+                      <table class=" items-center bg-transparent w-full border-collapse">
                         <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                           <tr className="">
                             <th>Picture</th>

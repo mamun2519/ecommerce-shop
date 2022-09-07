@@ -17,14 +17,14 @@ const Dashboard = () => {
     <div className="">
       <div class="drawer drawer-mobile">
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content lg:px-6 py-6">
+        <div class="drawer-content lg:px-6 py-6 ">
           {/* <!-- Page content here --> */}
           
           <Outlet />
-          <div className="flex flex-col  justify-end px-3">
+          <div className="flex   justify-end items-top  relative h-12 px-3">
             <label
               for="my-drawer-2"
-              class="bg-red-50 border rounded-full p-5 drawer-button lg:hidden"
+              class="bg-red-500 w-8 border absolute top-[-500px]  rounded-full p-5 drawer-button lg:hidden"
             ></label>
           </div>
         </div>

@@ -27,6 +27,7 @@ import User from './components/page/Dashboard/User';
 import ManageProduct from './components/page/Dashboard/ManageProduct';
 import AddProduct from './components/page/Dashboard/AddProduct';
 import RequreAdmin from './components/page/Authontication/RequreAdmin';
+import ProductReadMore from './components/page/Dashboard/ProductReadMore';
 function App() {
   
   return (
@@ -41,8 +42,8 @@ function App() {
           <Dashboard/>
         </RequreAuth>
        }>
-       <Route  index element={<ShowMessage/>}></Route>
-       <Route  path='/dashboard/myorders' element={<Myorder/>}></Route>
+       {/* <Route  index element={<ShowMessage/>}></Route> */}
+       <Route index element={<Myorder/>}></Route>
        <Route  path='/dashboard/updateProfile' element={
          <RequreAuth>
                <UpdateProfile/>
@@ -77,6 +78,14 @@ function App() {
         <RequreAuth>
         <RequreAdmin>
         <User/>
+        </RequreAdmin>
+        </RequreAuth>
+       }></Route>
+       <Route  path='/dashboard/product/readMore/:id' element={
+
+        <RequreAuth>
+        <RequreAdmin>
+        <ProductReadMore/>
         </RequreAdmin>
         </RequreAuth>
        }></Route>

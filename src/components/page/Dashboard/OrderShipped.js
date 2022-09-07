@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 const OrderShipped = () => {
@@ -7,6 +7,7 @@ const OrderShipped = () => {
   const [shippedInfo, setShippedInfo] = useState({});
   const orderStatusRef = useRef();
   const [orderStatus, setOrderStatus] = useState("");
+  const navigate = useNavigate()
   useEffect(() => {
     fetch(`http://localhost:5000/order/${id}`)
       .then((res) => res.json())
@@ -281,6 +282,9 @@ const OrderShipped = () => {
             </div>
           </div>
         </div>
+        <div>
+            <button onClick={()=>navigate('/dashboard/manageOrder')} className="bg-red-500 text-white px-6 py-2 rounded-lg">Back</button>
+      </div>
       </div>
     </div>
   );

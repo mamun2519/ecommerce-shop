@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ManageProductRow = ({ product }) => {
-  const { name, price, Stock, images, category, description } = product;
+  const { name, price, Stock, images, category, description , _id } = product;
+  const navigate = useNavigate()
   return (
     <tr className="border-b">
       <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
@@ -25,6 +27,9 @@ const ManageProductRow = ({ product }) => {
       </td>
       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
         {description}
+      </td>
+      <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+        <button onClick={()=>navigate(`/dashboard/product/readMore/${_id}`)} className="bg-red-500 text-white px-4 py-1 rounded-lg">Read More</button>
       </td>
 
       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
