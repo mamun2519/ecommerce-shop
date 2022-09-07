@@ -233,7 +233,7 @@ const AddProduct = () => {
                     </div>
                   </div>
 
-                  <input
+                  <select
                     {...register("brand", {
                       required: {
                         value: true,
@@ -243,7 +243,13 @@ const AddProduct = () => {
                     type="text"
                     placeholder="Enter brand"
                     class="block w-full px-4 py-2 mt-2 pl-12  bg-white border rounded-md   focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                  />
+                  >
+                    <option value="Aarong" selected>Aarong</option>
+                    <option value="Richman">Richman</option>
+                    <option value="Dorjibari">Dorjibari</option>
+                    <option value="Smartex">Smartex</option>
+                    <option value="Texmart">Texmart</option>
+                    </select>
                   <label class="label">
                     {errors.brand?.type === "required" && (
                       <span className="text-red-500">

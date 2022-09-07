@@ -39,7 +39,7 @@ const Navber = () => {
       )}
 
       <li>
-        <a>Blog</a>
+        <a>Customer Service</a>
       </li>
     </>
   );
@@ -72,7 +72,7 @@ const Navber = () => {
                 {navber}
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-xl">Smart Ecommarce</a>
+            <a className="btn btn-ghost normal-case text-xl">SMART E-SHOP</a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0">{navber}</ul>
