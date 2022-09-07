@@ -12,7 +12,7 @@ const Reviews = () => {
     <div>
       <div id="testimonail" className="max-w-7xl m-auto lg:px-2 px-4 my-40">
         <div className="mt-16">
-          <p className="text-xl">Coustomer Review</p>
+          <p className="text-xl">RECENT REVIEWS</p>
           <div className="">
             <Swiper
               pagination={true}

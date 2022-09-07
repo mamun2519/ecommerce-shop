@@ -1,14 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { fetchProduct } from "../Futurecher/Slice/productSlice";
 
 const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
+  const [searchText, setSearchText] = useState();
+  console.log(searchText);
+  const disPatch = useDispatch();
+  const searchHendeler = () => {
+    disPatch(fetchProduct(searchText));
+  };
   return (
     <div className="card-bod p-2  ">
+      <div className="relative text-center">
+        
+        <input
+          onChange={(e) => setSearchText(e.target.value)}
+          className="h-14 w-[220px] lg:w-[220px] search border outline-none rounded-lg px-2 "
+          placeholder="Search Product"
+          type="text"
+          name=""
+          id=""
+        />
+        <button
+          onClick={() => searchHendeler()}
+          className="h-12 mt-1 bg-red-500 px-2 text-white rounded-lg absolute left-[152px] lg:left-[152px]"
+        >
+          Search
+        </button>
+
+      </div>
       <div
         onClick={() => selectCatagoryHendeler("T Shirt")}
         className={
           shart
-            ? "bg-red-400  rounded-lg border-b   px-4 text-white cursor-pointer"
-            : "py-3 border-b  px-4 cursor-pointer"
+            ? "bg-red-400  rounded-lg border-b  mt-2  px-4 text-white cursor-pointer"
+            : " border-b  px-4 cursor-pointer mt-2"
         }
       >
         <p id="tShart" className="py-3">
@@ -23,7 +49,7 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
             : "py-3 border-b  px-4 cursor-pointer"
         }
       >
-        <p id="hudi" className="py-c">
+        <p id="hudi" className="">
           Smart Boy Hudi
         </p>
       </div>
@@ -39,8 +65,8 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
       <div  onClick={() => selectCatagoryHendeler("all")}
         className={
           viewAll
-            ? "bg-red-400 py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
-            : "py-3 border-b  px-4 cursor-pointer"
+            ? "bg-red-400  rounded-lg border-b   px-4 text-white cursor-pointer"
+            : " border-b  px-4 cursor-pointer"
         }>
         <p className="py-3">Vrew All Catagory</p>
       </div>

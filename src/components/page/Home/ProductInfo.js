@@ -9,14 +9,17 @@ import ProductReview from "./ProductReview";
 import AddProductReview from "./AddProductReview";
 import ProductDetails from "./ProductDetails";
 import { toast } from "react-toastify";
+import MoreProduct from "./MoreProduct";
+
 const ProductInfo = () => {
+ 
   const [quantity, setquantity] = useState(1);
   const { id } = useParams();
   const disPatch = useDispatch();
   const product = useSelector((state) => state.product);
   useEffect(() => {
     disPatch(fetchSingleProduct(id));
-  }, []);
+  }, [id]);
 
   const addedToCartHendeler = () => {
     const totalPrice =
@@ -70,6 +73,16 @@ const ProductInfo = () => {
         </div>
       ),
     },
+    {
+      name: "More Products",
+      content: (
+        <div>
+          <MoreProduct></MoreProduct>
+     
+        </div>
+      ),
+    },
+   
   ];
 
   return (

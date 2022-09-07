@@ -1,13 +1,17 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { FcLike } from 'react-icons/fc';
 import { GrView } from 'react-icons/gr';
+
 import { useNavigate } from 'react-router-dom';
 
 const Product = ({product}) => {
   const navigate = useNavigate()
-      const {name , description , price , images , _id} = product
- 
+      const {name , description , price , images , _id , Stock} = product
+  
+     
+   
       return (
             <div className="card  h-[420px]  bg-base-100 shadow-md border relative ">
             <figure className="px-5 pt-5">
@@ -18,7 +22,7 @@ const Product = ({product}) => {
               />
             </figure>
             <div className="card-b  px-5 pt-3">
-            <p className="badge badge-secondary p-2 absolute top-[25px] right-[2px]  rotate-45">In Stcok</p>
+            <p className={Stock == 0 ?"bg-red-400 text-white text-sm rounded-lg px-2 absolute top-[25px] right-[2px] line-through " : "bg-red-400 text-white text-sm rounded-lg px-2 absolute top-[25px] right-[2px] "}> {Stock == 0 ? "Out Stock" : "In Stock"} </p>
               <h2 className="card-title pb-0">{name}  </h2>
              
               <span className=" text-gray-500">{description}</span>

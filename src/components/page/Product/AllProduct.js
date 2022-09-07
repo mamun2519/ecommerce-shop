@@ -50,10 +50,10 @@ const AllProduct = () => {
   };
       return (
             <div className="max-w-7xl m-auto px-2 my-20">
-      <h1 className="text-xl mb-5">Top Categories Products</h1>
+      <h1 className="text-xl">PRODUCTS CATEGORIES</h1>
       <div className="grid lg:grid-cols-4  grid-cols-2">
         <div className="w-60  mt-5">
-          <div className="card bg-base-100  sticky top-0 border shadow-md rounded-lg h-80">
+          <div className="card bg-base-100  sticky top-0 border shadow-md rounded-lg h-96">
            
             <Catagory
             selectCatagoryHendeler={selectCatagoryHendeler}
@@ -65,7 +65,7 @@ const AllProduct = () => {
             </Catagory>
           </div>
         </div>
-        <div className="w-full col-span-3">
+        <div className="w-full col-span-3 mt-5">
           <div className=" grid lg:grid-cols-3 grid-cols-1  gap-5">
             {product.loading && <Loading></Loading>}
             {!product.loading && product.error ? <p>{product.error}</p> : ""}
