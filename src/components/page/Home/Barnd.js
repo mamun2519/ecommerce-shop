@@ -13,7 +13,7 @@ const Barnd = () => {
             data-aos-duration="3000"
             
             className='my-40 max-w-7xl m-auto px-3 '>
-                  <h1 className='text-xl my-5 ptext'>Our Top Sales Brand</h1>
+                  <h1 className='text-xl my-5 ptext'>OUR TOP SALES BRAND</h1>
                   <div className='grid lg:grid-cols-6 grid-cols-3 '>
 
                   <div className='border h-28'>

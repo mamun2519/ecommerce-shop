@@ -11,17 +11,17 @@ const Busness = () => {
             data-aos="fade-up"
      data-aos-duration="3000"
             
-            className='my-20 max-w-7xl m-auto px-3'>
-                   <h1 className='text-xl ptext'>Milions Business Trust Us</h1>
+            className='max-w-7xl m-auto px-3'>
+                   <h1 className='text-xl ptext'>OUR SATICFAY CUSTOMER</h1>
                   <div className="sumarry-counter grid grid-cols-1 lg:grid-cols-4 gap-5">
                         <div class="card  shadow-sm border bg-white mt-3">
-                              <div class="card-body text-center">
+                              <div class="car p-5 text-center">
                                     <div className=''>
-                                          <div className=' inline-block'>
-                                          <small className=' text-4xl'>< AiFillCustomerService className='text-blue-800' /></small>
+                                          <div className='inline-block'>
+                                          <small className='text-3xl'>< AiFillCustomerService className='text-blue-800' /></small>
                                           </div>
 
-                                          <p className='text-3xl  font-bold'>
+                                          <p className='text-2xl  font-bold'>
                                                 <CountUp delay={5} start={0} end={670} />
                                           </p>
                                           <p className='text-xl ptext'>served customers</p>
@@ -29,11 +29,11 @@ const Busness = () => {
                               </div>
                         </div>
                         <div class="card shadow-sm border bg-white mt-3">
-                              <div class="card-body">
+                              <div class="card-bod  p-5">
                                     <div className='text-center'>
-                                          <small className='text-center inline-block text-4xl'>< SiBitcoincash className='text-red-400' /></small>
+                                          <small className='text-center inline-block text-3xl'>< SiBitcoincash className='text-red-400' /></small>
 
-                                          <p className='text-3xl font-bold'>
+                                          <p className='text-2xl font-bold'>
                                                 <CountUp delay={2} start={0} end={120} />M
                                           </p>
                                           <p className='text-xl ptext'>Annual revenue</p>
@@ -41,11 +41,11 @@ const Busness = () => {
                               </div>
                         </div>
                         <div class="card shadow-sm border bg-white mt-3">
-                              <div class="card-body">
+                              <div class="card-bod  p-5">
                                     <div className='text-center'>
-                                          <small className='text-center text-4xl inline-block'>< IoIosPeople className='text-blue-800' /></small>
+                                          <small className='text-center text-3xl inline-block'>< IoIosPeople className='text-blue-800' /></small>
 
-                                          <p className='text-3xl  font-bold'>
+                                          <p className='text-2xl  font-bold'>
                                                 <CountUp delay={5} start={0} end={33} />K
                                           </p>
                                           <p className='text-xl ptext'> Reviews</p>
@@ -53,11 +53,11 @@ const Busness = () => {
                               </div>
                         </div>
                         <div class="card shadow-sm border bg-white mt-3">
-                              <div class="card-body">
+                              <div class="card-bod  p-5">
                                     <div className='text-center'>
-                                          <small className='text-center text-4xl inline-block'>< MdProductionQuantityLimits className='text-red-400' /></small>
+                                          <small className='text-center text-3xl inline-block'>< MdProductionQuantityLimits className='text-red-400' /></small>
 
-                                          <p className='text-3xl  font-bold'>
+                                          <p className='text-2xl  font-bold'>
                                                 <CountUp delay={5} start={0} end={123} />
                                           </p>
                                           <p className='text-xl ptext'>Tools</p>
