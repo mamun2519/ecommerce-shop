@@ -91,7 +91,7 @@ const CartSumary = () => {
           {/* <p>text</p> */}
 
          <div>
-         <button  disabled={discount} onClick={()=>applayPromoCodeHendeler()} className={discount? "px-8 mt-3 py-2 bg-red-400 rounded-lg text-white": "px-8 mt-3 py-2 bg-red-500 rounded-lg text-white"}>
+         <button  disabled={discount} onClick={()=>applayPromoCodeHendeler()} className={discount? "px-8 mt-3 py-2 bg-red-200 rounded-lg text-white": "px-8 mt-3 py-2 bg-[#062C30] rounded-lg text-white"}>
             APPLY
           </button>
          </div>
@@ -112,7 +112,7 @@ const CartSumary = () => {
           <div class="mt-6">
             <button
             onClick={()=>navigate('/chackout')}
-             class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-red-400 rounded-md">
+             class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md">
               CheckOut
             </button>
           </div>

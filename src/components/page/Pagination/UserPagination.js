@@ -69,7 +69,7 @@ const UserPagination = () => {
             <div class="flex justify-center">
             <button onClick={()=>  previousPageHendeler()} href="#"
             disabled={prePage ==1 && "disabled"}
-            className={prePage == 1 ? "px-4 py-2 mx-1  capitalize  rounded-md cursor-not-allowed  bg-red-200  text-white": "px-4 py-2 mx-1  capitalize  rounded-md cursor-not-allowed  bg-red-400  text-white"}>
+            className={prePage == 1 ? "px-4 py-2 mx-1  capitalize  rounded-md cursor-not-allowed  bg-red-200  text-white": "px-4 py-2 mx-1  capitalize  rounded-md cursor-not-allowed  bg-[#062C30]  text-white"}>
                 <div class="flex items-center -mx-1">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
@@ -101,7 +101,7 @@ const UserPagination = () => {
                 5
             </button>
     
-            <button onClick={()=>  nextPageHendeler() }  disabled={prePage ==5 && "disabled"} className={prePage == 5 ? "px-4 py-2 mx-1  capitalize  rounded-md cursor-not-allowed  bg-red-200  text-white": "px-4 py-2 mx-1  capitalize  rounded-md cursor-not-allowed  bg-red-400  text-white"}>
+            <button onClick={()=>  nextPageHendeler() }  disabled={prePage ==5 && "disabled"} className={prePage == 5 ? "px-4 py-2 mx-1  capitalize  rounded-md cursor-not-allowed  bg-red-200  text-white": "px-4 py-2 mx-1  capitalize  rounded-md cursor-not-allowed  bg-[#062C30]  text-white"}>
                 <div class="flex items-center-mx-1">
                     <span class="mx-1">
                         Next

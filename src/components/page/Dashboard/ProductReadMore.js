@@ -412,7 +412,7 @@ const ProductReadMore = () => {
         )}
       </div>
       <div>
-            <button onClick={()=>navigate('/dashboard/manageProduct')} className="bg-red-500 text-white px-6 py-2 rounded-lg">Back</button>
+            <button onClick={()=>navigate('/dashboard/manageProduct')} className="bg-[#062C30] text-white px-6 py-2 rounded-lg">Back</button>
       </div>
     </div>
   );

@@ -49,7 +49,7 @@ const MyProfile = () => {
             </p>
           </div>
           <div className="flex justify-center mt-3"> 
-            <NavLink to='/dashboard/updateProfile' className="bg-red-500 text-white px-6 py-1  rounded-lg">Edit Profile</NavLink>
+            <NavLink to='/dashboard/updateProfile' className="bg-[#062C30] text-white px-6 py-1  rounded-lg">Edit Profile</NavLink>
           </div>
           <div className="mt-5 flex justify-center">
             <div>

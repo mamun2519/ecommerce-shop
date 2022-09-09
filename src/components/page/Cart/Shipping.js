@@ -295,7 +295,7 @@ const Shipping = () => {
           <input
             type="submit"
             value="Confrom Shipping"
-            class=" px-6 py-2 tracking-wide text-white transition-colors duration-200 transform bg-red-400 rounded-md"
+            class=" px-6 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
           />
         </div>
       </form>

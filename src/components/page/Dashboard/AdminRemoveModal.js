@@ -138,7 +138,7 @@ const AdminRemoveModal = ({ closeModal, openModal, isOpen, id }) => {
                             <div class="mt-6">
                               <button
                                 onClick={() => removeUserAdminHendeler(user)}
-                                className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-red-400 rounded-md"
+                                className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30]rounded-md"
                               >
                                 Remove Admin
                               </button>

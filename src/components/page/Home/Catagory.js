@@ -23,7 +23,7 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
         />
         <button
           onClick={() => searchHendeler()}
-          className="h-12 mt-1 bg-red-500 px-2 text-white rounded-lg absolute left-[152px] lg:left-[152px]"
+          className="h-12 mt-1 bg-[#062C30] px-2 text-white rounded-lg absolute left-[152px] lg:left-[152px]"
         >
           Search
         </button>
@@ -33,7 +33,7 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
         onClick={() => selectCatagoryHendeler("T Shirt")}
         className={
           shart
-            ? "bg-red-400  rounded-lg border-b  mt-2  px-4 text-white cursor-pointer"
+            ? "bg-[#062C30]  rounded-lg border-b  mt-2  px-4 text-white cursor-pointer"
             : " border-b  px-4 cursor-pointer mt-2"
         }
       >
@@ -45,7 +45,7 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
         onClick={() => selectCatagoryHendeler("hudi")}
         className={
           hudi
-            ? "bg-red-400 py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
+            ? "bg-[#062C30] py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
             : "py-3 border-b  px-4 cursor-pointer"
         }
       >
@@ -65,7 +65,7 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
       <div  onClick={() => selectCatagoryHendeler("all")}
         className={
           viewAll
-            ? "bg-red-400  rounded-lg border-b   px-4 text-white cursor-pointer"
+            ? "bg-[#062C30]  rounded-lg border-b   px-4 text-white cursor-pointer"
             : " border-b  px-4 cursor-pointer"
         }>
         <p className="py-3">Vrew All Catagory</p>

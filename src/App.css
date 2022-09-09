@@ -7,14 +7,14 @@
 }
 
 .progressBar li.active {
-  color: dodgerblue;
+  color: #062C30;
 }
 .progressBar li.active:before {
-  border-color: dodgerblue;
-  background-color: dodgerblue
+  border-color: #062C30;;
+  background-color: #062C30;
 }
 .progressBar li.active + li:after {
-  background-color: dodgerblue;
+  background-color: #062C30;;
 }
 .wrapper-progressBar {
   width: 100%
@@ -60,16 +60,16 @@
 }
 
 .progressBar li.active {
-  color: dodgerblue;
+  color: #062C30;
 }
 
 .progressBar li.active:before {
-  border-color: dodgerblue;
-  background-color: dodgerblue
+  color: #062C30;
+  background-color: #062C30;
 }
 
 .progressBar .active:after {
-  background-color: dodgerblue;
+  background-color: #062C30;;
 }
 
 .banner{
@@ -115,11 +115,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #062C30;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #062C30;
 }
 
 @keyframes App-logo-spin {

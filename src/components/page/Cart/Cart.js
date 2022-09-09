@@ -30,7 +30,7 @@ const Cart = () => {
 
                     <div class="block w-full overflow-x-auto p-3">
                       <table class=" items-center bg-transparent w-full border-collapse">
-                        <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                        <thead class="text-xs font-semibold uppercase  bg-[#062C30] text-white">
                           <tr className="">
                             <th>Picture</th>
                             <th class="p-2">

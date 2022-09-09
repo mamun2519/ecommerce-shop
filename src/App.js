@@ -31,7 +31,7 @@ import ProductReadMore from './components/page/Dashboard/ProductReadMore';
 function App() {
   
   return (
-    <div className="">
+    <div className="bg">
        <Navber/>
             <Routes>
         <Route path='/' element={<Home/>}/>

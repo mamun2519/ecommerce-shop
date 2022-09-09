@@ -220,7 +220,7 @@ const ProductInfo = () => {
                       <div>
                         <button
                           onClick={() => decreasequantity()}
-                          className="bg-red-300 rounded p-2 text-white px-5"
+                          className="bg-[#062C30] rounded p-2 text-white px-5"
                         >
                           -
                         </button>
@@ -231,7 +231,7 @@ const ProductInfo = () => {
                         </div>
                         <button
                           onClick={() => increasequantity()}
-                          className="bg-red-300 rounded p-2 text-white px-5"
+                          className="bg-[#062C30] rounded p-2 text-white px-5"
                         >
                           +
                         </button>
@@ -246,7 +246,7 @@ const ProductInfo = () => {
                       </span>
                       <button
                         onClick={() => addedToCartHendeler()}
-                        class="flex ml-auto text-white bg-red-400 rounded-lg px-6 py-3"
+                        class="flex ml-auto text-white bg-[#062C30] rounded-lg px-6 py-3"
                       >
                         Add To card
                       </button>
@@ -280,7 +280,7 @@ const ProductInfo = () => {
                               className={({ selected }) => (
                                 "w-full relative  px-4 py-2.5 focus:outline-none whitespace-nowrap",
                                 selected
-                                  ? "transition duration-500 py-[5px] px-6 bg-red-400  text-white rounded-lg "
+                                  ? "transition duration-500 py-[5px] px-6 bg-[#062C30]  text-white rounded-lg "
                                   : "  py-[5px] px-6"
                               )}
                             >

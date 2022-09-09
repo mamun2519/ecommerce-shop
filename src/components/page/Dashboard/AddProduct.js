@@ -334,14 +334,14 @@ const AddProduct = () => {
               <input
                 type="submit"
                 value="Save"
-                className="bg-red-500 px-6 py-2 rounded-lg text-white"
+                className="bg-[#062C30] px-12 py-2 rounded-lg text-white"
               />
             </div>
           </div>
         </form>
       </div>
       <div className="mt-5">
-            <button onClick={()=>navigate('/dashboard/manageProduct')} className="bg-red-500 text-white px-6 py-2 rounded-lg">Back</button>
+            <button onClick={()=>navigate('/dashboard/manageProduct')} className="bg-[#062C30] text-white px-6 py-2 rounded-lg">Back</button>
       </div>
     </div>
   );

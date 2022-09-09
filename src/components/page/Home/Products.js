@@ -73,7 +73,7 @@ const Products = () => {
             ) : null}
           </div>
           <div className="text-right mt-5">
-            <button onClick={()=> navigate("/view/all/product")} className=" bg-red-400 text-white rounded-lg px-3 py-2">
+            <button onClick={()=> navigate("/view/all/product")} className=" bg-[#062C30] text-white rounded-lg px-3 py-2">
               See All Product
             </button>
           </div>

@@ -58,7 +58,7 @@ const Order = () => {
             <div class="mt-6 text-center">
               <button
                 onClick={() => navigate("/chackout/orderReview/payment")}
-                class="w-1/2 px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-red-400 rounded-md"
+                class="w-1/2 px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
               >
                 Confrom Order
               </button>

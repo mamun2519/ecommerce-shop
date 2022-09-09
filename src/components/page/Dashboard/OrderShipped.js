@@ -273,7 +273,7 @@ const OrderShipped = () => {
               <button
                 disabled={shippedInfo?.orderStatus == "Delivered" && "disabled"}
                 onClick={() => confromOrderDelivaryHendeler()}
-                class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-red-400 rounded-md"
+                class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
               >
                 {shippedInfo?.orderStatus == "Processing" && "Shipped Now"}
                 {shippedInfo?.orderStatus == "Shipped" && "Delivered Now"}
@@ -283,7 +283,7 @@ const OrderShipped = () => {
           </div>
         </div>
         <div>
-            <button onClick={()=>navigate('/dashboard/manageOrder')} className="bg-red-500 text-white px-6 py-2 rounded-lg">Back</button>
+            <button onClick={()=>navigate('/dashboard/manageOrder')} className="bg-[#062C30] text-white px-6 py-2 rounded-lg">Back</button>
       </div>
       </div>
     </div>

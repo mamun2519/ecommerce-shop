@@ -377,7 +377,7 @@ const UpdateProfile = () => {
               <input
                 type="submit"
                 value="Save"
-                className="bg-red-500 px-6 py-2 rounded-lg text-white"
+                className="bg-[#062C30] px-8 py-2 rounded-lg text-white"
               />
             </div>
           </div>

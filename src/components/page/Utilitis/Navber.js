@@ -12,15 +12,13 @@ const Navber = () => {
   const cart = useSelector((state) => state.cart.cart);
   const avatars = useSelector((state) => state.avatar);
 
-  const disPatch = useDispatch()
+  const disPatch = useDispatch();
   const userId = localStorage.getItem("UserId");
   useEffect(() => {
-  
-      disPatch(fetchUserAvater(userId))
-
-  }, [  user]);
+    disPatch(fetchUserAvater(userId));
+  }, [user]);
   console.log();
-  
+
   const navber = (
     <>
       <li>
@@ -72,7 +70,11 @@ const Navber = () => {
                 {navber}
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-xl">SMART E-SHOP</a>
+            <a className="btn btn-ghost normal-case text-xl">
+              SMA<span className="text-[#EC255A]">RT</span>
+            
+                E-S<span className="text-[#EC255A]">HOP</span>
+            </a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0">{navber}</ul>
@@ -118,11 +120,11 @@ const Navber = () => {
                   className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <li>
-                    <NavLink to="/dashboard/myProfile" className="justify-between">
-                        Profile
-                      
-                      
-                     
+                    <NavLink
+                      to="/dashboard/myProfile"
+                      className="justify-between"
+                    >
+                      Profile
                     </NavLink>
                   </li>
                   <li>
@@ -136,7 +138,7 @@ const Navber = () => {
             )}
 
             {!user && (
-              <button className="px-4 py-2 bg-red-400 rounded-lg text-white">
+              <button className="px-4 py-2 bg-[#062C30] rounded-lg text-white">
                 <NavLink to="/login">Login</NavLink>
               </button>
             )}

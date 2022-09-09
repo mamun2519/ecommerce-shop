@@ -35,7 +35,7 @@ const Login = () => {
                   className={({ selected }) => (
                     "w-full relative  px-4 py-2.5 focus:outline-none whitespace-nowrap",
                     selected
-                      ? "transition duration-500 py-[5px] px-6 bg-red-400 text-white rounded-lg "
+                      ? "transition duration-500 py-[5px] px-6 bg-[#062C30] text-white rounded-lg "
                       : "  py-[5px] px-6"
                   )}
                 >

@@ -126,7 +126,7 @@ const CheckoutForm = () => {
                 </div>
               )}
                 <button
-                  className="bg-red-500 rounded-lg px-6 py-2 mt-3 w-1/2 text-white  "
+                  className="bg-[#062C30] rounded-lg px-6 py-2 mt-3 w-1/2 text-white  "
                   disabled={isLoading || !stripe || !elements}
                   id="submit"
                 >

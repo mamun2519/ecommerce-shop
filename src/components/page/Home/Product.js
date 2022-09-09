@@ -22,7 +22,7 @@ const Product = ({product}) => {
               />
             </figure>
             <div className="card-b  px-5 pt-3">
-            <p className={Stock == 0 ?"bg-red-400 text-white text-sm rounded-lg px-2 absolute top-[25px] right-[2px] line-through " : "bg-red-400 text-white text-sm rounded-lg px-2 absolute top-[25px] right-[2px] "}> {Stock == 0 ? "Out Stock" : "In Stock"} </p>
+            <p className={Stock == 0 ?"bg-red-400 text-white text-sm rounded-lg px-2 absolute top-[25px] right-[2px] line-through " : "bg-[#EC255A] text-white text-sm rounded-lg px-2 absolute top-[25px] right-[2px] "}> {Stock == 0 ? "Out Stock" : "In Stock"} </p>
               <h2 className="card-title pb-0">{name}  </h2>
              
               <span className=" text-gray-500">{description}</span>
@@ -36,9 +36,9 @@ const Product = ({product}) => {
                 <span><AiFillStar/></span>
                 <span><AiFillStar/></span>
               </div>
-              
+              {/* // 062C30  1687A7  126E82 FF4B5C*/}
               <div className="mt-5 flex gap-3">
-              <button onClick={() => navigate(`/productInfo/${_id}`)} className=" px-4 w-1/2 py-2 bg-red-400 rounded-lg text-white ">Buy Now</button>
+              <button onClick={() => navigate(`/productInfo/${_id}`)} className=" px-4 w-1/2 py-2 bg-[#062C30]  rounded-lg text-white ">Buy Now</button>
               <button className=" px-4 py-2 text-xl bg-base-200 rounded-lg text-white"><span className=""><FcLike/></span></button>
               <button className=" px-4 py-2 text-xl bg-base-200 text-red-400 rounded-lg"><span className=""><GrView/></span></button>
               </div>

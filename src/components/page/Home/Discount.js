@@ -23,7 +23,7 @@ const Discount = () => {
               </p>
 
               <div className="mt-2">
-                <button class="py-2 px-3 text-white bg-red-400 rounded-lg">
+                <button class="py-2 px-3 text-white bg-[#062C30]  rounded-lg">
                   Shop Now
                 </button>
               </div>
@@ -40,7 +40,7 @@ const Discount = () => {
               </p>
 
               <div className="mt-2">
-                <button class="py-2 px-3 text-white bg-red-400 rounded-lg">
+                <button class="py-2 px-3 text-white bg-[#062C30]  rounded-lg">
                   Shop Now
                 </button>
               </div>
@@ -56,7 +56,7 @@ const Discount = () => {
               </p>
 
               <div className="mt-2">
-                <button class="py-2 px-3 text-white bg-red-400 rounded-lg">
+                <button class="py-2 px-3 text-white bg-[#062C30]  rounded-lg">
                   Shop Now
                 </button>
               </div>

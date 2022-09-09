@@ -43,7 +43,7 @@ const ManageProduct = () => {
                     />
                     <button
                       onClick={() => searchProductHendeler()}
-                      className="h-10 mt-1 bg-red-500 px-4 text-white rounded-lg absolute right-[5px]"
+                      className="h-10 mt-1 bg-[#062C30] px-4 text-white rounded-lg absolute right-[5px]"
                     >
                       Search
                     </button>
@@ -55,7 +55,7 @@ const ManageProduct = () => {
             <div class="block w-full overflow-x-auto">
               <table class="items-center bg-transparent w-full border-collapse ">
                 <thead>
-                  <tr className="bg-teal-400 sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
+                  <tr className="bg-[#062C30] text-white sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
                     <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                       product Profile
                     </th>
