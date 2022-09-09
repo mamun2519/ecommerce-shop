@@ -1,11 +1,14 @@
 import React from "react";
 import { useState } from "react";
+import UserDeleteM from "../Modal/UserDeleteM";
 import MakeAdminModal from "./MakeAdminModal";
 
 const UserRow = ({ user }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isUser, setIsUser] = useState(false);
   const { name, email, role, avatar, _id } = user;
   const [userId, setUserId] = useState("");
+  const [userIds, setUserIds] = useState("");
   console.log(user);
   const makeAdminModal = (id) => {
     setUserId(id);
@@ -17,6 +20,17 @@ const UserRow = ({ user }) => {
 
   function openModal() {
     setIsOpen(true);
+  }
+  const removeUser = (id) => {
+    setUserIds(id);
+    useropenModal();
+  };
+  function usercloseModal() {
+    setIsUser(false);
+  }
+
+  function useropenModal() {
+    setIsUser(true);
   }
 
   return (
@@ -47,7 +61,10 @@ const UserRow = ({ user }) => {
       </td>
 
       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-        <button>
+        <button
+        onClick={()=>removeUser(_id)}
+        
+        >
           <svg
             class="w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1"
             fill="none"
@@ -71,6 +88,14 @@ const UserRow = ({ user }) => {
           openModal={openModal}
           id={userId}
         ></MakeAdminModal>
+      )}
+      {isUser && (
+        <UserDeleteM
+          closeModal={usercloseModal}
+          isUser={isUser}
+          openModal={usercloseModal}
+          id={userIds}
+        ></UserDeleteM>
       )}
     </tr>
   );

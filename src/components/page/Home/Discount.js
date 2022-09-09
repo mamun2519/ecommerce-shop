@@ -34,7 +34,7 @@ const Discount = () => {
           <div class="h-52 flex items-center pl-5">
             <div className=" ">
               <h2 class="text-2xl font-medium text-white">GET 40%
-                                        OFF YOUR ENTIRE ORDER!</h2>
+                                        ENTIRE ORDER!</h2>
               <p className="text-xl text-white">
               Black Friday Sale
               </p>

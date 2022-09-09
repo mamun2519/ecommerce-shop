@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import ProductDeleteM from '../Modal/ProductDeleteM';
 const ManageProductRow = ({ product }) => {
   const { name, price, Stock, images, category, description , _id } = product;
   const navigate = useNavigate()
+
+  const [userId, setUserId] = useState("")
+  const [isOpen, setIsOpen] = useState(false);
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+    const deletehendeler = (id) => {
+      setUserId(id)
+      openModal()
+    }
+
   return (
     <tr className="border-b">
       <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
@@ -33,7 +48,9 @@ const ManageProductRow = ({ product }) => {
       </td>
 
       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-        <button>
+        <button
+        onClick={()=>deletehendeler(_id)}
+        >
           <svg
             class="w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1"
             fill="none"
@@ -50,14 +67,14 @@ const ManageProductRow = ({ product }) => {
           </svg>
         </button>
       </td>
-      {/* {isOpen && <MakeAdminModal
+      {isOpen && <ProductDeleteM
             closeModal={closeModal}
             isOpen={isOpen}
             openModal={openModal}
             id={userId}
 
           
-            ></MakeAdminModal>} */}
+            ></ProductDeleteM>}
     </tr>
   );
 };

@@ -46,8 +46,8 @@ const ShowMessage = ({myOrder}) => {
       </div>
     </div>
      </div>
-     <div>
-     <div    class="card w-80  text-center h-36 bg-base-100 shadow-md border rounded-md">
+     <div className="">
+     <div    class="card w-80 delivary text-center h-36 bg-base-100 shadow-md border rounded-md">
       <div class="p-5">
            <h1 className="text-xl  font-medium">Order Delivard</h1> 
            <p className="text-2xl  font-medium">{delivered?.length}</p>

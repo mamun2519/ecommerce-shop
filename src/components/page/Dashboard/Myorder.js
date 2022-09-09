@@ -14,7 +14,7 @@ const Myorder = () => {
 
 
     
-  }, [])
+  }, [myOrder])
   console.log(myOrder)
   return (
     <div className={isOpen ? " blur-lg" : ""}>

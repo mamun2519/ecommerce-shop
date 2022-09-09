@@ -16,6 +16,25 @@ const Cart = () => {
     <div className="max-w-7xl m-auto px-4 mt-10">
       <div class="">
         <div class="">
+
+          {cart.length == 0 ? 
+          <div className="lg:w-1/2 mx-auto w-[370px] h-[520px] bg-white shadow-md rounded-xl border border-gray-200  flex justify-center items-center">
+
+            <div className=" ">
+              <img className=" w-[370px] h-[370px]" src="/Assist/picture/emtyCart.gif" alt="" />
+              <p className="text-center text-xl   text-red-500">Shopping Cart Is Empty</p>
+            </div>
+
+         
+          </div>
+          
+          
+          
+          
+          
+          :  
+          
+          
           <div className=" grid gird-cols-1 lg:grid-cols-3 gap-5">
             <div className=" lg:col-span-2 ">
               <section class="antialiased  text-gray-600" x-data="app">
@@ -79,7 +98,8 @@ const Cart = () => {
             <div>
               <CartSumary></CartSumary>
             </div>
-          </div>
+          </div>}
+          
         </div>
       </div>
     </div>

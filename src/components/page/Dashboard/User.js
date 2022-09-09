@@ -26,6 +26,8 @@ const User = () => {
     disPatch(fetchAdmin(searchAdmin));
   };
 
+
+
   return (
     <div>
       <section class="py-1 bg-blueGray-50">

@@ -1,26 +1,30 @@
-import { Dialog, Transition } from '@headlessui/react';
 import React from 'react';
+import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react'
 import { toast } from 'react-toastify';
-const DeleteModal = ({closeModal , openModal , isOpen , id}) => {
-
-     const deleteMyOrderHendeler = (id) =>{
-      fetch(`https://boiling-mesa-36077.herokuapp.com/order/${id}` , {
-        method: "DELETE"
-      })
-      .then(res => res.json())
-      .then(data => {
-        if(data.success){
-          toast(data?.message)
-          closeModal()
-        }
-      })
-     }
+import { useDispatch } from 'react-redux';
+import { fetchProduct } from '../Futurecher/Slice/productSlice';
+import { fetchUser } from '../Futurecher/Slice/userSlice';
+import { fetchAdmin } from '../Futurecher/Slice/getallAdminSlice';
+const UserDeleteM = ({closeModal , openModal , isUser , id}) => {
+      const disPatch = useDispatch();
+      const deleteMyOrderHendeler = (id) =>{
+            fetch(`https://boiling-mesa-36077.herokuapp.com/user/delete/${id}` , {
+              method: "DELETE"
+            })
+            .then(res => res.json())
+            .then(data => {
+              if(data.success){
+                toast(data?.message)
+                closeModal()
+                disPatch(fetchUser());
+                disPatch(fetchAdmin());
+              }
+            })
+           }
       return (
             <div>
-            
-
-      <Transition appear show={isOpen} as={Fragment}>
+                  <Transition appear show={isUser} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
@@ -71,9 +75,8 @@ const DeleteModal = ({closeModal , openModal , isOpen , id}) => {
           </div>
         </Dialog>
       </Transition>
-</div>
-          
+            </div>
       );
 };
 
-export default DeleteModal;
+export default UserDeleteM;

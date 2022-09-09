@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom'
 import DeleteModal from './DeleteModal';
-const OrderRow = ({order ,setIsOpen , isOpen}) => {
+const OrderRow = ({order }) => {
       const {orderItems, totalPrice , orderStatus , _id} =  order
       const navigate = useNavigate()
-
+      const [userId, setUserId] = useState("")
+      const [isOpen, setIsOpen] = useState(false);
  
   function closeModal() {
     setIsOpen(false)
@@ -14,7 +15,8 @@ const OrderRow = ({order ,setIsOpen , isOpen}) => {
     setIsOpen(true)
   }
     const deletehendeler = (id) => {
-      console.log(id);
+      setUserId(id)
+      openModal()
     }
 
   
@@ -65,6 +67,7 @@ const OrderRow = ({order ,setIsOpen , isOpen}) => {
             closeModal={closeModal}
             isOpen={isOpen}
             openModal={openModal}
+            id={userId}
 
           
             ></DeleteModal>}
