@@ -9,7 +9,7 @@ const useAdmins = (user) =>{
       useEffect(()=>{
             const email = user?.email
             if(email){
-                  fetch(`http://localhost:5000/user/chackAdmin/${email}` , {
+                  fetch(`https://boiling-mesa-36077.herokuapp.com/user/chackAdmin/${email}` , {
                         method: "GET",
                         headers:{
                               "authorization": `Bearer ${localStorage.getItem('UserToken')}`

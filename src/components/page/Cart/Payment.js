@@ -21,7 +21,7 @@ const Payment = () => {
   
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:5000/order/create-payment-intent", {
+    fetch("https://boiling-mesa-36077.herokuapp.com/order/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ price:totalPrice }),

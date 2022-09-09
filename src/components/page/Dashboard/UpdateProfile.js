@@ -14,7 +14,7 @@ const UpdateProfile = () => {
   const userId = localStorage.getItem("UserId");
   useEffect(() => {
     if (userId) {
-      fetch(`http://localhost:5000/user/single/${userId}`)
+      fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${userId}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.success) {
@@ -63,7 +63,7 @@ const UpdateProfile = () => {
 
     await axios({
       method: "put",
-      url: `http://localhost:5000/user/update/${userId}`,
+      url: `https://boiling-mesa-36077.herokuapp.com/user/update/${userId}`,
       data: myForm,
       headers: { "Content-Type": "multipart/form-data" },
     })

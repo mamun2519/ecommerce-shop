@@ -7,7 +7,7 @@ const MoreProduct = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/product/get")
+    fetch("https://boiling-mesa-36077.herokuapp.com/product/get")
       .then((res) => res.json())
       .then((data) => setProduct(data.products));
   }, []);

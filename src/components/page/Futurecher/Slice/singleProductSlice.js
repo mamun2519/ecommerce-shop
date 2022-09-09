@@ -7,7 +7,7 @@ const initistialProductState = {
       error: ''
 }
 export const fetchSingleProduct = createAsyncThunk('/products/fetch' , (id) =>{
-      return axios.get(`http://localhost:5000/product/get/${id}`)
+      return axios.get(`https://boiling-mesa-36077.herokuapp.com/product/get/${id}`)
       .then((res) => res.data)
 })
 

@@ -13,21 +13,21 @@ export const fetchManageOrder = createAsyncThunk(
     console.log(catagory);
     if (typeof catagory == "number") {
       return axios
-        .get(`http://localhost:5000/order?page=${catagory}`)
+        .get(`https://boiling-mesa-36077.herokuapp.com/order?page=${catagory}`)
         .then((res) => res.data);
     }
     // if (catagory) {
     //   return axios
-    //     .get(`http://localhost:5000/product/get?keyword=${catagory}`)
+    //     .get(`https://boiling-mesa-36077.herokuapp.com/product/get?keyword=${catagory}`)
     //     .then((res) => res.data);
     // }
     // if (catagory === "all") {
     //   return axios
-    //     .get("http://localhost:5000/product/get")
+    //     .get("https://boiling-mesa-36077.herokuapp.com/product/get")
     //     .then((res) => res.data);
     // }
     return axios
-      .get("http://localhost:5000/order")
+      .get("https://boiling-mesa-36077.herokuapp.com/order")
       .then((res) => res.data);
   }
 );

@@ -29,7 +29,7 @@ const AddProduct = () => {
     myForm.append("images", productPictue);
     await axios({
       method: "post",
-      url: "http://localhost:5000/product/add",
+      url: "https://boiling-mesa-36077.herokuapp.com/product/add",
       data: myForm,
       headers: { "Content-Type": "multipart/form-data" },
     })

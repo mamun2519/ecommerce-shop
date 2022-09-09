@@ -8,7 +8,7 @@ const Myorder = () => {
   let [isOpen, setIsOpen] = useState(false)
   useEffect(() => {
    
-      fetch(`http://localhost:5000/order/myOrder/${userId}`)
+      fetch(`https://boiling-mesa-36077.herokuapp.com/order/myOrder/${userId}`)
       .then(res => res.json())
       .then(data => setMyOrder(data.order))
 

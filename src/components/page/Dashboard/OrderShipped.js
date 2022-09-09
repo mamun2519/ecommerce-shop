@@ -9,7 +9,7 @@ const OrderShipped = () => {
   const [orderStatus, setOrderStatus] = useState("");
   const navigate = useNavigate()
   useEffect(() => {
-    fetch(`http://localhost:5000/order/${id}`)
+    fetch(`https://boiling-mesa-36077.herokuapp.com/order/${id}`)
       .then((res) => res.json())
       .then((data) => setShippedInfo(data?.order));
   }, [shippedInfo]);
@@ -19,7 +19,7 @@ const OrderShipped = () => {
   };
 
   const confromOrderDelivaryHendeler = () => {
-    fetch(`http://localhost:5000/order/${id}`, {
+    fetch(`https://boiling-mesa-36077.herokuapp.com/order/${id}`, {
       method: "PUT",
       body: JSON.stringify({ status: orderStatus }),
       headers: {

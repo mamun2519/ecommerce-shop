@@ -36,7 +36,7 @@ const AddProductReview = ({ product }) => {
       time: new Date(),
     };
     fetch(
-      `http://localhost:5000/product/review/${product?.product?.product?._id}`,
+      `https://boiling-mesa-36077.herokuapp.com/product/review/${product?.product?.product?._id}`,
       {
         method: "POST",
         body: JSON.stringify(reviews),

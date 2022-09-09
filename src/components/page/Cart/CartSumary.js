@@ -25,7 +25,7 @@ const CartSumary = () => {
 
 
   const applayPromoCodeHendeler = () =>{
-    fetch(`http://localhost:5000/order/promo/?totalCost=${totalCost}&code=${promoCode}`, {
+    fetch(`https://boiling-mesa-36077.herokuapp.com/order/promo/?totalCost=${totalCost}&code=${promoCode}`, {
   method: 'POST',
   headers: {
     'Content-type': 'application/json',

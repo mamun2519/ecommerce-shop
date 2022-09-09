@@ -18,7 +18,7 @@ const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
   const [users, lodaing] = useAuthState(auth);
   const disPatch = useDispatch();
   useEffect(() => {
-    fetch(`http://localhost:5000/user/single/${id}`)
+    fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}`)
       .then((res) => res.json())
       .then((data) => setUser(data?.user));
   }, []);
@@ -30,7 +30,7 @@ const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
   console.log(user);
   const makeUserAdminHendeler = (user) => {
     fetch(
-      `http://localhost:5000/user/admin/${user?.email}?roleAction=${role}`,
+      `https://boiling-mesa-36077.herokuapp.com/user/admin/${user?.email}?roleAction=${role}`,
       {
         method: "PUT",
         headers: {

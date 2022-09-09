@@ -37,7 +37,7 @@ const SuccessMessage = () => {
 
    
    
-    fetch(`http://localhost:5000/order/new/${user}`, {
+    fetch(`https://boiling-mesa-36077.herokuapp.com/order/new/${user}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

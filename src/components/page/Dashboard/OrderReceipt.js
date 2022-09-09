@@ -10,7 +10,7 @@ const OrderReceipt = () => {
   const { id } = useParams();
   const navigate = useNavigate()
   useEffect(() => {
-    fetch(`http://localhost:5000/order/${id}`)
+    fetch(`https://boiling-mesa-36077.herokuapp.com/order/${id}`)
       .then((res) => res.json())
       .then((data) => setOrder(data.order));
   }, []);

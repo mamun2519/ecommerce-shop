@@ -15,17 +15,17 @@ export const fetchUser = createAsyncThunk(
         const config = { headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`} };
         if (typeof catagory == "number") {
           return axios
-            .get(`http://localhost:5000/user/all?page=${catagory}`, config)
+            .get(`https://boiling-mesa-36077.herokuapp.com/user/all?page=${catagory}`, config)
             .then((res) => res.data);
         }
         if (catagory) {
           return axios
-            .get(`http://localhost:5000/user/all?keyword=${catagory}` , config)
+            .get(`https://boiling-mesa-36077.herokuapp.com/user/all?keyword=${catagory}` , config)
             .then((res) => res.data);
         }
         
         return axios
-          .get("http://localhost:5000/user/all" , config)
+          .get("https://boiling-mesa-36077.herokuapp.com/user/all" , config)
           .then((res) => res.data);
       }
     );

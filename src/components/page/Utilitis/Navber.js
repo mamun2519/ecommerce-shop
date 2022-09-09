@@ -70,7 +70,7 @@ const Navber = () => {
                 {navber}
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-xl">
+            <a className="btn btn-ghost px-0 lg:px-4 normal-case text-xl">
               SMA<span className="text-[#EC255A]">RT</span>
             
                 E-S<span className="text-[#EC255A]">HOP</span>

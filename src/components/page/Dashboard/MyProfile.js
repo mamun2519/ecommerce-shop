@@ -9,7 +9,7 @@ const MyProfile = () => {
   const [myProfile , setMyProfile] = useState({})
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/user/single/${userId}`)
+    fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${userId}`)
     .then(res => res.json())
     .then(data => setMyProfile(data?.user))
   },[])
