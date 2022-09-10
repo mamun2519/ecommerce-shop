@@ -6,7 +6,9 @@ import {MdPayment} from 'react-icons/md';
 const Facilitis = () => {
       return (
             <div className='grid lg:grid-cols-4 max-w-7xl m-auto px-2 my-10 gap-5 grid-cols-1 '>
-                  <div>
+                  <div  data-aos="flip-left"
+                   data-aos-duration="1500"
+                  >
                         <div className='border shadow-md rounded-lg py-6 flex justify-center gap-5'>
                               <div className=' flex items-center'>
                               <span className='text-4xl'><GiTakeMyMoney/></span>
@@ -17,7 +19,8 @@ const Facilitis = () => {
                               </div>
                         </div>
                   </div>
-                  <div>
+                  <div  data-aos="flip-left"
+                   data-aos-duration="1500">
                         <div className='border shadow-md rounded-lg py-6 flex justify-center gap-5'>
                               <div className=' flex items-center'>
                               <span className='text-4xl'><MdOutlineSupportAgent/></span>
@@ -27,8 +30,9 @@ const Facilitis = () => {
                               <p>Call or email us 24/7</p>
                               </div>
                         </div>
-                  </div>
-                  <div>
+                  </div >
+                  <div  data-aos="flip-left"
+                   data-aos-duration="1500">
                         <div className='border shadow-md rounded-lg py-6 flex justify-center gap-5'>
                               <div className=' flex items-center'>
                               <span className='text-4xl'><MdOutlineLocalShipping/></span>
@@ -39,7 +43,8 @@ const Facilitis = () => {
                               </div>
                         </div>
                   </div>
-                  <div>
+                  <div  data-aos="flip-left"
+                   data-aos-duration="1500">
                         <div className='border shadow-md rounded-lg py-6 flex justify-center gap-5'>
                               <div className=' flex items-center'>
                               <span className='text-4xl'><MdPayment/></span>

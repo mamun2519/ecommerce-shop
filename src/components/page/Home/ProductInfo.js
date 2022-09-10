@@ -52,7 +52,8 @@ const ProductInfo = () => {
     {
       name: "Product Info",
       content: (
-        <div>
+        <div data-aos="fade-right"
+        data-aos-duration="1000">
           <ProductDetails product={product}></ProductDetails>
         </div>
       ),
@@ -60,7 +61,8 @@ const ProductInfo = () => {
     {
       name: "Product Review",
       content: (
-        <div>
+        <div data-aos="fade-right"
+        data-aos-duration="1000">
           <ProductReview product={product}></ProductReview>
         </div>
       ),
@@ -68,7 +70,8 @@ const ProductInfo = () => {
     {
       name: "Add Review",
       content: (
-        <div>
+        <div data-aos="fade-right"
+        data-aos-duration="1000">
           <AddProductReview product={product}></AddProductReview>
         </div>
       ),
@@ -76,7 +79,8 @@ const ProductInfo = () => {
     {
       name: "More Products",
       content: (
-        <div>
+        <div data-aos="fade-right"
+        data-aos-duration="1000">
           <MoreProduct></MoreProduct>
      
         </div>
@@ -94,7 +98,8 @@ const ProductInfo = () => {
       )}
       {!product.loading && product.error ? <p>{product.error}</p> : ""}
       {!product.loading && product?.product?.product ? (
-        <div class="card w-full bg-base-100 shadow border mt-10">
+        <div data-aos="fade-right"
+        data-aos-duration="500" class="card w-full bg-base-100 shadow border mt-10">
           <div class="card-body ">
             <section class="text-gray-600 body-font overflow-hidden">
               <div class="container lg:px-5 py- lg:mx-auto">

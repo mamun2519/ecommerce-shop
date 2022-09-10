@@ -60,7 +60,8 @@ const Payment = () => {
             <li class="active">Order</li>
             <li className="activ">Payment</li>
           </ul>
-          <div className="mt-20">
+          <div data-aos="fade-up"
+            data-aos-duration="1000" className="mt-20">
             {clientSecret &&  <Elements options={options} stripe={stripePromise}>
               <CheckoutForm />
             </Elements>}

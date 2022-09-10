@@ -9,8 +9,10 @@ import React from 'react';
 const Barnd = () => {
       return (
             <div
-            data-aos="zoom-in-right"
-            data-aos-duration="3000"
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500"
             
             className='my-40 max-w-7xl m-auto px-3 '>
                   <h1 className='text-xl my-5 ptext'>OUR TOP SALES BRAND</h1>

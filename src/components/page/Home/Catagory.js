@@ -10,7 +10,7 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
     disPatch(fetchProduct(searchText));
   };
   return (
-    <div className="card-bod p-2  ">
+    <div  className="card-bod p-2  ">
       <div className="relative text-center">
         
         <input

@@ -11,7 +11,8 @@ const ChackOut = () => {
             <li class="activ">Order </li>
             <li className="activ">Payment</li>
           </ul>
-          <div className="mt-20">
+          <div data-aos="fade-right"
+          data-aos-duration="1000" className="mt-20">
             <Shipping></Shipping>
           </div>
         </div>

@@ -51,7 +51,9 @@ const Products = () => {
       <h1 className="text-xl ">PRODUCTS CATEGORIES</h1>
       <div className="grid lg:grid-cols-4  grid-cols-2">
         <div className="w-60  mt-5">
-          <div className="card bg-base-100  sticky top-0 border shadow-md  rounded-lg h-96 w-full">
+          <div  data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1000" className="card bg-base-100  sticky top-0 border shadow-md  rounded-lg h-96 w-full">
             <Catagory
               selectCatagoryHendeler={selectCatagoryHendeler}
               shart={shart}
@@ -60,7 +62,7 @@ const Products = () => {
             ></Catagory>
           </div>
         </div>
-        <div className="w-full col-span-3">
+        <div   className="w-full col-span-3">
           <div className=" grid lg:grid-cols-3 grid-cols-1  gap-5  mt-5">
             {product.loading && <div className=" flex  justify-end"><Loading></Loading></div>}
             {!product.loading && product.error ? <p>{product.error}</p> : ""}

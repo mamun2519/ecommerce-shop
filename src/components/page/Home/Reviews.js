@@ -23,7 +23,9 @@ const Reviews = () => {
                 <section class="text-gray-600 body-font">
                   <div class="container  py-10 mx-auto">
                     <div class="flex flex-wrap -m-4">
-                      <div class="p-4 md:w-1/2 w-full">
+                      <div data-aos="zoom-out-right"
+                       data-aos-duration="1000"
+                       class="p-4 md:w-1/2 w-full">
                         <div class="h-full p-8 border shadow-md bg-white  rounded-lg">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +59,8 @@ const Reviews = () => {
                           </a>
                         </div>
                       </div>
-                      <div class="p-4 md:w-1/2 w-full">
+                      <div data-aos="zoom-out-left"
+                       data-aos-duration="1000" class="p-4 md:w-1/2 w-full">
                         <div class="h-full p-8 border shadow-md bg-white  rounded-lg">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +102,8 @@ const Reviews = () => {
               <section class="text-gray-600 body-font">
                   <div class="container  py-10 mx-auto">
                     <div class="flex flex-wrap -m-4">
-                      <div class="p-4 md:w-1/2 w-full">
+                      <div data-aos="zoom-out-right"
+                       data-aos-duration="1000" class="p-4 md:w-1/2 w-full">
                         <div class="h-full p-8 border shadow-md bg-white rounded-lg">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +137,8 @@ const Reviews = () => {
                           </a>
                         </div>
                       </div>
-                      <div class="p-4 md:w-1/2 w-full">
+                      <div data-aos="zoom-out-left"
+                       data-aos-duration="1000"  class="p-4 md:w-1/2 w-full">
                         <div class="h-full p-8 border shadow-md bg-white  rounded-lg">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +180,8 @@ const Reviews = () => {
               <section class="text-gray-600 body-font">
                   <div class="container  py-10 mx-auto">
                     <div class="flex flex-wrap -m-4">
-                      <div class="p-4 md:w-1/2 w-full">
+                      <div data-aos="zoom-out-right"
+                       data-aos-duration="1000" class="p-4 md:w-1/2 w-full">
                         <div class="h-full p-8 border shadow-md bg-white  rounded-lg">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +215,8 @@ const Reviews = () => {
                           </a>
                         </div>
                       </div>
-                      <div class="p-4 md:w-1/2 w-full">
+                      <div data-aos="zoom-out-left"
+                       data-aos-duration="1000"  class="p-4 md:w-1/2 w-full">
                         <div class="h-full p-8 border shadow-md bg-white  rounded-lg">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"

@@ -13,7 +13,8 @@ const Product = ({product}) => {
      
    
       return (
-            <div className="card  h-[420px]  bg-base-100 shadow-md border relative ">
+            <div data-aos="fade-up"
+            data-aos-duration="1000" className="card  h-[420px]  bg-base-100 shadow-md border relative ">
             <figure className="px-5 pt-5">
               <img
                 src={images[0].url}

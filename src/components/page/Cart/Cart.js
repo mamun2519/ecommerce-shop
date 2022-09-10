@@ -18,7 +18,8 @@ const Cart = () => {
         <div class="">
 
           {cart.length == 0 ? 
-          <div className="lg:w-1/2 mx-auto w-[370px] h-[520px] bg-white shadow-md rounded-xl border border-gray-200  flex justify-center items-center">
+          <div data-aos="fade-right"
+          data-aos-duration="1000" className="lg:w-1/2 mx-auto w-[370px] h-[520px] bg-white shadow-md rounded-xl border border-gray-200  flex justify-center items-center">
 
             <div className=" ">
               <img className=" w-[370px] h-[370px]" src="/Assist/picture/emtyCart.gif" alt="" />
@@ -39,7 +40,8 @@ const Cart = () => {
             <div className=" lg:col-span-2 ">
               <section class="antialiased  text-gray-600" x-data="app">
                 <div class="flex flex-col justify-center h-full">
-                  <div class="lg:w-full w-[370px] bg-white shadow-md rounded-xl border border-gray-200">
+                  <div data-aos="fade-right"
+          data-aos-duration="1000" class="lg:w-full w-[370px] bg-white shadow-md rounded-xl border border-gray-200">
                     <header class="px-5 py-4 border-b border-gray-100">
                       <div class="font-semibold flex   justify-between text-gray-800">
                         <p>Shopping Cart</p>
@@ -95,7 +97,8 @@ const Cart = () => {
               </section>
             </div>
 
-            <div>
+            <div data-aos="fade-left"
+          data-aos-duration="1000">
               <CartSumary></CartSumary>
             </div>
           </div>}

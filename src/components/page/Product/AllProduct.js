@@ -53,7 +53,8 @@ const AllProduct = () => {
       <h1 className="text-xl">PRODUCTS CATEGORIES</h1>
       <div className="grid lg:grid-cols-4  grid-cols-2">
         <div className="w-60  mt-5">
-          <div className="card bg-base-100  sticky top-0 border shadow-md rounded-lg h-96">
+          <div data-aos="fade-down"
+            data-aos-duration="1000"  className="card bg-base-100  sticky top-0 border shadow-md rounded-lg h-96">
            
             <Catagory
             selectCatagoryHendeler={selectCatagoryHendeler}

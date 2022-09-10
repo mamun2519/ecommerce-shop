@@ -37,7 +37,8 @@ const Myorder = () => {
               </div>
             </div>
 
-            <div class="block w-full overflow-x-auto">
+            <div data-aos="fade-up"
+            data-aos-duration="1000" class="block w-full overflow-x-auto">
               <table class="items-center bg-transparent w-full border-collapse ">
                 <thead>
                   <tr className="bg-[#062C30] text-white sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">

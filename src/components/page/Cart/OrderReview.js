@@ -20,7 +20,8 @@ const OrderReview = () => {
             <li class="activ">Order</li>
             <li className="activ">Payment</li>
           </ul>
-          <div className="mt-20">
+          <div data-aos="fade-left"
+          data-aos-duration="1000" className="mt-20">
             <Order></Order>
           </div>
         </div>
