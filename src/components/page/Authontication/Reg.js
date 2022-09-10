@@ -73,7 +73,7 @@ const Reg = () => {
     setToken(localStorage.getItem("UserToken"));
   }
 
-  if (token) {
+  if (token || user) {
     navigate("/");
   }
 

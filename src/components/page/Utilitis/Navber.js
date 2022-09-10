@@ -11,13 +11,17 @@ const Navber = () => {
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart.cart);
   const avatars = useSelector((state) => state.avatar);
+  const [cover , setCover] = useState("https://cdn.digitbin.com/wp-content/uploads/Why-I-am-Seeing-Blank-Facebook-Profile-and-How-to-Fix-it.jpg")
 
   const disPatch = useDispatch();
   const userId = localStorage.getItem("UserId");
   useEffect(() => {
-    disPatch(fetchUserAvater(userId));
-  }, [user]);
-  console.log();
+    if(userId){
+      disPatch(fetchUserAvater(userId));
+    }
+    
+  }, [user , userId ]);
+
 
   const navber = (
     <>

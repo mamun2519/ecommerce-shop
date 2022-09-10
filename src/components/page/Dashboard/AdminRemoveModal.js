@@ -1,38 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useDispatch } from 'react-redux';
-import auth from '../../../firebase.init';
-import { fetchAdmin } from '../Futurecher/Slice/getallAdminSlice';
-import { toast } from 'react-toastify';
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useDispatch } from "react-redux";
+import auth from "../../../firebase.init";
+import { fetchAdmin } from "../Futurecher/Slice/getallAdminSlice";
+import { toast } from "react-toastify";
 import { Fragment } from "react";
-import { AiOutlineMail } from 'react-icons/ai';
-import { BiLockOpenAlt } from 'react-icons/bi';
-import { fetchUser } from '../Futurecher/Slice/userSlice';
+import { AiOutlineMail } from "react-icons/ai";
+import { BiLockOpenAlt } from "react-icons/bi";
+import { fetchUser } from "../Futurecher/Slice/userSlice";
 const AdminRemoveModal = ({ closeModal, openModal, isOpen, id }) => {
-      const [user, setUser] = useState({});
-      
+  const [user, setUser] = useState({});
+
   const [role, setRole] = useState("");
   const [users, lodaing] = useAuthState(auth);
   const disPatch = useDispatch();
   useEffect(() => {
-   
-      fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}`)
+    fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}`)
       .then((res) => res.json())
       .then((data) => setUser(data?.user));
-
-   
-   
   }, []);
-  
-//   useEffect(()=>{
-//       disPatch(fetchAdmin())
-//   },[])
+
+  //   useEffect(()=>{
+  //       disPatch(fetchAdmin())
+  //   },[])
   const selectUserRole = (e) => {
     setRole(e.target.value);
   };
 
- 
   const removeUserAdminHendeler = (user) => {
     fetch(
       `https://boiling-mesa-36077.herokuapp.com/user/admin/${user?.email}?roleAction=${role}`,
@@ -46,120 +41,118 @@ const AdminRemoveModal = ({ closeModal, openModal, isOpen, id }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.admin.matchedCount > 0) {
-          disPatch(fetchAdmin())
-          disPatch(fetchUser())
+          disPatch(fetchAdmin());
+          disPatch(fetchUser());
           toast("Admin Remove Successfull");
           closeModal();
         }
       });
   };
-      return (
-            <div >
-            <Transition appear show={isOpen} as={Fragment}>
-              <Dialog as="div" className="relative z-10" onClose={closeModal}>
-                <Transition.Child
-                  as={Fragment}
-                  enter="ease-out duration-300"
-                  enterFrom="opacity-0"
-                  enterTo="opacity-100"
-                  leave="ease-in duration-200"
-                  leaveFrom="opacity-100"
-                  leaveTo="opacity-0"
-                >
-                  <div className="fixed inset-0 bg-black bg-opacity-25" />
-                </Transition.Child>
-      
-                <div className="fixed inset-0 overflow-y-auto">
-                  <div className="flex min-h-full items-center justify-center p-4 text-center">
-                    <Transition.Child
-                      as={Fragment}
-                      enter="ease-out duration-300"
-                      enterFrom="opacity-0 scale-95"
-                      enterTo="opacity-100 scale-100"
-                      leave="ease-in duration-200"
-                      leaveFrom="opacity-100 scale-100"
-                      leaveTo="opacity-0 scale-95"
-                    >
-                      <Dialog.Panel className="lg:w-96 w-72 py-10 max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                        <Dialog.Title
-                          as="h3"
-                          className="text-lg font-medium flex justify-center leading-6 text-gray-900"
-                        >
-                          <div>
-                            <div className="relative">
-                              <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-                                <AiOutlineMail />
-                              </div>
-                              <label for="username" class="block text-sm text-black">
-                                Name
-                              </label>
-      
-                              <input
-                                type="text"
-                                value={user?.name}
-                                placeholder="Email address"
-                                class="block pl-12 w-full px-4 py-2 mt-2  bg-white border rounded-md   outline-none  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring focus:ring-opacity-40"
-                              />
-                            </div>
-      
-                            <div class="mt-4">
-                              <div class="flex items-center justify-between relative">
-                                <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-                                  <BiLockOpenAlt />
-                                </div>
-                                <label
-                                  for="password"
-                                  class="block text-sm text-black "
-                                >
-                                  Email
-                                </label>
-                              </div>
-      
-                              <input
-                                type="email"
-                                placeholder="Enter Email"
-                                value={user?.email}
-                                class="block w-full px-4 py-2 mt-2 pl-12  bg-white border rounded-md   focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                              />
-                            </div>
-      
-                            <div className="mt-4">
-                              <label for="role" class="block text-sm text-black ">
-                                Role
-                              </label>
-                              <select
-                                //     ref={orderStatusRef}
-                                onChange={(e) => selectUserRole(e)}
-                                class="w-full block  
-        px-2 py-2   bg-slate-100 border rounded-md   outline-none  focus:border-blue-400 mt-2 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring focus:ring-opacity-40"
-                              >
-                                <option value={user?.role} selected>
-                                  {user?.role}
-                                </option>
-                                <option value="user">User</option>
-                              </select>
-                            </div>
-      
-                            <div class="mt-6">
-                              <button
-                                onClick={() => removeUserAdminHendeler(user)}
-                                className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30]rounded-md"
-                              >
-                                Remove Admin
-                              </button>
-                            </div>
+  return (
+    <div>
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="lg:w-96 w-72 py-10 max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Title
+                    as="h3"
+                    className="text-lg font-medium flex justify-center leading-6 text-gray-900"
+                  >
+                    <div>
+                      <div className="relative">
+                        <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
+                          <AiOutlineMail />
+                        </div>
+                        <label for="username" class="block text-sm text-black">
+                          Name
+                        </label>
+
+                        <input
+                          type="text"
+                          value={user?.name}
+                          placeholder="Email address"
+                          class="block pl-12 w-full px-4 py-2 mt-2  bg-white border rounded-md   outline-none  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring focus:ring-opacity-40"
+                        />
+                      </div>
+
+                      <div class="mt-4">
+                        <div class="flex items-center justify-between relative">
+                          <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
+                            <BiLockOpenAlt />
                           </div>
-                        </Dialog.Title>
-      
-                       
-                      </Dialog.Panel>
-                    </Transition.Child>
-                  </div>
-                </div>
-              </Dialog>
-            </Transition>
+                          <label
+                            for="password"
+                            class="block text-sm text-black "
+                          >
+                            Email
+                          </label>
+                        </div>
+
+                        <input
+                          type="email"
+                          placeholder="Enter Email"
+                          value={user?.email}
+                          class="block w-full px-4 py-2 mt-2 pl-12  bg-white border rounded-md   focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                      </div>
+
+                      <div className="mt-4">
+                        <label for="role" class="block text-sm text-black ">
+                          Role
+                        </label>
+                        <select
+                          //     ref={orderStatusRef}
+                          onChange={(e) => selectUserRole(e)}
+                          class="w-full block  
+        px-2 py-2   bg-slate-100 border rounded-md   outline-none  focus:border-blue-400 mt-2 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring focus:ring-opacity-40"
+                        >
+                          <option value={user?.role} selected>
+                            {user?.role}
+                          </option>
+                          <option value="user">User</option>
+                        </select>
+                      </div>
+
+                      <div class="mt-6">
+                        <button
+                          onClick={() => removeUserAdminHendeler(user)}
+                          className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
+                        >
+                          Remove Admin
+                        </button>
+                      </div>
+                    </div>
+                  </Dialog.Title>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
           </div>
-      );
+        </Dialog>
+      </Transition>
+    </div>
+  );
 };
 
 export default AdminRemoveModal;
