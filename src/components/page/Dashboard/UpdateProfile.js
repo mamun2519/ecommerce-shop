@@ -7,7 +7,10 @@ import { AiFillCamera } from "react-icons/ai";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { fetchUserAvater } from "../Futurecher/Slice/userProSlice";
 const UpdateProfile = () => {
+  
   const [user] = useAuthState(auth);
   const [cover, setCover] = useState("");
   const [profile, setProfile] = useState("");
@@ -30,7 +33,7 @@ const UpdateProfile = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-
+  const disPatch = useDispatch()
   const changeCoverPictureHendeler = (e) => {
     const reader = new FileReader();
     reader.onload = () => {
@@ -70,6 +73,7 @@ const UpdateProfile = () => {
       .then((res) => {
         if (res.data.success) {
           toast("Profile Update Success");
+          disPatch(fetchUserAvater(userId))
         }
         console.log(res);
       })

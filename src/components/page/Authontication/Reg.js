@@ -12,19 +12,21 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { useNavigate } from "react-router-dom";
-import { useSelector, } from "react-redux";
+import { useDispatch, useSelector, } from "react-redux";
 import { postUser } from "../Futurecher/Slice/createUserSlice";
 import axios from "axios";
 import Loading from "../Utilitis/Loading";
 import sendToken from "../Utilitis/sendToken";
+import { fetchUserAvater } from "../Futurecher/Slice/userProSlice";
 
 const Reg = () => {
   const [token, setToken] = useState("");
+  const userId = localStorage.getItem("UserId");
   const [avatar, setAvatar] = useState(
     "https://www.valleverdecountryclub.com/wp-content/uploads/2022/04/istockphoto-610003972-612x612-2.jpg"
   );
   const [cover , setCover] = useState("https://cdn.digitbin.com/wp-content/uploads/Why-I-am-Seeing-Blank-Facebook-Profile-and-How-to-Fix-it.jpg")
-
+  const disPatch = useDispatch()
   const [user, loadings, error] = useAuthState(auth);
 
   const navigate = useNavigate();
@@ -72,9 +74,14 @@ const Reg = () => {
     sendToken(myForm);
     setToken(localStorage.getItem("UserToken"));
   }
-
+ 
   if (token || user) {
     navigate("/");
+    if(userId){
+      disPatch(fetchUserAvater(userId));
+
+    }
+    
   }
 
   return (

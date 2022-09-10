@@ -68,9 +68,9 @@ const SuccessMessage = () => {
                
                  <div>
                 <div className='flex justify-center'> <img  className='w-60' src="/Assist/picture/paymenSuccess.gif" alt="" /></div>
-               <p className='lg:text-2xl text-xl'>Congraculation Your Payment SuccessFull</p>
+               <p className='lg:text-2xl text-xl text-center'>Congraculation Your Payment SuccessFull</p>
                <div className='text-center mt-3'>
-               <button  className='px-6 bg-red-500 rounded-lg py-2 text-white'>Go DashBoard</button>
+               <button  className='px-6 bg-[#062C30] rounded-lg py-2 text-white'>Go DashBoard</button>
                </div>
                  </div>
               </div>

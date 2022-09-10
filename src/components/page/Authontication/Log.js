@@ -65,7 +65,7 @@ const Log = () => {
 
   if (token || user) {
     navigate(from, { replace: true });
-    // disPatch(fetchUserAvater(userId))
+    disPatch(fetchUserAvater(userId))
     // navigate("/")
   }
 
