@@ -12,11 +12,11 @@ export const fetchUserAvater = createAsyncThunk(
       "/user/avater",
       
       (id) => {
-        const config = { headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`} };
+        // const config = { headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`} };
        
-        return axios
-          .get(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}` , config)
-          .then((res) => res.data);
+        // return axios
+        // .get(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}` , config)
+        // .then((res) => res.data);
       }
     );
 
