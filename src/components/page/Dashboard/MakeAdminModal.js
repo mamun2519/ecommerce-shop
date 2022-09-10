@@ -17,15 +17,15 @@ const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
   const [role, setRole] = useState("");
   const [users, lodaing] = useAuthState(auth);
   const disPatch = useDispatch();
-  useEffect(() => {
-    if(id){
-      fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}`)
-      .then((res) => res.json())
-      .then((data) => setUser(data?.user));
+  // useEffect(() => {
+  //   if(id){
+  //     fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setUser(data?.user));
 
-    }
+  //   }
     
-  }, []);
+  // }, []);
 
   const selectUserRole = (e) => {
     setRole(e.target.value);
