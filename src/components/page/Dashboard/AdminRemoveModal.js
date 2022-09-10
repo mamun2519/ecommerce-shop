@@ -15,9 +15,13 @@ const AdminRemoveModal = ({ closeModal, openModal, isOpen, id }) => {
   const [users, lodaing] = useAuthState(auth);
   const disPatch = useDispatch();
   useEffect(() => {
-    fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}`)
+    if(id){
+      fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}`)
       .then((res) => res.json())
       .then((data) => setUser(data?.user));
+
+    }
+   
   }, []);
   
 //   useEffect(()=>{
