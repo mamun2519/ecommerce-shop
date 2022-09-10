@@ -11,18 +11,19 @@ import { BiLockOpenAlt } from 'react-icons/bi';
 import { fetchUser } from '../Futurecher/Slice/userSlice';
 const AdminRemoveModal = ({ closeModal, openModal, isOpen, id }) => {
       const [user, setUser] = useState({});
+      
   const [role, setRole] = useState("");
   const [users, lodaing] = useAuthState(auth);
   const disPatch = useDispatch();
-  // useEffect(() => {
-  //   if(id){
-  //     fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setUser(data?.user));
-
-  //   }
+  useEffect(() => {
    
-  // }, []);
+      fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}`)
+      .then((res) => res.json())
+      .then((data) => setUser(data?.user));
+
+   
+   
+  }, []);
   
 //   useEffect(()=>{
 //       disPatch(fetchAdmin())
