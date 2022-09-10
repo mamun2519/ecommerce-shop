@@ -2,9 +2,12 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { BiLockOpenAlt } from "react-icons/bi";
-import { MdAddPhotoAlternate } from "react-icons/md";
+import { BiCategoryAlt, BiLockOpenAlt } from "react-icons/bi";
+import { MdAddPhotoAlternate, MdDescription, MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { TiDelete } from "react-icons/ti";
+import { RiPriceTagLine } from "react-icons/ri";
+import { FiDollarSign } from "react-icons/fi";
+import { TbBrandAirtable } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -52,7 +55,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="mb-20 px-4 lg:px-0">
+    <div className="mb-5 px-4 lg:px-0">
       <div className="w-full  mx-auto border  shadow-md rounded-lg p-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="">
@@ -63,8 +66,8 @@ const AddProduct = () => {
               <div className="col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <MdOutlineProductionQuantityLimits />
                     </div>
                   </div>
 
@@ -96,8 +99,8 @@ const AddProduct = () => {
               <div className=" col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <BiCategoryAlt />
                     </div>
                   </div>
 
@@ -129,8 +132,8 @@ const AddProduct = () => {
               <div className="col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <MdDescription />
                     </div>
                   </div>
 
@@ -162,8 +165,8 @@ const AddProduct = () => {
               <div className=" col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <RiPriceTagLine />
                     </div>
                   </div>
 
@@ -195,8 +198,8 @@ const AddProduct = () => {
               <div className=" col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <FiDollarSign />
                     </div>
                   </div>
 
@@ -228,8 +231,8 @@ const AddProduct = () => {
               <div className=" col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <TbBrandAirtable />
                     </div>
                   </div>
 
@@ -292,9 +295,9 @@ const AddProduct = () => {
                   >
                     <div>
                       {!productPictue && (
-                        <div className="h-44 w-72 border rounded-md flex justify-center  items-center">
+                        <div className="h-44 lg:w-72 w-52 border rounded-md flex justify-center  items-center">
                           <div className=" ">
-                            <span className="text-6xl text-gray-700">
+                            <span className="text-6xl text-[#EC255A]">
                               <MdAddPhotoAlternate />
                             </span>
                           </div>
@@ -334,7 +337,7 @@ const AddProduct = () => {
               <input
                 type="submit"
                 value="Save"
-                className="bg-[#062C30] px-12 py-2 rounded-lg text-white"
+                className="bg-[#062C30] px-16 py-2 rounded-lg text-white"
               />
             </div>
           </div>

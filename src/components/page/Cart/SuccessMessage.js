@@ -4,11 +4,12 @@ import { cartClear } from '../Futurecher/Slice/cartSlice';
 import { clearShippingTotalCostDiscount } from '../Futurecher/Slice/shippingPriceSlice';
 import { clearSubTotal } from '../Futurecher/Slice/SubTotalPriceSlice';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 const SuccessMessage = () => {
   const orderItems = useSelector((state) => state.cart.cart);
   const parseInfo = localStorage.getItem("ShippingInfo");
   const shippingInfo = JSON.parse(parseInfo);
-
+ const navigate = useNavigate()
 
   const user = localStorage.getItem("UserId");
   const subTotalPrice = parseInt(localStorage.getItem("SubTotalPrice"));
@@ -70,7 +71,7 @@ const SuccessMessage = () => {
                 <div className='flex justify-center'> <img  className='w-60' src="/Assist/picture/paymenSuccess.gif" alt="" /></div>
                <p className='lg:text-2xl text-xl text-center'>Congraculation Your Payment SuccessFull</p>
                <div className='text-center mt-3'>
-               <button  className='px-6 bg-[#062C30] rounded-lg py-2 text-white'>Go DashBoard</button>
+               <button onClick={()=>navigate('/dashboard')} className='px-6 bg-[#062C30] rounded-lg py-2 text-white'>Go DashBoard</button>
                </div>
                  </div>
               </div>

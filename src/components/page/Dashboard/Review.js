@@ -1,7 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { AiOutlineMail } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
+import { CgMoreO, CgProfile } from "react-icons/cg";
+import { BsFlagFill } from "react-icons/bs";
 const Review = () => {
   const {
     register,
@@ -10,11 +11,11 @@ const Review = () => {
   } = useForm();
   const onSubmit = async (data) => {};
   return (
-    <div className="mb-10 px-4 lg:px-0">
+    <div className="mb-5 px-4 lg:px-0">
       <div className="w-full lg:w-9/12 mx-auto border  shadow-md rounded-lg p-5 h[700px]">
         <div className="w-full grid-cols-1 grid lg:grid-cols-2 gap-5 mt-5">
           <div className="relative">
-            <div className="border p-2  w-9 rounded absolute top-[32px] left-1 bg-red-200">
+            <div className="border p-2  w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
               <CgProfile />
             </div>
             <label for="username" class="block text-sm text-black">
@@ -39,8 +40,8 @@ const Review = () => {
             </label>
           </div>
           <div className="relative">
-            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-              <AiOutlineMail />
+            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+              <BsFlagFill />
             </div>
             <label for="username" class="block text-sm text-black">
               country
@@ -66,8 +67,8 @@ const Review = () => {
           </div>
         </div>
         <div className="relative">
-            <div className="border p-2  w-9 rounded absolute top-[32px] left-1 bg-red-200">
-              <CgProfile />
+            <div className="border p-2  w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+              <CgMoreO />
             </div>
             <label for="username" class="block text-sm text-black">
               Comment
@@ -94,7 +95,7 @@ const Review = () => {
           <input
             type="submit"
             value="Comment"
-            class=" px-6 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
+            class=" px-16 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
           />
         </div>
       </div>

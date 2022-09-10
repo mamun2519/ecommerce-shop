@@ -22,10 +22,26 @@ const Dashboard = () => {
           
           <Outlet />
           <div className="flex   justify-end items-top  relative h-12 px-3">
-            <label
-              for="my-drawer-2"
+            {/* <label
+             
               class="bg-red-500 w-8 border absolute top-[-500px]  rounded-full p-5 drawer-button lg:hidden"
-            ></label>
+            ></label> */}
+             <label  for="my-drawer-2" tabindex="0" className="btn btn-ghost drawer-button lg:hidden  absolute   border bg-slate-100 p-">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
           </div>
         </div>
         <div class="drawer-side">
@@ -35,28 +51,9 @@ const Dashboard = () => {
 
             <div class="flex flex-wrap bg-gray-100 w-full h-screen">
               <div class="w-full bg-white rounded p-3 shadow-lg">
-                {/* <div class="mt-8 text-center mb-10">
-                  <img
-                    src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp"
-                    alt=""
-                    class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"
-                  />
-                  <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">
-                    Cynthia J. Watts
-                  </h5>
-                  <span class="hidden text-gray-400 lg:block">Admin</span>
-                </div> */}
+              
                 <ul class="space-y-2 text-sm">
-                  {/* <li>
-                <a href="#" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 bg-gray-200 focus:shadow-outline">
-                    <span class="text-gray-600">
-                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </span>
-                    <span>Dashboard</span>
-                </a>
-            </li> */}
+               
                   <li>
                     <NavLink
                     to='myorders'

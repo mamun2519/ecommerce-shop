@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { FaGraduationCap } from "react-icons/fa";
+import { MdOutlineAccountBox } from "react-icons/md";
+import { MdCastForEducation } from "react-icons/md";
+import { MdDateRange} from "react-icons/md";
+import { AiOutlineMail} from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 const MyProfile = () => {
   const [user] = useAuthState(auth);
@@ -14,7 +18,7 @@ const MyProfile = () => {
     .then(data => setMyProfile(data?.user))
   },[])
   return (
-    <div className="mb-20 px-4 lg:px-0">
+    <div className="mb-5 px-4 lg:px-0">
       <div>
         <div className="w-full lg:w-9/12 mx-auto border  shadow-md rounded-lg p-5">
           <div className="">
@@ -54,7 +58,7 @@ const MyProfile = () => {
           <div className="mt-5 flex justify-center">
             <div>
               <div className="flex items-center gap-2">
-                <span className=" text-xl">
+                <span className="   text-xl">
                   <FaGraduationCap />
                 </span>
                 <span className="">
@@ -67,7 +71,7 @@ const MyProfile = () => {
               </div>
               <div className="flex items-center gap-2 mt-2">
               <span className=" text-xl">
-                  <FaGraduationCap />
+                  <MdOutlineAccountBox />
                 </span>
               <span className="">
                 Profession At{" "}
@@ -78,7 +82,7 @@ const MyProfile = () => {
               </div>
               <div className="flex items-center gap-2 mt-2">
               <span className=" text-xl">
-                  <FaGraduationCap />
+                  <MdCastForEducation />
                 </span>
               <span className="">
               Job Title At{" "}
@@ -100,7 +104,7 @@ const MyProfile = () => {
               </div>
               <div className="flex items-center gap-2 mt-2">
               <span className=" text-xl">
-                  <FaGraduationCap />
+                  <MdDateRange />
                 </span>
               <span className="">
               Alternative Contect Email At{" "}
@@ -111,7 +115,7 @@ const MyProfile = () => {
               </div>
               <div className="flex items-center gap-2 mt-2">
               <span className=" text-xl">
-                  <FaGraduationCap />
+                  <AiOutlineMail />
                 </span>
               <span className="">
               Joining Date At{" "}

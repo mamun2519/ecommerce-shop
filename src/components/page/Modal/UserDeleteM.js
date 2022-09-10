@@ -62,11 +62,11 @@ const UserDeleteM = ({closeModal , openModal , isUser , id}) => {
                  
 
                   <div className="mt-4 flex justify-center gap-5">
-                    <button onClick={()=> closeModal()} className=' bg-red-400 text-white rounded px-4 py-1'>
+                    <button onClick={()=> closeModal()} className='bg-[#062C30] text-white rounded px-4 py-1'>
                       No
                     </button>
-                    <button onClick={()=>deleteMyOrderHendeler(id)}  className=' bg-red-400 text-white rounded px-4 py-1'>
-                      yes
+                    <button onClick={()=>deleteMyOrderHendeler(id)}  className=' bg-red-500  text-white rounded px-4 py-1'>
+                      Yes
                     </button>
                   </div>
                 </Dialog.Panel>

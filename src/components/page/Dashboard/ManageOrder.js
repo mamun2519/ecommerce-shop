@@ -16,12 +16,12 @@ const ManageOrder = () => {
             <div data-aos="fade-down"
             data-aos-duration="1000" >
                    <section class="py-1 bg-blueGray-50">
-        <div class="w-full  mb-12 xl:mb-0 px-4">
+        <div class="w-full  mb-5 xl:mb-0 px-4">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-md border rounded ">
             <div class="rounded-t mb-0 px-2 py-3 border-0">
               <div class="flex flex-wrap items-center">
                 <div class="relative w-full p2-4 max-w-full flex-grow flex-1">
-                  <h3 class="font-semibold text-base text-blueGray-700">
+                  <h3 class="font-semibold text-base  text-blueGray-700">
                    Manage All Order
                   </h3>
                 </div>

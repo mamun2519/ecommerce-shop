@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Fragment } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { AiOutlineMail } from "react-icons/ai";
-import { BiLockOpenAlt } from "react-icons/bi";
+import { CgProfile } from "react-icons/cg";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
@@ -86,8 +86,8 @@ const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
                   >
                     <div>
                       <div className="relative">
-                        <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-                          <AiOutlineMail />
+                        <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+                          <CgProfile />
                         </div>
                         <label for="username" class="block text-sm text-black">
                           Name
@@ -103,8 +103,8 @@ const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
 
                       <div class="mt-4">
                         <div class="flex items-center justify-between relative">
-                          <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-                            <BiLockOpenAlt />
+                          <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+                            <AiOutlineMail />
                           </div>
                           <label
                             for="password"

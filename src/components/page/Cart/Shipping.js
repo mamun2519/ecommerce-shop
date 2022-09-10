@@ -1,6 +1,11 @@
 import React, {  useState } from "react";
 import { useForm } from "react-hook-form";
-import { AiOutlineMail } from "react-icons/ai";
+import { AiFillPushpin, AiOutlineMail } from "react-icons/ai";
+import { FaRegAddressBook } from "react-icons/fa";
+import { BsFlagFill } from "react-icons/bs";
+import { GiMatterStates} from "react-icons/gi";
+import { FaCity} from "react-icons/fa";
+import { MdPhoneAndroid} from "react-icons/md";
 
 import { CgProfile } from "react-icons/cg";
 import { Country, State, City } from "country-state-city";
@@ -15,6 +20,7 @@ const Shipping = () => {
   const [state, setState] = useState("");
   const disPatch = useDispatch();
   const navigate = useNavigate();
+  
 
   const shippingInfoParce = localStorage.getItem("ShippingInfo");
   const shipping = JSON.parse(shippingInfoParce);
@@ -45,7 +51,7 @@ const Shipping = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="w-full grid-cols-1 grid lg:grid-cols-2 gap-5 mt-5">
           <div className="relative">
-            <div className="border p-2  w-9 rounded absolute top-[32px] left-1 bg-red-200">
+            <div className="border p-2  w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
               <CgProfile />
             </div>
             <label for="username" class="block text-sm text-black">
@@ -70,7 +76,7 @@ const Shipping = () => {
             </label>
           </div>
           <div className="relative">
-            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
+            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
               <AiOutlineMail />
             </div>
             <label for="username" class="block text-sm text-black">
@@ -105,11 +111,11 @@ const Shipping = () => {
         </div>
         <div className="w-full grid grid-cols-1  lg:grid-cols-2 gap-5">
           <div className="relative">
-            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-              <CgProfile />
+            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+              <FaRegAddressBook />
             </div>
             <label for="username" class="block text-sm text-black">
-              address
+              Address
             </label>
 
             <input
@@ -130,8 +136,8 @@ const Shipping = () => {
             </label>
           </div>
           <div className="relative">
-            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-              <AiOutlineMail />
+            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+              <BsFlagFill />
             </div>
             <label for="username" class="block text-sm text-black">
               Country
@@ -168,11 +174,11 @@ const Shipping = () => {
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div className="relative">
-            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-              <CgProfile />
+            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+              <GiMatterStates />
             </div>
             <label for="username" class="block text-sm text-black">
-              state
+              State
             </label>
 
             <select
@@ -203,8 +209,8 @@ const Shipping = () => {
             </label>
           </div>
           <div className="relative">
-            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-              <AiOutlineMail />
+            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+              <FaCity />
             </div>
             <label for="username" class="block text-sm text-black">
               City
@@ -239,8 +245,8 @@ const Shipping = () => {
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div className="relative">
-            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-              <CgProfile />
+            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+              <AiFillPushpin />
             </div>
             <label for="username" class="block text-sm text-black">
               PinCode
@@ -264,11 +270,11 @@ const Shipping = () => {
             </label>
           </div>
           <div className="relative">
-            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-              <AiOutlineMail />
+            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+              <MdPhoneAndroid />
             </div>
             <label for="username" class="block text-sm text-black">
-              phone Number
+              Phone Number
             </label>
 
             <input
@@ -295,7 +301,7 @@ const Shipping = () => {
           <input
             type="submit"
             value="Confrom Shipping"
-            class=" px-6 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
+            class=" px-8 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
           />
         </div>
       </form>

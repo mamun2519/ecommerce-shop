@@ -36,7 +36,7 @@ const OrderShipped = () => {
   };
   console.log(shippedInfo);
   return (
-    <div className="mb-20 px-4 lg:px-0">
+    <div className=" px-4 lg:px-0">
       <div className=" grid grid-cols-2  lg:grid-cols-3 gap-5">
         <div className="col-span-2">
           <div className="relative   min-w-0 break-words bg-white w-full mb-6 shadow-md border rounded">
@@ -251,7 +251,7 @@ const OrderShipped = () => {
         </div>
 
         {/* shipped part  */}
-        <div className="relative min-w-0 break-words bg-white w-full mb-6 shadow-md border rounded h-[200px]">
+        <div className="relative min-w-0 break-words bg-white w-full  shadow-md border rounded h-[200px] col-span-2 lg:col-span-1">
           <div className="p-5">
             <h1 className=" font-medium">Order Shipped</h1>
             <div className="mt-3">

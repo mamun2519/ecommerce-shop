@@ -7,8 +7,8 @@ import { fetchAdmin } from "../Futurecher/Slice/getallAdminSlice";
 import { toast } from "react-toastify";
 import { Fragment } from "react";
 import { AiOutlineMail } from "react-icons/ai";
-import { BiLockOpenAlt } from "react-icons/bi";
 import { fetchUser } from "../Futurecher/Slice/userSlice";
+import { CgProfile } from "react-icons/cg";
 const AdminRemoveModal = ({ closeModal, openModal, isOpen, id }) => {
   const [user, setUser] = useState({});
 
@@ -82,8 +82,8 @@ const AdminRemoveModal = ({ closeModal, openModal, isOpen, id }) => {
                   >
                     <div>
                       <div className="relative">
-                        <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-                          <AiOutlineMail />
+                        <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+                          <CgProfile />
                         </div>
                         <label for="username" class="block text-sm text-black">
                           Name
@@ -99,8 +99,8 @@ const AdminRemoveModal = ({ closeModal, openModal, isOpen, id }) => {
 
                       <div class="mt-4">
                         <div class="flex items-center justify-between relative">
-                          <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
-                            <BiLockOpenAlt />
+                          <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
+                            <AiOutlineMail />
                           </div>
                           <label
                             for="password"

@@ -24,7 +24,7 @@ const Order = () => {
                 cart.map((myCart) => (
                   <div className="grid grid-cols-3 mt-1 " key={myCart.id}>
                     <span className="">{myCart.name}</span>
-                    <span className="text-center">{myCart.quentity} PSC</span>
+                    <span className="text-center">{myCart.quantity} PSC</span>
                     <span className="text-end">{myCart.price} BDT</span>
                   </div>
                 ))}
@@ -58,7 +58,7 @@ const Order = () => {
             <div class="mt-6 text-center">
               <button
                 onClick={() => navigate("/chackout/orderReview/payment")}
-                class="w-1/2 px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
+                class=" px-16 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
               >
                 Confrom Order
               </button>

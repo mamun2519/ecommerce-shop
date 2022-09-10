@@ -2,111 +2,90 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className=" bg-base-200">
-      <footer class="text-gray-600 body-font max-w-7xl m-auto ">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+    <div className=" bg-[#062C30]">
+      <footer class="text-white body-font max-w-7xl m-auto ">
+  <div class="container px-5 py-12 mx-auto">
+    <div class=" grid lg:grid-cols-4 grid-cols-1 md:text-left text-center -mb-10 -mx-4">
+      <div class=" w-full px-4">
+        <h2 class="title-font font-medium  tracking-widest text-sm mb-3">Company</h2>
         <nav class="list-none mb-10">
           <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            <a class="text-white hover:text-[#EC255A]">About Us</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            <a class="text-white hover:text-[#EC255A]">Delivary Information</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+            <a class="text-white hover:text-[#EC255A]">Privacy Policy</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            <a class="text-white hover:text-[#EC255A]">Terms & Condication</a>
+        
+          </li>
+          <li>
+          <a class="text-white hover:text-[#EC255A]">Countact Us</a>
+            
+        
+          </li>
+          <li>
+          <a class="text-white hover:text-[#EC255A]">Support Center</a>
+        
           </li>
         </nav>
       </div>
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+    
+     
+      <div class=" w-full px-4">
+        <h2 class="title-font font-medium racking-widest text-sm mb-3">Account</h2>
         <nav class="list-none mb-10">
           <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            <a class="text-white hover:text-[#EC255A]">Sing In</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            <a class="text-white hover:text-[#EC255A]">View Cart</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+            <a class="text-white hover:text-[#EC255A]">My Wishlist</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            <a class="text-white hover:text-[#EC255A]">Track My Order</a>
+          </li>
+          <li>
+            <a class="text-white hover:text-[#EC255A]">Shipping Details</a>
+          </li>
+          <li>
+            <a class="text-white hover:text-[#EC255A]">Compure Products</a>
           </li>
         </nav>
       </div>
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+      <div class=" w-full px-4">
+        <h2 class="title-font font-medium  tracking-widest text-sm mb-3">Popular</h2>
         <nav class="list-none mb-10">
           <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            <a class="text-white hover:text-[#EC255A]">T-sharts</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            <a class="text-white hover:text-[#EC255A]">Smart Boy Hudi</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+            <a class="text-white hover:text-[#EC255A]">Shari</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            <a class="text-white hover:text-[#EC255A]">Lady Bag</a>
+          </li>
+          <li>
+            <a class="text-white hover:text-[#EC255A]">Panjbaji</a>
+          </li>
+          <li>
+            <a class="text-white hover:text-[#EC255A]">Three Pis</a>
           </li>
         </nav>
       </div>
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav>
-      </div>
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav>
-      </div>
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav>
+      <div class="w-full px-4">
+        <h2 class="title-font font-medium  tracking-widest text-sm mb-3">Payment Gateways</h2>
+       <div>
+        <img src="https://i0.wp.com/zitengine.com/zitcms/uploads/2021/01/ssl-commerz-payment-gateway-bangladesh-cover-photo.png?fit=850%2C446&ssl=1" alt="" />
+       </div>
       </div>
     </div>
   </div>
@@ -114,12 +93,13 @@ const Footer = () => {
     <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
       <div class="flex md:flex-nowrap flex-wrap justify-center items-end md:justify-start">
         <div class="relative sm:w-64 w-40 sm:mr-4 mr-2">
-          <label for="footer-field" class="leading-7 text-sm text-gray-600">Placeholder</label>
+          <label for="footer-field" class="leading-7 text-sm -[#062C30] ">SUBSCRIBE</label>
+     
           <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
         </div>
-        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
-        <p class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">Bitters chicharrones fanny pack
-          <br class="lg:block hidden"/>waistcoat green juice
+        <button class="inline-flex text-white bg-[#EC255A]  border-0 py-2 px-6  rounded">SUBSCRIBE</button>
+        <p class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">Get E-mail updates abouts
+          <br class="lg:block hidden"/> our latest shop and special offer.
         </p>
       </div>
       <span class="inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
@@ -148,12 +128,12 @@ const Footer = () => {
       </span>
     </div>
   </div>
-  <div class="bg-gray-100">
+  <div class="">
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
-        <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" target="_blank" rel="noopener noreferrer">@knyttneve</a>
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2022 CopyRight Recive
+        <a href="https://twitter.com/knyttneve" class="text-white ml-1" target="_blank" rel="noopener noreferrer">Smart E-Shop</a>
       </p>
-      <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm">Enamel pin tousled raclette tacos irony</span>
+     
     </div>
   </div>
 </footer>

@@ -75,9 +75,13 @@ const Navber = () => {
               </ul>
             </div>
             <a className="btn btn-ghost px-0 lg:px-4 normal-case text-xl">
-              SMA<span className="text-[#EC255A]">RT</span>
+              {/* SMA<span className="text-[#EC255A]">RT</span>
             
-                E-S<span className="text-[#EC255A]">HOP</span>
+                E-S<span className="text-[#EC255A]">HOP</span> */}
+                <span> SM</span>
+                <span className="text-[#EC255A]">ART</span>
+                <span className="pl-2">{" "} E-S</span>
+                <span className="text-[#EC255A]">HOP</span>
             </a>
           </div>
           <div className="navbar-center hidden lg:flex">

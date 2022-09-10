@@ -46,14 +46,7 @@ const Payment = () => {
   return (
     <div className="max-w-7xl m-auto px-2">
       <div class="card w-full bg-base-400 border my-5">
-        <div className="px-8 mt-3">
-          <button
-            onClick={() => navigate("/chackout/orderReview")}
-            className="px-8 py-2 bg-red-500 text-white rounded-lg"
-          >
-            Back
-          </button>
-        </div>
+       
         <div class="py-8 px-2">
           <ul class="progressBar ">
             <li class="active">Shipping</li>
@@ -67,6 +60,15 @@ const Payment = () => {
             </Elements>}
             
           </div>
+        </div>
+
+        <div className="px-4 lg:px-8 my-5">
+          <button
+            onClick={() => navigate("/chackout/orderReview")}
+            className="px-8 py-2 bg-[#062C30]  text-white rounded-lg"
+          >
+            Back
+          </button>
         </div>
       </div>
     </div>

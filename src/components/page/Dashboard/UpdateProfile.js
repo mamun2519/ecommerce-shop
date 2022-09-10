@@ -3,12 +3,16 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { BiLockOpenAlt } from "react-icons/bi";
 import auth from "../../../firebase.init";
 import { useForm } from "react-hook-form";
-import { AiFillCamera } from "react-icons/ai";
+import { AiFillCamera, AiOutlineMail } from "react-icons/ai";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { fetchUserAvater } from "../Futurecher/Slice/userProSlice";
+import { MdCastForEducation, MdDateRange } from "react-icons/md";
+import { SiAboutdotme} from "react-icons/si";
+import { MdOutlineAccountBox} from "react-icons/md";
+import { FaGraduationCap } from "react-icons/fa";
 const UpdateProfile = () => {
   
   const [user] = useAuthState(auth);
@@ -83,7 +87,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="mb-20 px-4 lg:px-0">
+    <div className="mb-5 px-4 lg:px-0">
       <div className="w-full lg:w-9/12 mx-auto border  shadow-md rounded-lg p-5">
         <div className="">
           <img
@@ -152,8 +156,8 @@ const UpdateProfile = () => {
               <div className="col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A] ">
+                    <AiOutlineMail />
                     </div>
                   </div>
 
@@ -185,8 +189,8 @@ const UpdateProfile = () => {
               <div className=" col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                    <MdCastForEducation />
                     </div>
                   </div>
 
@@ -218,8 +222,8 @@ const UpdateProfile = () => {
               <div className=" col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <SiAboutdotme />
                     </div>
                   </div>
 
@@ -249,8 +253,8 @@ const UpdateProfile = () => {
               <div className=" col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <MdOutlineAccountBox />
                     </div>
                   </div>
 
@@ -282,8 +286,8 @@ const UpdateProfile = () => {
               <div className=" col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <FaGraduationCap />
                     </div>
                   </div>
 
@@ -315,8 +319,8 @@ const UpdateProfile = () => {
               <div className=" col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <MdDateRange/>
                     </div>
                   </div>
 
@@ -351,8 +355,8 @@ const UpdateProfile = () => {
               <div className=" col-span-2">
                 <div class="">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
+                      <AiOutlineMail/>
                     </div>
                   </div>
 
@@ -377,11 +381,11 @@ const UpdateProfile = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center">
+            <div className="text-center mt-4" >
               <input
                 type="submit"
                 value="Save"
-                className="bg-[#062C30] px-8 py-2 rounded-lg text-white"
+                className="bg-[#062C30] px-16 py-2 rounded-lg text-white"
               />
             </div>
           </div>

@@ -75,8 +75,8 @@ const Myorder = () => {
             </div>
           </div>
         </div>
-        <footer class="relative  pb-6">
-          <div class="container mx-auto px-4">
+        <footer class="relative ">
+          <div class="container mx-auto px-4 text-red-500">
           Dear customer, complete details of your order are in order receipt. Please check it out.
           </div>
         </footer>

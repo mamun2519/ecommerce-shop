@@ -23,7 +23,7 @@ const ManageProduct = () => {
     <div data-aos="fade-down"
     data-aos-duration="1000">
       <section class="py-1 bg-blueGray-50">
-        <div class="w-full  mb-12 xl:mb-0 px-4">
+        <div class="w-full  mb-5 xl:mb-0 px-4">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-md border rounded ">
             <div class="rounded-t mb-0 px-2 py-3 border-0">
               <div class="lg:flex block flex-wrap items-center">

@@ -275,8 +275,8 @@ const ProductInfo = () => {
             <div className="border-t mt-10">
               <div>
                 <div className="flex justify-center  lg:px-4">
-                  <div class="card w-full bg-base-100  ">
-                    <div class="card-body p-4">
+                  <div class="lg:card cards w-full bg-base-100  ">
+                    <div class="lg:card-body lg:p-4">
                       <Tab.Group>
                         <Tab.List className="lg:flex text-center gap-10 py-[4px] bg-slate-100 lg:px-[4px] border rounded-lg   lg:mx-auto justify-center">
                           {Tabs.map((item, index) => (

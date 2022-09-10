@@ -4,7 +4,7 @@ import { BiLockOpenAlt } from "react-icons/bi";
 import SocialLogin from "./SocialLogin";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+
 import auth from "../../../firebase.init";
 import {
   useAuthState,
@@ -75,7 +75,7 @@ const Log = () => {
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="relative">
-          <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
+          <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
             <AiOutlineMail />
           </div>
           <label for="username" class="block text-sm text-black">
@@ -109,7 +109,7 @@ const Log = () => {
 
         <div class="mt-4">
           <div class="flex items-center justify-between relative">
-            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 bg-red-200">
+            <div className="border p-2   w-9 rounded absolute top-[32px] left-1 text-[#EC255A]">
               <BiLockOpenAlt />
             </div>
             <label for="password" class="block text-sm text-black ">
@@ -160,8 +160,7 @@ const Log = () => {
 
       <SocialLogin signInWithGoogle={signInWithGoogle}></SocialLogin>
 
-      {/* <p class="mt-8 text-xs font-light text-center text-gray-400"> Don't have an account? <a href="#"
-                class="font-medium text-gray-700 dark:text-gray-200 hover:underline">Create One</a></p> */}
+      
     </div>
   );
 };
