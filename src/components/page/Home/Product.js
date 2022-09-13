@@ -27,8 +27,8 @@ const Product = ({product}) => {
               <h2 className="card-title pb-0">{name}  </h2>
              
               <span className=" text-gray-500">{description}</span>
-              <p className="text-xl text-red-400 font-medium">{price}$</p>
-              <small className="line-through">1200$</small>
+              <p className="text-xl text-[#EC255A] font-medium">{price}$</p>
+              <small className="line-through">200$</small>
               
               <div className="flex mt-2  text-orange-400 gap-1">
                 <span><AiFillStar/></span>

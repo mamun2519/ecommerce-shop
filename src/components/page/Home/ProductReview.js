@@ -42,36 +42,36 @@ const ProductReview = ({ product }) => {
                           </div>
                           <div class="text-gray-700 flex gap-1">
                                   {pro?.rating == 1 && (
-                                    <AiFillStar className="text-red-500" />
+                                    <AiFillStar className="text-orange-400" />
                                   )}
                                   {pro?.rating == 2 && (
                                     <>
-                                      <AiFillStar className="text-red-500" />
-                                      <AiFillStar className="text-red-500" />
+                                      <AiFillStar className="text-orange-400" />
+                                      <AiFillStar className="text-orange-400" />
                                     </>
                                   )}
                                   {pro?.rating == 3 && (
                                     <>
-                                      <AiFillStar className="text-red-500" />
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />
+                                      <AiFillStar className="text-orange-400" />
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />
                                     </>
                                   )}
                                   {pro?.rating == 4 && (
                                     <>
-                                      <AiFillStar className="text-red-500" />
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />
+                                      <AiFillStar className="text-orange-400" />
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />
                                     </>
                                   )}
                                   {pro?.rating == 5 && (
                                     <>
-                                      <AiFillStar className="text-red-500" />
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />
+                                      <AiFillStar className="text-orange-400" />
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />
                                     </>
                                   )}
                                 </div>
@@ -142,7 +142,7 @@ const ProductReview = ({ product }) => {
                   }
                 >
                   {product?.product?.product?.reviews.length == 0 ? (
-                    <div className="text-4xl text-red-500 font-medium flex h-[400px] justify-center items-center">
+                    <div className="text-4xl text-orange-400 font-medium flex h-[400px] justify-center items-center">
                       <h3 className="">NO Reviews Here</h3>
                     </div>
                   ) : (
@@ -171,36 +171,36 @@ const ProductReview = ({ product }) => {
                                 </div>
                                 <div class="text-gray-700 flex gap-1">
                                   {pro?.rating == 1 && (
-                                    <AiFillStar className="text-red-500" />
+                                    <AiFillStar className="text-orange-400" />
                                   )}
                                   {pro?.rating == 2 && (
                                     <>
-                                      <AiFillStar className="text-red-500" />
-                                      <AiFillStar className="text-red-500" />
+                                      <AiFillStar className="text-orange-400" />
+                                      <AiFillStar className="text-orange-400" />
                                     </>
                                   )}
                                   {pro?.rating == 3 && (
                                     <>
-                                      <AiFillStar className="text-red-500" />
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />
+                                      <AiFillStar className="text-orange-400" />
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />
                                     </>
                                   )}
                                   {pro?.rating == 4 && (
                                     <>
-                                      <AiFillStar className="text-red-500" />
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />
+                                      <AiFillStar className="text-orange-400" />
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />
                                     </>
                                   )}
                                   {pro?.rating == 5 && (
                                     <>
-                                      <AiFillStar className="text-red-500" />
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />{" "}
-                                      <AiFillStar className="text-red-500" />
+                                      <AiFillStar className="text-orange-400" />
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />{" "}
+                                      <AiFillStar className="text-orange-400" />
                                     </>
                                   )}
                                 </div>

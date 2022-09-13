@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProduct } from "../Futurecher/Slice/productSlice";
 
-const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
+const Catagory = ({ selectCatagoryHendeler, shart, hudi , burka ,  hijab , shoe, cosmatic, saree ,  viewAll}) => {
   const [searchText, setSearchText] = useState();
   console.log(searchText);
   const disPatch = useDispatch();
@@ -30,7 +30,7 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
 
       </div>
       <div
-        onClick={() => selectCatagoryHendeler("T Shirt")}
+        onClick={() => selectCatagoryHendeler("T-shirts")}
         className={
           shart
             ? "bg-[#062C30]  rounded-lg border-b  mt-2  px-4 text-white cursor-pointer"
@@ -42,7 +42,7 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
         </p>
       </div>
       <div
-        onClick={() => selectCatagoryHendeler("hudi")}
+        onClick={() => selectCatagoryHendeler("Smart Hudi")}
         className={
           hudi
             ? "bg-[#062C30] py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
@@ -50,17 +50,48 @@ const Catagory = ({ selectCatagoryHendeler, shart, hudi , viewAll}) => {
         }
       >
         <p id="hudi" className="">
-          Smart Boy Hudi
+          Smart Hoodie
         </p>
       </div>
-      <div className="border-b  px-4 ">
-        <p className="py-3">Home</p>
+      <div  onClick={() => selectCatagoryHendeler("Arabic Hijab")}
+        className={
+          hijab
+            ? "bg-[#062C30] py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
+            : "py-3 border-b  px-4 cursor-pointer"
+        }>
+        <p className="">Arabic Hijab</p>
       </div>
-      <div className="border-b  px-4">
-        <p className="py-3">Home</p>
+      <div  onClick={() => selectCatagoryHendeler("Burka")}
+        className={
+          burka
+            ? "bg-[#062C30] py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
+            : "py-3 border-b  px-4 cursor-pointer"
+        }>
+        <p className="">Burka</p>
       </div>
-      <div className="border-b  px-4">
-        <p className="py-3">Home</p>
+      <div  onClick={() => selectCatagoryHendeler("Saree")}
+        className={
+          saree
+            ? "bg-[#062C30] py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
+            : "py-3 border-b  px-4 cursor-pointer"
+        }>
+        <p className=""> lady Saree</p>
+      </div>
+      <div  onClick={() => selectCatagoryHendeler("Shoe")}
+        className={
+          shoe
+            ? "bg-[#062C30] py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
+            : "py-3 border-b  px-4 cursor-pointer"
+        }>
+        <p className="">Man Woman Shoe</p>
+      </div>
+      <div  onClick={() => selectCatagoryHendeler("Cosmatic")}
+        className={
+        cosmatic
+            ? "bg-[#062C30] py-3 rounded-lg border-b   px-4 text-white cursor-pointer"
+            : "py-3 border-b  px-4 cursor-pointer"
+        }>
+        <p className="">Cosmatic</p>
       </div>
       <div  onClick={() => selectCatagoryHendeler("all")}
         className={

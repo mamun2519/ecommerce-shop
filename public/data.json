@@ -3,24 +3,28 @@
             "name": "All In One Shirt",
             "description": "Man Fashion",
             "price": 450,
+            "brand": "Aarong",
             "images":{
                 "public_id": "xxx",
                 "url": "https://i.ibb.co/sWTMQPw/1661147284027.jpg"
             },
             "category": "T-shirts",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "All In One Shirt are the ultimate in comfort. Cool Spire moisture wicking keep you cool and dry while the soft touch yarn and tag-free neck feels great all day long. These tees are built to last with durable tubular collar design and covered shoulder seams. The Gildan t-shirt will soon be your favorite...if it isn't already"
             
       },
       {
             "name": "Body Fit Shirt",
             "description": "Man Fashion",
             "price": 600,
+            "brand": "Aarong",
             "images":{
                 "public_id": "xxx",
                 "url": "https://i.ibb.co/4ZPkccS/1661147284046.jpg"
             },
             "category": "T-shirts",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "Body Fit Shirt are the ultimate in comfort. Cool Spire moisture wicking keep you cool and dry while the soft touch yarn and tag-free neck feels great all day long. These tees are built to last with durable tubular collar design and covered shoulder seams. The Gildan t-shirt will soon be your favorite...if it isn't already"
 
             
       },
@@ -28,108 +32,533 @@
             "name": "Cool T Shirts",
             "description": "Man Fashion",
             "price": 390,
+            "brand": "Aarong",
             "images":{
                 "public_id": "xxx",
                 "url": "https://i.ibb.co/JpvbdD8/1661147284067.jpg"
             },
             "category": "T-shirts",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "Cool T Shirts Bloue are the ultimate in comfort. Cool Spire moisture wicking keep you cool and dry while the soft touch yarn and tag-free neck feels great all day long. These tees are built to last with durable tubular collar design and covered shoulder seams. The Gildan t-shirt will soon be your favorite...if it isn't already"
+            
             
       },
       {
             "name": "Cute T Shirt Bloue",
             "description": "Man Fashion",
+            "brand": "Aarong",
             "price": 900,
             "images":{
                 "public_id": "xxx",
                 "url": "https://i.ibb.co/vjLFwjS/1661147284091.jpg"
             },
             "category": "T-shirts",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "Cute T Shirt Bloue are the ultimate in comfort. Cool Spire moisture wicking keep you cool and dry while the soft touch yarn and tag-free neck feels great all day long. These tees are built to last with durable tubular collar design and covered shoulder seams. The Gildan t-shirt will soon be your favorite...if it isn't already"
             
       },
       {
             "name": "Energie Shirt",
             "description": "Man Fashion",
+            "brand": "Aarong",
             "price": 760,
             "images":{
                 "public_id": "xxx",
                 "url": "https://i.ibb.co/mS1f5rc/1661147284117.jpg"
             },
             "category": "T-shirts",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "Energie Shirt are the ultimate in comfort. Cool Spire moisture wicking keep you cool and dry while the soft touch yarn and tag-free neck feels great all day long. These tees are built to last with durable tubular collar design and covered shoulder seams. The Gildan t-shirt will soon be your favorite...if it isn't already"
             
       },
       {
             "name": "Fitted T Shirt",
             "description": "Man Fashion",
+            "brand": "Aarong",
             "price": 400,
             "images":{
                 "public_id": "xxx",
                 "url": "https://i.ibb.co/kXZGTFt/1661147284149.jpg"
             },
             "category": "T-shirts",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "Fitted T Shirt are the ultimate in comfort. Cool Spire moisture wicking keep you cool and dry while the soft touch yarn and tag-free neck feels great all day long. These tees are built to last with durable tubular collar design and covered shoulder seams. The Gildan t-shirt will soon be your favorite...if it isn't already"
             
       },
       {
             "name": "My T Shirt",
             "description": "Man Fashion",
+            "brand": "Aarong",
             "price": 620,
             "images":{
                 "public_id": "xxx",
                 "url": "https://i.ibb.co/m5r3LZL/1661147284180.jpg"
             },
             "category": "T-shirts",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "My T Shirt are the ultimate in comfort. Cool Spire moisture wicking keep you cool and dry while the soft touch yarn and tag-free neck feels great all day long. These tees are built to last with durable tubular collar design and covered shoulder seams. The Gildan t-shirt will soon be your favorite...if it isn't already."
             
       },
       {
             "name": "Sweat Shirt",
             "description": "Man Fashion",
+            "brand": "Richman",
             "price": 710,
             "images":{
                 "public_id": "xxx",
                 "url": "https://i.ibb.co/L9Fz83Z/1661147284214.jpg"
             },
             "category": "T-shirts",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "Sweat Shirt are the ultimate in comfort. Cool Spire moisture wicking keep you cool and dry while the soft touch yarn and tag-free neck feels great all day long. These tees are built to last with durable tubular collar design and covered shoulder seams. The Gildan t-shirt will soon be your favorite...if it isn't already."
             
       },
       {
             "name": "Smart T Shirt",
             "description": "Man Fashion",
+            "brand": "Richman",
             "price": 520,
             "images":{
                 "public_id": "xxx",
                 "url": "https://i.ibb.co/RyV5J15/1661147284245.jpg"
             },
             "category": "T-shirts",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "Smart T Shirt are the ultimate in comfort. Cool Spire moisture wicking keep you cool and dry while the soft touch yarn and tag-free neck feels great all day long. These tees are built to last with durable tubular collar design and covered shoulder seams. The Gildan t-shirt will soon be your favorite...if it isn't already."
             
       },
       {
-            "name": "Cool Hudi",
-            "description": "Man Fashion",
+            "name": "Cute Cat Hoodie For Girls",
+            "description": "Girls Fashion",
+            "brand": "Richman",
             "price": 2190,
             "images":{
                 "public_id": "xxx",
-                "url": "https://i.ibb.co/Vm4PtBV/1661147284277.jpg"
+                "url": "https://i.ibb.co/3SwgkKy/hudi1.jpg"
             },
             "category": "Smart Hudi",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "Ultimate comfort has been taken to the next level with this heavyweight hoodie featuring camo accents. No need to rip that tight neck opening - we've done it for you by engineering a casual V-neck to provide extra comfort. Might become the new standard for hoodies! Big & Tall sizes are designed for men over 6'2 and add 2 in body length and 1-1⁄2 in sleeve length."
             
       },
       {
-            "name": "Smart Black Hudi",
+            "name": "Smart Cat Hoodie",
             "description": "Man Fashion",
-            "price": 1990,
+            "brand": "Richman",
+            "price": 1290,
             "images":{
                 "public_id": "xxx",
-                "url": "https://i.ibb.co/Vm4PtBV/1661147284277.jpg"
+                "url": "https://i.ibb.co/5YDZntW/hudi.jpg"
             },
             "category": "Smart Hudi",
-            "Stock": 100
+            "Stock": 100,
+            "prodescription": "The Children’s Place offers a huge selection of kid's clothing! Shop us for jeans, shorts, leggings, chinos, polo shirts, dresses, uniforms, pajamas, and accessories. Made with premium quality materials at a great value. Kids clothing made simple."
+            
+      },
+      {
+            "name": "Jaket Hoodie",
+            "description": "Man Fashion",
+            "brand": "Richman",
+            "price": 1600,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/SQJ7sX0/hudi2.jpg"
+            },
+            "category": "Smart Hudi",
+            "Stock": 100,
+            "prodescription": "Ultimate comfort has been taken to the next level with this heavyweight hoodie featuring camo accents. No need to rip that tight neck opening - we've done it for you by engineering a casual V-neck to provide extra comfort. Might become the new standard for hoodies! Big & Tall sizes are designed for men over 6'2 and add 2 in body length and 1-1⁄2 in sleeve length."
+            
+      },
+      {
+            "name": "Carhartt Men's Fit Hoodie",
+            "description": "Man Fashion",
+            "brand": "Aarong",
+            "price": 1300,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/wN30kfx/hudi4.jpg"
+            },
+            "category": "Smart Hudi",
+            "Stock": 100,
+            "prodescription": "The Children’s Place offers a huge selection of kid's clothing! Shop us for jeans, shorts, leggings, chinos, polo shirts, dresses, uniforms, pajamas, and accessories. Made with premium quality materials at a great value. Kids clothing made simple."
+            
+      },
+      {
+            "name": "Terry Zip Hoodie",
+            "description": "Man Fashion",
+            "brand": "Aarong",
+            "price": 1300,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/1T09433/hudi5.jpg"
+            },
+            "category": "Smart Hudi",
+            "Stock": 100,
+            "prodescription": "Ultimate comfort has been taken to the next level with this heavyweight hoodie featuring camo accents. No need to rip that tight neck opening - we've done it for you by engineering a casual V-neck to provide extra comfort. Might become the new standard for hoodies! Big & Tall sizes are designed for men over 6'2 and add 2 in body length and 1-1⁄2 in sleeve length."
+            
+      },
+      {
+            "name": "Afghanistan Authentic Burka",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 2100,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/7g5dgCC/burka1.jpg"
+            },
+            "category": "Burka",
+            "Stock": 100,
+            "prodescription": "Borka is a muslim women dress in Bangladesh. By wearing borka women can covered their full body. There are huge advantages of wearing borka like by wearing borka you can tackle yourself from sexual harassments. Also every muslim believe  covering secret places of the body is farz for men and women also. So, for women can covering their body easily by using borka."
+            
+      },
+      {
+            "name": "Muslim Burka",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 2700,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/wJdkDGz/burka2.jpg"
+            },
+            "category": "Burka",
+            "Stock": 100,
+            "prodescription": "Borka is a muslim women dress in Bangladesh. By wearing borka women can covered their full body. There are huge advantages of wearing borka like by wearing borka you can tackle yourself from sexual harassments. Also every muslim believe  covering secret places of the body is farz for men and women also. So, for women can covering their body easily by using borka."
+            
+      },
+      {
+            "name": "Islamic Khimar",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 2400,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/XF65Cbn/burka4.jpg"
+            },
+            "category": "Burka",
+            "Stock": 100,
+            "prodescription": "Borka is a muslim women dress in Bangladesh. By wearing borka women can covered their full body. There are huge advantages of wearing borka like by wearing borka you can tackle yourself from sexual harassments. Also every muslim believe  covering secret places of the body is farz for men and women also. So, for women can covering their body easily by using borka."
+            
+      },
+      {
+            "name": "Abaya Borka",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 4400,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/WBCgD00/burka5.jpg"
+            },
+            "category": "Burka",
+            "Stock": 100,
+            "prodescription": "Borka is a muslim women dress in Bangladesh. By wearing borka women can covered their full body. There are huge advantages of wearing borka like by wearing borka you can tackle yourself from sexual harassments. Also every muslim believe  covering secret places of the body is farz for men and women also. So, for women can covering their body easily by using borka."
+            
+      },
+      {
+            "name": "Irani Borka",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 3100,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/dP1XJct/burka5.png"
+            },
+            "category": "Burka",
+            "Stock": 100,
+            "prodescription": "Borka is a muslim women dress in Bangladesh. By wearing borka women can covered their full body. There are huge advantages of wearing borka like by wearing borka you can tackle yourself from sexual harassments. Also every muslim believe  covering secret places of the body is farz for men and women also. So, for women can covering their body easily by using borka."
+            
+      },
+      {
+            "name": "Arabic Hijab",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 2700,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/vDVypGm/hijab1.jpg"
+            },
+            "category": "Arabic Hijab",
+            "Stock": 100,
+            "prodescription": "Borka is a muslim women dress in Bangladesh. By wearing borka women can covered their full body. There are huge advantages of wearing borka like by wearing borka you can tackle yourself from sexual harassments. Also every muslim believe  covering secret places of the body is farz for men and women also. So, for women can covering their body easily by using borka."
+            
+      },
+      {
+            "name": "Chiffon Hijab",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 3500,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/xq1QWg3/hijab2.jpg"
+            },
+            "category": "Arabic Hijab",
+            "Stock": 100,
+            "prodescription": "Borka is a muslim women dress in Bangladesh. By wearing borka women can covered their full body. There are huge advantages of wearing borka like by wearing borka you can tackle yourself from sexual harassments. Also every muslim believe  covering secret places of the body is farz for men and women also. So, for women can covering their body easily by using borka."
+            
+      },
+      {
+            "name": " Fashionable Hijab",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 3500,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/zFfnbht/hijab4.jpg"
+            },
+            "category": "Arabic Hijab",
+            "Stock": 100,
+            "prodescription": "Borka is a muslim women dress in Bangladesh. By wearing borka women can covered their full body. There are huge advantages of wearing borka like by wearing borka you can tackle yourself from sexual harassments. Also every muslim believe  covering secret places of the body is farz for men and women also. So, for women can covering their body easily by using borka."
+            
+      },
+      {
+            "name": " Stylish Hijab",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 3500,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/m50DFVM/hijab3.jpg"
+            },
+            "category": "Arabic Hijab",
+            "Stock": 100,
+            "prodescription": "Borka is a muslim women dress in Bangladesh. By wearing borka women can covered their full body. There are huge advantages of wearing borka like by wearing borka you can tackle yourself from sexual harassments. Also every muslim believe  covering secret places of the body is farz for men and women also. So, for women can covering their body easily by using borka."
+            
+      },
+      {
+            "name": "Banarasi Art Silk",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 6300,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/RHpKJ61/sari1.webp"
+            },
+            "category": "Saree",
+            "Stock": 100,
+            "prodescription": "Express your style better by draping this saree presented to you by Elena Fashion. It has been crafted with care using Cotton Silk fabric that promises to keep you at ease all through the day. Besides, it comes with a printed work which adds to its design. Besides, It also comes with an unstitched matching blouse."
+            
+      },
+      {
+            "name": "Special Saree",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 6200,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/TWzmFwW/sari2.jpg"
+            },
+            "category": "Saree",
+            "Stock": 100,
+            "prodescription": "Traditional Indian Saree is the best dress for women to look beautiful. Saree is also called sari and sadi in India. Resham, Zari Embroidery Saree is the cultural outfit of most Indian women. Wedding Sarees for Women Latest Design. Nivah Fashion Embroidered Saree comes with an embellished unstitched blouse piece which is similar to the shade and design of the saree."
+            
+      },
+      {
+            "name": "Special Jamdani",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 6700,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/kMYQZj1/sari4.webp"
+            },
+            "category": "Saree",
+            "Stock": 100,
+            "prodescription": "Lilac half silk jamdani saree with buti detailing. Comes with matching unstitched blouse piece. Blouse shown in the photo is a styling suggestion, it is not a part of the actual product."
+            
+      },
+      {
+            "name": "Lady Shoe",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 6500,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/Lxfn2Hw/shoe4.webp"
+            },
+            "category": "Shoe",
+            "Stock": 100,
+            "prodescription": "Easy Street is a national branded shoe company that has been making women's traditional shoes for over 50 years with an emphasis on comfort and fit supported by widths and sizes."
+            
+      },
+      {
+            "name": "Lady Shoe",
+            "description": "Woman Fashion",
+            "brand": "Aarong",
+            "price": 5700,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/Lxfn2Hw/shoe4.webp"
+            },
+            "category": "Shoe",
+            "Stock": 100,
+            "prodescription": "Easy Street is a national branded shoe company that has been making women's traditional shoes for over 50 years with an emphasis on comfort and fit supported by widths and sizes."
+            
+      },
+      {
+            "name": "Dexter  Raquel V Bowling Shoes",
+            "description": "Man Fashion",
+            "brand": "Aarong",
+            "price": 7600,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/z2C7z3V/shoe1.webp"
+            },
+            "category": "Shoe",
+            "Stock": 100,
+            "prodescription": "Easy Street is a national branded shoe company that has been making women's traditional shoes for over 50 years with an emphasis on comfort and fit supported by widths and sizes.Updated with a fresh new silhouette, like the women’s Raquel V, the Raquel V Jr. features a new seamless toe designed for comfort, and a DEX-LITE EVA outsole."
+            
+      },
+      {
+            "name": " Mens  SST 8 Pro",
+            "description": "Man Fashion",
+            "brand": "Aarong",
+            "price": 7600,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/W0sj67n/shoe3.webp"
+            },
+            "category": "Shoe",
+            "Stock": 100,
+            "prodescription": "Easy Street is a national branded shoe company that has been making women's traditional shoes for over 50 years with an emphasis on comfort and fit supported by widths and sizes.Updated with a fresh new silhouette, like the women’s Raquel V, the Raquel V Jr. features a new seamless toe designed for comfort, and a DEX-LITE EVA outsole."
+            
+      },
+      {
+            "name": "Armour Men's  9 Running Shoe",
+            "description": "Man Fashion",
+            "brand": "Aarong",
+            "price": 7600,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/8M0SJBw/shoe2.webp"
+            },
+            "category": "Shoe",
+            "Stock": 100,
+            "prodescription": "These running shoes are built to help anyone go faster-Charged Cushioning® helps protect against impact, leather overlays add durable stability, and a mesh upper keeps your feet cool for mile.ides soft, step-in comfort. Charged Cushioning® midsole uses compression molded foam for ultimate responsiveness & durability. Solid rubber outsole covers high impact zones for greater durability with less weight. Offset: 10mm. NEUTRAL: For runners who need a balance of flexibility & cushioning. Lace type: Standard tie."
+            
+      },
+      {
+            "name": "Face Cream",
+            "description": "Man and Woman Fashion",
+            "brand": "Aarong",
+            "price": 200,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/w4RJ5sP/cream2.webp"
+            },
+            "category": "Cosmatic",
+            "Stock": 100,
+            "prodescription": "Enriched with natural extracts,helps fight 6 skin problems that are related to acne prone skin,day after day your skin is purified, cleared of imperfections and pimple problems,this face wash helps to control oil, dry pimples, uproot blackheads, tighten pores, reduce redness and lighten marks,use daily for effective results."
+            
+      },
+      {
+            "name": "Olay Face Cream",
+            "description": "Man and Woman Fashion",
+            "brand": "Aarong",
+            "price": 200,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/P419srN/cream5.jpg"
+            },
+            "category": "Cosmatic",
+            "Stock": 100,
+            "prodescription": "Enriched with natural extracts,helps fight 6 skin problems that are related to acne prone skin,day after day your skin is purified, cleared of imperfections and pimple problems,this face wash helps to control oil, dry pimples, uproot blackheads, tighten pores, reduce redness and lighten marks,use daily for effective results."
+            
+      },
+      {
+            "name": "Fair And Lovely",
+            "description": "Man and Woman Fashion",
+            "brand": "Fair Lovely",
+            "price": 200,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/44s0bf9/fireAdn.jpg"
+            },
+            "category": "Cosmatic",
+            "Stock": 100,
+            "prodescription": "Enriched with natural extracts,helps fight 6 skin problems that are related to acne prone skin,day after day your skin is purified, cleared of imperfections and pimple problems,this face wash helps to control oil, dry pimples, uproot blackheads, tighten pores, reduce redness and lighten marks,use daily for effective results."
+            
+      },
+      {
+            "name": "Gernier Man",
+            "description": "Man and Woman Fashion",
+            "brand": "Gernier",
+            "price": 280,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/1KF8BqB/garnierman.webp"
+            },
+            "category": "Cosmatic",
+            "Stock": 100,
+            "prodescription": "Enriched with natural extracts,helps fight 6 skin problems that are related to acne prone skin,day after day your skin is purified, cleared of imperfections and pimple problems,this face wash helps to control oil, dry pimples, uproot blackheads, tighten pores, reduce redness and lighten marks,use daily for effective results."
+            
+      },
+      {
+            "name": "Navia Man",
+            "description": "Man and Woman Fashion",
+            "brand": "Navia",
+            "price": 200,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/ZLdnhT2/naviyaman.jpg"
+            },
+            "category": "Cosmatic",
+            "Stock": 100,
+            "prodescription": "Enriched with natural extracts,helps fight 6 skin problems that are related to acne prone skin,day after day your skin is purified, cleared of imperfections and pimple problems,this face wash helps to control oil, dry pimples, uproot blackheads, tighten pores, reduce redness and lighten marks,use daily for effective results."
+            
+      },
+      {
+            "name": "Pond's Beauty",
+            "description": "Man and Woman Fashion",
+            "brand": "Ponds",
+            "price": 190,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/crbR2K7/pnds-2jfif.jpg"
+            },
+            "category": "Cosmatic",
+            "Stock": 100,
+            "prodescription": "Enriched with natural extracts,helps fight 6 skin problems that are related to acne prone skin,day after day your skin is purified, cleared of imperfections and pimple problems,this face wash helps to control oil, dry pimples, uproot blackheads, tighten pores, reduce redness and lighten marks,use daily for effective results."
+            
+      },
+      {
+            "name": "Pond's",
+            "description": "Man and Woman Fashion",
+            "brand": "Ponds",
+            "price": 340,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/zhS1HCX/pnds.jpg"
+            },
+            "category": "Cosmatic",
+            "Stock": 100,
+            "prodescription": "Enriched with natural extracts,helps fight 6 skin problems that are related to acne prone skin,day after day your skin is purified, cleared of imperfections and pimple problems,this face wash helps to control oil, dry pimples, uproot blackheads, tighten pores, reduce redness and lighten marks,use daily for effective results."
+            
+      },
+      {
+            "name": "Pond's Fashwash",
+            "description": "Man and Woman Fashion",
+            "brand": "Ponds",
+            "price": 270,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/jr6dd28/pnds3.jpg"
+            },
+            "category": "Cosmatic",
+            "Stock": 100,
+            "prodescription": "Enriched with natural extracts,helps fight 6 skin problems that are related to acne prone skin,day after day your skin is purified, cleared of imperfections and pimple problems,this face wash helps to control oil, dry pimples, uproot blackheads, tighten pores, reduce redness and lighten marks,use daily for effective results."
+            
+      },
+      {
+            "name": "Facewash",
+            "description": "Man and Woman Fashion",
+            "brand": "Ponds",
+            "price": 240,
+            "images":{
+                "public_id": "xxx",
+                "url": "https://i.ibb.co/YR1gtNL/simple.jpg"
+            },
+            "category": "Cosmatic",
+            "Stock": 100,
+            "prodescription": "Enriched with natural extracts,helps fight 6 skin problems that are related to acne prone skin,day after day your skin is purified, cleared of imperfections and pimple problems,this face wash helps to control oil, dry pimples, uproot blackheads, tighten pores, reduce redness and lighten marks,use daily for effective results."
             
       }
 ]

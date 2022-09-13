@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToShippingPrice, calculatetTotalTotalCost, promoDiscount } from "../Futurecher/Slice/shippingPriceSlice";
 import {useNavigate} from 'react-router-dom'
+import { toast } from "react-toastify";
 
 const CartSumary = () => {
   const cart = useSelector((state) => state.cart.cart);
@@ -38,11 +39,12 @@ const CartSumary = () => {
       setPromoCode("")
     }
     else{
-      alert("sorry")
+      toast("Sorry Promo code Dont Match")
+      setPromoCode("")
     }
   });
   }
-  
+  console.log(promoCode);
 
   useEffect(()=>{
     const shippingPrice = parseInt(selectRef?.current?.value)
@@ -80,13 +82,14 @@ const CartSumary = () => {
           <p className="font-semibold">PROMO CODE</p>
           <input
           onChange={(e)=> setPromoCode(e.target.value)}
+          value={promoCode}
             type="number"
             placeholder="Enter Your Code"
             class="block w-full px-2 py-2 mt-2  bg-white border rounded-md   outline-none  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring focus:ring-opacity-40"
           />
           {discount ? <label className="px-1 text-sm text-red-500" htmlFor="">congaculation you have 20% Descount.Happy Shopping</label>
           :
-          <label className="px-1 text-sm text-red-500" htmlFor="">Use Promo code 20% Discount</label>}
+          <label className="px-1 text-sm text-red-500" htmlFor="">Use Promo code Get 20% Discount</label>}
           
           {/* <p>text</p> */}
 

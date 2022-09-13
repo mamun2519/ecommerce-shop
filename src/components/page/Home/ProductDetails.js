@@ -30,7 +30,7 @@ const ProductDetails = ({ product }) => {
                 <div>
                   <p className=" text-gray-600">Brand</p>
                 </div>
-                <div>Nun</div>
+                <div>{product?.product?.product?.brand}</div>
               </div>
               <div className=" grid grid-cols-2 gap-10 mt-1">
                 <div>
