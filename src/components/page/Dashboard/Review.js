@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { AiOutlineMail } from "react-icons/ai";
 import { CgMoreO, CgProfile } from "react-icons/cg";
 import { BsFlagFill } from "react-icons/bs";
+import PageTitle from "../Utilitis/PageTitle";
 const Review = () => {
   const {
     register,
@@ -12,6 +13,7 @@ const Review = () => {
   const onSubmit = async (data) => {};
   return (
     <div className="mb-5 px-4 lg:px-0">
+      <PageTitle title='Review'></PageTitle>
       <div className="w-full lg:w-9/12 mx-auto border  shadow-md rounded-lg p-5 h[700px]">
         <div className="w-full grid-cols-1 grid lg:grid-cols-2 gap-5 mt-5">
           <div className="relative">

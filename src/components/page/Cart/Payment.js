@@ -6,6 +6,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
 import { useDispatch, useSelector } from "react-redux";
 import { addToSecretClient } from "../Futurecher/Slice/clientScritSlice";
+import PageTitle from "../Utilitis/PageTitle";
 const stripePromise = loadStripe(
   "pk_test_51L1nmNCGpaTt0RU8npNSNITrjLTAUDjwjX275RD6RDk5SGoYi1H1zLKxAis8OFp4C0PxQBT2L5c0L0VsTI9ewqGl00dT2UHEXy"
 );
@@ -47,6 +48,7 @@ const Payment = () => {
   
   return (
     <div className="max-w-7xl m-auto px-2">
+      <PageTitle title='Payment'></PageTitle>
       <div class="card w-full bg-base-400 border my-5">
        
         <div class="py-8 px-2">

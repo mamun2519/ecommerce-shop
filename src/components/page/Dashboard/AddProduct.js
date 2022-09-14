@@ -10,6 +10,7 @@ import { FiDollarSign } from "react-icons/fi";
 import { TbBrandAirtable } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import PageTitle from "../Utilitis/PageTitle";
 
 const AddProduct = () => {
   const [productPictue, setProductPicture] = useState("");
@@ -57,6 +58,7 @@ const AddProduct = () => {
 
   return (
     <div className="mb-5 px-4 lg:px-0">
+      <PageTitle title='Add Product'></PageTitle>
       <div className="w-full  mx-auto border  shadow-md rounded-lg p-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="">

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { fetchSingleProduct } from "../Futurecher/Slice/singleProductSlice";
 import Loading from "../Utilitis/Loading";
+import PageTitle from "../Utilitis/PageTitle";
 
 const ProductReadMore = () => {
   const { id } = useParams();
@@ -19,6 +20,7 @@ const ProductReadMore = () => {
 
   return (
     <div className="px-4"> 
+    <PageTitle title='Product Details'></PageTitle>
       <div className="  grid grid-cols-2 ">
         {product.loading && (
           <p>

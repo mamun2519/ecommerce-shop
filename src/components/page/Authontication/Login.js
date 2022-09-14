@@ -1,5 +1,6 @@
 import { Tab } from "@headlessui/react";
 import React from "react";
+import PageTitle from "../Utilitis/PageTitle";
 import Log from "./Log";
 import Reg from "./Reg";
 
@@ -24,6 +25,7 @@ const Login = () => {
         data-aos="fade-right"
         data-aos-duration="1000"
         >
+          <PageTitle title='Sign Up'></PageTitle>
           <Reg></Reg>
         </div>
       ),
@@ -31,6 +33,7 @@ const Login = () => {
   ];
   return (
     <div className="flex h-screen justify-center items-center px-4">
+      <PageTitle title='Login'></PageTitle>
       <div class="card w-96 bg-base-100 border ">
         <div class="card-body p-4">
           <Tab.Group>

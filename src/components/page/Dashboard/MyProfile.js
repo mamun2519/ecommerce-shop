@@ -7,6 +7,7 @@ import { MdCastForEducation } from "react-icons/md";
 import { MdDateRange} from "react-icons/md";
 import { AiOutlineMail} from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+import PageTitle from "../Utilitis/PageTitle";
 const MyProfile = () => {
   const [user] = useAuthState(auth);
   const userId = localStorage.getItem("UserId")
@@ -19,6 +20,7 @@ const MyProfile = () => {
   },[])
   return (
     <div className="mb-5 px-4 lg:px-0">
+      <PageTitle title='My Profile'></PageTitle>
       <div>
         <div className="w-full lg:w-9/12 mx-auto border  shadow-md rounded-lg p-5">
           <div className="">

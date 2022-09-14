@@ -8,6 +8,7 @@ import Product from "../Home/Product";
 import Pagination from "./Pagination";
 import Catagory from "../Home/Catagory";
 import Loading from "../Utilitis/Loading";
+import PageTitle from "../Utilitis/PageTitle";
 // import Product from "./Product";
 
 const AllProduct = () => {
@@ -130,6 +131,7 @@ const AllProduct = () => {
   };
       return (
             <div className="max-w-7xl m-auto px-2 my-20">
+              <PageTitle title='Shipping'></PageTitle>
       <h1 className="text-xl">PRODUCTS CATEGORIES</h1>
       <div className="grid lg:grid-cols-4  grid-cols-2">
         <div className="w-60  mt-5">

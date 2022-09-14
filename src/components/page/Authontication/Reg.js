@@ -75,7 +75,7 @@ const Reg = () => {
     setToken(localStorage.getItem("UserToken"));
   }
  
-  if (token || user) {
+  if (user) {
     navigate("/");
     if(userId){
       disPatch(fetchUserAvater(userId));
@@ -186,7 +186,7 @@ const Reg = () => {
         <div class="mt-4">
           <input
             type="submit"
-            value="Regestion"
+            value="Sign Up"
             class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#062C30] rounded-md"
           />
           {errorMessage}

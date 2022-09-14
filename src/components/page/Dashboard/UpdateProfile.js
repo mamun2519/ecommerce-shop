@@ -13,6 +13,7 @@ import { MdCastForEducation, MdDateRange } from "react-icons/md";
 import { SiAboutdotme} from "react-icons/si";
 import { MdOutlineAccountBox} from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa";
+import PageTitle from "../Utilitis/PageTitle";
 const UpdateProfile = () => {
   
   const [user] = useAuthState(auth);
@@ -88,6 +89,7 @@ const UpdateProfile = () => {
 
   return (
     <div className="mb-5 px-4 lg:px-0">
+      <PageTitle title='Update Profile'></PageTitle>
       <div className="w-full lg:w-9/12 mx-auto border  shadow-md rounded-lg p-5">
         <div className="">
           <img

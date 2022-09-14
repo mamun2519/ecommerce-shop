@@ -34,11 +34,12 @@ const ProductReview = ({ product }) => {
                           src={pro?.profileUrl}
                         />
                         <div class="">
-                          <div class="flex items-center justify-between">
+                          <div class="flex items-center  justify-between">
                             <h2 class="text-lg font-semibold text-gray-900">
                               {pro?.name}{" "}
                             </h2>
-                            <small class="text-sm text-gray-700">  <Moment fromNow>{pro.time}</Moment></small>
+                            <small class="text-sm text-gray-700 n"> 
+                            {" "} <Moment fromNow>{pro.time}</Moment></small>
                           </div>
                           <div class="text-gray-700 flex gap-1">
                                   {pro?.rating == 1 && (

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct } from "../Futurecher/Slice/productSlice";
 import Pagination from "../Product/Pagination";
 import Loading from "../Utilitis/Loading";
+import PageTitle from "../Utilitis/PageTitle";
 import ManageProductRow from "./ManageProductRow";
 
 const ManageProduct = () => {
@@ -22,6 +23,7 @@ const ManageProduct = () => {
   return (
     <div data-aos="fade-down"
     data-aos-duration="1000">
+      <PageTitle title='Manage Product'></PageTitle>
       <section class="py-1 bg-blueGray-50">
         <div class="w-full  mb-5 xl:mb-0 px-4">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-md border rounded ">

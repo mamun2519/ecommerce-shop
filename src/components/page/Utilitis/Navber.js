@@ -78,6 +78,7 @@ const Navber = () => {
               {/* SMA<span className="text-[#EC255A]">RT</span>
             
                 E-S<span className="text-[#EC255A]">HOP</span> */}
+              
                 <span> SM</span>
                 <span className="text-[#EC255A]">ART</span>
                 <span className="pl-2">{" "} E-S</span>

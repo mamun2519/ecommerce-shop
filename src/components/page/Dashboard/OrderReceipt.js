@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate, useParams } from "react-router-dom";
 import auth from "../../../firebase.init";
+import PageTitle from "../Utilitis/PageTitle";
 
 const OrderReceipt = () => {
   const [user] = useAuthState(auth);
@@ -30,6 +31,7 @@ const OrderReceipt = () => {
   };
   return (
     <div className="mb-40 px-4 lg:px-0">
+      <PageTitle title='Order Receipt'></PageTitle>
       <div
         id="receipt"
         className="border rounded-md shadow-md relative w-full lg:w-9/12 mx-auto "

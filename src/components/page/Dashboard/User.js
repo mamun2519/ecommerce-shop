@@ -5,6 +5,7 @@ import { fetchUser } from "../Futurecher/Slice/userSlice";
 import AdminPagenation from "../Pagination/AdminPagenation";
 import UserPagination from "../Pagination/UserPagination";
 import Loading from "../Utilitis/Loading";
+import PageTitle from "../Utilitis/PageTitle";
 import AdminTableRow from "./AdminTableRow";
 import UserRow from "./UserRow";
 
@@ -31,6 +32,7 @@ const User = () => {
   return (
     <div data-aos="fade-down"
     data-aos-duration="1000">
+      <PageTitle title='User'></PageTitle>
       <section class="py-1 bg-blueGray-50">
         <div class="w-full  mb-6 xl:mb-0 px-4">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-md border rounded ">

@@ -14,6 +14,7 @@ import { sendShipingInfoLocalSorage } from "../Futurecher/Slice/shippingPriceSli
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import PageTitle from "../Utilitis/PageTitle";
 const Shipping = () => {
   const [user] = useAuthState(auth);
   const [country, setCoutry] = useState("");
@@ -45,6 +46,7 @@ const Shipping = () => {
   };
   return (
     <div className="card lg:w-2/3 w-full m-auto  border p-4">
+      <PageTitle title='Shipping Info'></PageTitle>
       <div className="pb-4 border-b border-gray-100">
         <p className="font-semibold text-center">Shipping Info</p>
       </div>

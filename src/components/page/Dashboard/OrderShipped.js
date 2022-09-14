@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
+import PageTitle from "../Utilitis/PageTitle";
 const OrderShipped = () => {
   const { id } = useParams();
   const [shippedInfo, setShippedInfo] = useState({});
@@ -37,6 +38,7 @@ const OrderShipped = () => {
   console.log(shippedInfo);
   return (
     <div className=" px-4 lg:px-0">
+      <PageTitle title='Order Shipped'></PageTitle>
       <div className=" grid grid-cols-2  lg:grid-cols-3 gap-5">
         <div className="col-span-2">
           <div className="relative   min-w-0 break-words bg-white w-full mb-6 shadow-md border rounded">

@@ -5,6 +5,7 @@ import { fetchManageOrder } from '../Futurecher/Slice/manageOrderSlice';
 import Loading from '../Utilitis/Loading';
 import ManageOrderRow from './ManageOrderRow';
 import ManageOrderPag from '../Pagination/ManageOrderPag';
+import PageTitle from '../Utilitis/PageTitle';
 const ManageOrder = () => {
       const disPatch = useDispatch();
       const orders = useSelector((state) => state.orders);
@@ -15,6 +16,7 @@ const ManageOrder = () => {
       return (
             <div data-aos="fade-down"
             data-aos-duration="1000" >
+              <PageTitle title='Manage Order'></PageTitle>
                    <section class="py-1 bg-blueGray-50">
         <div class="w-full  mb-5 xl:mb-0 px-4">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-md border rounded ">

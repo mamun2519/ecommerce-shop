@@ -1,5 +1,8 @@
 import React from 'react';
 import Footer from '../Utilitis/Footer';
+import PageTitle from '../Utilitis/PageTitle';
+
+
 import Banner from './Banner';
 import Barnd from './Barnd';
 import Busness from './Busness';
@@ -13,7 +16,7 @@ const Home = () => {
       return (
             <div>
                  
-              
+              <PageTitle title='Home'></PageTitle>
                   <Banner/>
                   <Facilitis/>
                   <Discount/>

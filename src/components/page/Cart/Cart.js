@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToSbTotal } from "../Futurecher/Slice/SubTotalPriceSlice";
+import PageTitle from "../Utilitis/PageTitle";
 import CartRow from "./CartRow";
 import CartSumary from "./CartSumary";
 
@@ -14,6 +15,7 @@ const Cart = () => {
  
   return (
     <div className="max-w-7xl m-auto px-4 mt-10">
+      <PageTitle title='Shopping Cart'></PageTitle>
       <div class="">
         <div class="">
 

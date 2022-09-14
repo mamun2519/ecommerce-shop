@@ -7,6 +7,7 @@ import { Outlet } from "react-router-dom";
 import {NavLink,} from 'react-router-dom'
 import auth from "../../../firebase.init";
 import useAdmins from "../Authontication/useAdmin";
+import PageTitle from "../Utilitis/PageTitle";
 const Dashboard = () => {
   const [user] = useAuthState(auth)
   const [admin] = useAdmins(user)
@@ -15,6 +16,7 @@ const Dashboard = () => {
 
   return (
     <div className="">
+      <PageTitle title='Dashboard'></PageTitle>
       <div class="drawer drawer-mobile">
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content lg:px-6 py-6 ">

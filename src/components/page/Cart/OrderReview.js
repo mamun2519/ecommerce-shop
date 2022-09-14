@@ -1,10 +1,12 @@
 import React from "react";
 import Order from "./Order";
 import { useNavigate } from "react-router-dom";
+import PageTitle from "../Utilitis/PageTitle";
 const OrderReview = () => {
   const navigate = useNavigate();
   return (
     <div className="max-w-7xl m-auto px-2">
+      <PageTitle title='Order Info'></PageTitle>
       <div class="card w-full bg-base-400 border my-5">
      
         <div class="py-8 px-2">

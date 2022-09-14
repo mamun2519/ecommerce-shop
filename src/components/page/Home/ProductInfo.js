@@ -10,6 +10,7 @@ import AddProductReview from "./AddProductReview";
 import ProductDetails from "./ProductDetails";
 import { toast } from "react-toastify";
 import MoreProduct from "./MoreProduct";
+import PageTitle from "../Utilitis/PageTitle";
 
 const ProductInfo = () => {
   const [quantity, setquantity] = useState(1);
@@ -90,6 +91,7 @@ const ProductInfo = () => {
 
   return (
     <div className="max-w-7xl m-auto pb-10 px-4">
+      <PageTitle title='ProductInfo'></PageTitle>
       {product.loading && (
         <p>
           <Loading></Loading>
