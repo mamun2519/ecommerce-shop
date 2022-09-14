@@ -1,16 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Discount = () => {
-  const disCount = [
-    {
-      name: "Starting At",
-      price: "$29",
-    },
-    {
-      name: "Starting At",
-      price: "$29",
-    },
-  ];
+const navigate = useNavigate()
   return (
     <div className="max-w-7xl m-auto px-2 my-10 ">
       <div className="grid lg:grid-cols-3 gird-cols-1 gap-5">
@@ -23,7 +15,7 @@ const Discount = () => {
               </p>
 
               <div className="mt-2">
-                <button class="py-2 px-3 text-white bg-[#062C30]  rounded-lg">
+                <button onClick={()=> navigate("/view/all/product")} class="py-2 px-3 text-white bg-[#062C30]  rounded-lg">
                   Shop Now
                 </button>
               </div>
@@ -40,7 +32,7 @@ const Discount = () => {
               </p>
 
               <div className="mt-2">
-                <button class="py-2 px-3 text-white bg-[#062C30]  rounded-lg">
+                <button onClick={()=> navigate("/view/all/product")} class="py-2 px-3 text-white bg-[#062C30]  rounded-lg">
                   Shop Now
                 </button>
               </div>
@@ -56,7 +48,7 @@ const Discount = () => {
               </p>
 
               <div className="mt-2">
-                <button class="py-2 px-3 text-white bg-[#062C30]  rounded-lg">
+                <button onClick={()=> navigate("/view/all/product")} class="py-2 px-3 text-white bg-[#062C30]  rounded-lg">
                   Shop Now
                 </button>
               </div>

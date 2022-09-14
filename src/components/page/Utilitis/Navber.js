@@ -29,7 +29,7 @@ const Navber = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/view/all/product">Shopping</NavLink>
+        <NavLink to="/view/all/product" >Shopping</NavLink>
       </li>
       {/* <li>
         <a>About</a>
@@ -47,8 +47,8 @@ const Navber = () => {
   );
   return (
     <>
-      <div className="bg-base-200">
-        <div className="navbar   max-w-7xl m-auto px-2">
+      <div className="bg-base-200 ">
+        <div className="navbar    max-w-7xl m-auto px-2">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabindex="0" className="btn btn-ghost lg:hidden">
