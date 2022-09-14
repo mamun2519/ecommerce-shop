@@ -10,10 +10,10 @@ const initistialManageOrderState = {
 export const fetchManageOrder = createAsyncThunk(
   "/manageOrders/fetch",
   (catagory) => {
-    console.log(catagory);
+    const config = { headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`} }
     if (typeof catagory == "number") {
       return axios
-        .get(`https://boiling-mesa-36077.herokuapp.com/order?page=${catagory}`)
+        .get(`https://boiling-mesa-36077.herokuapp.com/order?page=${catagory}` , config )
         .then((res) => res.data);
     }
     // if (catagory) {
@@ -27,7 +27,7 @@ export const fetchManageOrder = createAsyncThunk(
     //     .then((res) => res.data);
     // }
     return axios
-      .get("https://boiling-mesa-36077.herokuapp.com/order")
+      .get("https://boiling-mesa-36077.herokuapp.com/order" , config )
       .then((res) => res.data);
   }
 );

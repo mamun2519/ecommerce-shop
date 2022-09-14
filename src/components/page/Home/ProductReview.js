@@ -142,7 +142,7 @@ const ProductReview = ({ product }) => {
                   }
                 >
                   {product?.product?.product?.reviews.length == 0 ? (
-                    <div className="text-4xl text-orange-400 font-medium flex h-[400px] justify-center items-center">
+                    <div className="text-4xl text-[#EC255A] font-medium flex h-[400px] justify-center items-center">
                       <h3 className="">NO Reviews Here</h3>
                     </div>
                   ) : (

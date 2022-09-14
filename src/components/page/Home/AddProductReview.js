@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUserAvater } from "../Futurecher/Slice/userProSlice";
 import { toast } from "react-toastify";
 import { fetchSingleProduct } from "../Futurecher/Slice/singleProductSlice";
+import { FaCommentDots } from "react-icons/fa";
 const AddProductReview = ({ product }) => {
   const [number, setNumber] = useState(0);
   const disPatch = useDispatch();
@@ -41,7 +42,9 @@ const AddProductReview = ({ product }) => {
         method: "POST",
         body: JSON.stringify(reviews),
         headers: {
-          "Content-type": "application/json",
+          "Content-type": "application/json"
+          ,
+          "authorization": `Bearer ${localStorage.getItem('UserToken')}`
         },
       }
     )
@@ -85,8 +88,8 @@ const AddProductReview = ({ product }) => {
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="mt-2">
                   <div class="flex items-center justify-between relative">
-                    <div className="border p-2   w-9 rounded absolute top-[13px] left-1 bg-red-200">
-                      <BiLockOpenAlt />
+                    <div className="border p-2   w-9 rounded absolute top-[13px] left-1 text-[#EC255A]">
+                      <FaCommentDots />
                     </div>
                   </div>
 

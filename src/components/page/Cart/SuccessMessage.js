@@ -40,7 +40,8 @@ const SuccessMessage = () => {
    
     fetch(`https://boiling-mesa-36077.herokuapp.com/order/new/${user}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" ,
+      "authorization": `Bearer ${localStorage.getItem('UserToken')}` },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())

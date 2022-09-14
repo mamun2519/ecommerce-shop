@@ -28,6 +28,7 @@ import ManageProduct from './components/page/Dashboard/ManageProduct';
 import AddProduct from './components/page/Dashboard/AddProduct';
 import RequreAdmin from './components/page/Authontication/RequreAdmin';
 import ProductReadMore from './components/page/Dashboard/ProductReadMore';
+import CustomerService from './components/page/Utilitis/CustomerService';
 function App() {
   
   return (
@@ -36,6 +37,7 @@ function App() {
             <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/customerService' element={<CustomerService/>}/>
         <Route path='/chackout' element={<ChackOut/>}/>
        <Route path='/dashboard' element={
         <RequreAuth>

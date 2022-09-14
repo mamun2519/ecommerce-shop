@@ -23,7 +23,9 @@ const Payment = () => {
     // Create PaymentIntent as soon as the page loads
     fetch("https://boiling-mesa-36077.herokuapp.com/order/create-payment-intent", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" ,
+      "authorization": `Bearer ${localStorage.getItem('UserToken')}`
+    },
       body: JSON.stringify({ price:totalPrice }),
     })
       .then((res) => res.json())

@@ -34,10 +34,11 @@ const AddProduct = () => {
       method: "post",
       url: "https://boiling-mesa-36077.herokuapp.com/product/add",
       data: myForm,
-      headers: { "Content-Type": "multipart/form-data" },
+      headers: { "Content-Type": "multipart/form-data" ,
+      "authorization": `Bearer ${localStorage.getItem('UserToken')}` },
     })
       .then((res) => {
-        toast(res.message);
+        toast("Order Added Successful");
       })
       .catch((err) => {
         console.log(err);

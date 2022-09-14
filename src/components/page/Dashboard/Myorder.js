@@ -8,7 +8,9 @@ const Myorder = () => {
   let [isOpen, setIsOpen] = useState(false)
   useEffect(() => {
    
-      fetch(`https://boiling-mesa-36077.herokuapp.com/order/myOrder/${userId}`)
+      fetch(`https://boiling-mesa-36077.herokuapp.com/order/myOrder/${userId}` ,  {
+       headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`}
+      })
       .then(res => res.json())
       .then(data => setMyOrder(data.order))
 

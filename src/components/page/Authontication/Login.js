@@ -9,7 +9,10 @@ const Login = () => {
     {
       name: "Login",
       content: (
-        <div>
+        <div 
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        >
           <Log></Log>
         </div>
       ),
@@ -17,7 +20,10 @@ const Login = () => {
     {
       name: "Signup",
       content: (
-        <div>
+        <div
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        >
           <Reg></Reg>
         </div>
       ),

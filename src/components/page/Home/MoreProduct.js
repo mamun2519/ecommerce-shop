@@ -7,7 +7,9 @@ const MoreProduct = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch("https://boiling-mesa-36077.herokuapp.com/product/get")
+    fetch("https://boiling-mesa-36077.herokuapp.com/product/get" , {
+      headers: {"authorization": `Bearer ${localStorage.getItem('UserToken')}`}
+    })
       .then((res) => res.json())
       .then((data) => setProduct(data.products));
   }, []);

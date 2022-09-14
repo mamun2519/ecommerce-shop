@@ -41,7 +41,7 @@ const Navber = () => {
       )}
 
       <li>
-        <a>Customer Service</a>
+        <NavLink to='/customerService'>Customer Service</NavLink>
       </li>
     </>
   );

@@ -8,22 +8,22 @@ const initistialProductState = {
 };
 
 export const fetchProduct = createAsyncThunk("/products/fetch", (catagory) => {
- 
+  const config = { headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`} };
   if (typeof catagory == "number") {
     return axios
-      .get(`https://boiling-mesa-36077.herokuapp.com/product/get?page=${catagory}`)
+      .get(`https://boiling-mesa-36077.herokuapp.com/product/get?page=${catagory}` , config)
       .then((res) => res.data);
   }
   if (catagory) {
     if(catagory == "Smart Hudi" || catagory == "Burka" || catagory == "Arabic Hijab" || catagory == "Saree" || catagory == "Shoe" || catagory == "Cosmatic" || catagory == "T-shirts"){
       return axios
-      .get(`https://boiling-mesa-36077.herokuapp.com/product/get?category=${catagory}`)
+      .get(`https://boiling-mesa-36077.herokuapp.com/product/get?category=${catagory}` , config)
       .then((res) => res.data);
 
     }
     else{
       return axios
-      .get(`https://boiling-mesa-36077.herokuapp.com/product/get?keyword=${catagory}`)
+      .get(`https://boiling-mesa-36077.herokuapp.com/product/get?keyword=${catagory}` , config)
       .then((res) => res.data);
 
     }
@@ -31,10 +31,10 @@ export const fetchProduct = createAsyncThunk("/products/fetch", (catagory) => {
   }
   if (catagory === "all") {
     return axios
-      .get("https://boiling-mesa-36077.herokuapp.com/product/get")
+      .get("https://boiling-mesa-36077.herokuapp.com/product/get" ,  config)
       .then((res) => res.data);
   }
-  return axios.get("https://boiling-mesa-36077.herokuapp.com/product/get").then((res) => res.data);
+  return axios.get("https://boiling-mesa-36077.herokuapp.com/product/get" ,  config).then((res) => res.data);
 });
 export const productsSlice = createSlice({
   name: "products",
