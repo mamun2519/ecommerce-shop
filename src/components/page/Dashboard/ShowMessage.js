@@ -19,11 +19,11 @@ const ShowMessage = ({ myOrder }) => {
   const hour = date.getHours();
 
   return (
-    <div className=" grid lg:grid-cols-3 grid-cols-1 gap-5 lg:gap-20 lg:pr-16 px-4">
+    <div className=" grid lg:grid-cols-3 grid-cols-1 gap-5 lg:gap-20 lg:pr-19 px-4">
       <div data-aos="fade-right"
         data-aos-duration="1000">
         {" "}
-        <div class="card w-80 text-center  h-36 bg-base-100 shadow-md border rounded-md">
+        <div class="card w-full text-center  h-36 bg-base-100 shadow-md border rounded-md">
           <div class="p-5">
             <h1 className="text-xl  font-medium">
               {user?.displayName},{" "}
@@ -44,7 +44,7 @@ const ShowMessage = ({ myOrder }) => {
       </div>
       <div data-aos="fade-right"
         data-aos-duration="1000">
-        <div class="card w-80  text-center h-36 bg-base-100 shadow-md border rounded-md ">
+        <div class="card w-full  text-center h-36 bg-base-100 shadow-md border rounded-md ">
           <div class="p-5">
             <h1 className="text-xl  font-medium">Total Order</h1>
             <p className="text-2xl  font-medium">{myOrder?.length}</p>
@@ -58,7 +58,7 @@ const ShowMessage = ({ myOrder }) => {
       </div >
       <div data-aos="fade-right"
         data-aos-duration="1000" className="">
-        <div class="card w-80 delivary text-center h-36 bg-base-100 shadow-md border rounded-md">
+        <div class="card w-full delivary text-center h-36 bg-base-100 shadow-md border rounded-md">
           <div class="p-5">
             <h1 className="text-xl  font-medium">Order Delivard</h1>
             <p className="text-2xl  font-medium">{delivered?.length}</p>

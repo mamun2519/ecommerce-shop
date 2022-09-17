@@ -1,7 +1,11 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-
+import { MdOutlineProductionQuantityLimits } from 'react-icons/md'
+import { FiUploadCloud } from 'react-icons/fi'
+import { BiUserPlus } from 'react-icons/bi'
+import { FaUserGraduate } from 'react-icons/fa'
+import { GrProjects } from 'react-icons/gr'
 import { Outlet } from "react-router-dom";
 
 import {NavLink,} from 'react-router-dom'
@@ -86,21 +90,8 @@ const Dashboard = () => {
                      to="myProfile"
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
-                      <span class="text-gray-600">
-                        <svg
-                          class="h-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                          />
-                        </svg>
+                      <span class="text-gray-600 text-xl">
+                      <FaUserGraduate/>
                       </span>
                       <span className=" font-medium">My profile</span>
                     </NavLink>
@@ -185,21 +176,8 @@ const Dashboard = () => {
                      to="manageOrder"
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
-                      <span class="text-gray-600">
-                        <svg
-                          class="h-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                          ></path>
-                        </svg>
+                      <span class="text-gray-600 text-xl">
+                       <MdOutlineProductionQuantityLimits/>
                       </span>
                       <span className=" font-medium">Manage Order</span>
                     </NavLink>
@@ -209,21 +187,8 @@ const Dashboard = () => {
                      to="manageProduct"
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
-                      <span class="text-gray-600">
-                        <svg
-                          class="h-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                          ></path>
-                        </svg>
+                      <span class="text-gray-600 text-xl">
+                     <GrProjects/>
                       </span>
                       <span className=" font-medium">Manage Product</span>
                     </NavLink>
@@ -233,21 +198,8 @@ const Dashboard = () => {
                      to="productAdd"
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
-                      <span class="text-gray-600">
-                        <svg
-                          class="h-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                          ></path>
-                        </svg>
+                      <span class="text-gray-600 text-xl">
+                       <FiUploadCloud/>
                       </span>
                       <span className=" font-medium">Add Product</span>
                     </NavLink>
@@ -257,21 +209,8 @@ const Dashboard = () => {
                      to="user"
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
-                      <span class="text-gray-600">
-                        <svg
-                          class="h-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                          ></path>
-                        </svg>
+                      <span class="text-gray-600 text-2xl">
+                       <BiUserPlus/>
                       </span>
                       <span className=" font-medium">User</span>
                     </NavLink>
@@ -287,7 +226,7 @@ const Dashboard = () => {
                     
                       class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
                     >
-                      <span class="text-gray-600">
+                      <span class="text-gray-600 pl-2 px-0">
                         <svg
                           class="h-5"
                           xmlns="http://www.w3.org/2000/svg"
@@ -303,7 +242,7 @@ const Dashboard = () => {
                           />
                         </svg>
                       </span>
-                      <span className="">Logout</span>
+                      <span c>Logout</span>
                     </span>
                   </li>
                 </ul>
