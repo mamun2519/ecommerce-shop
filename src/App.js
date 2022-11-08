@@ -33,6 +33,7 @@ function App() {
   
   return (
     <div className="bg">
+      {/* osooos */}
        <Navber/>
             <Routes>
         <Route path='/' element={<Home/>}/>
