@@ -7,7 +7,7 @@ import { fetchManageOrder } from '../Futurecher/Slice/manageOrderSlice';
 const MangeOrderM = ({closeModal , openModal , isOpen , id}) => {
       const disPatch = useDispatch();
       const deleteMyOrderHendeler = (id) =>{
-            fetch(`https://boiling-mesa-36077.herokuapp.com/order/${id}` , {
+            fetch(`https://ecommerce-shop-server.vercel.app/order/${id}` , {
               method: "DELETE"
             })
             .then(res => res.json())

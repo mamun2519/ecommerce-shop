@@ -26,7 +26,7 @@ const CartSumary = () => {
 
 
   const applayPromoCodeHendeler = () =>{
-    fetch(`https://boiling-mesa-36077.herokuapp.com/order/promo/?totalCost=${totalCost}&code=${promoCode}`, {
+    fetch(`https://ecommerce-shop-server.vercel.app/order/promo/?totalCost=${totalCost}&code=${promoCode}`, {
   method: 'POST',
   headers: {
     'Content-type': 'application/json',

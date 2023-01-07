@@ -4,7 +4,7 @@ const sendToken = async(myForm) => {
   
     await axios({
       method: "post",
-      url: "https://boiling-mesa-36077.herokuapp.com/user/create",
+      url: "https://ecommerce-shop-server.vercel.app/user/create",
       data: myForm,
       headers: { "Content-Type": "multipart/form-data" },
     })

@@ -9,7 +9,7 @@ const inititialUserState = {
 
 export const postUser = createAsyncThunk('/user/post' , (userData) =>{
       const config = { headers: { "Content-Type": "multipart/form-data" } };
-    return axios.post(`https://boiling-mesa-36077.herokuapp.com/user/create` , userData, config)
+    return axios.post(`https://ecommerce-shop-server.vercel.app/user/create` , userData, config)
     .then((res) => res.data)
 })
 

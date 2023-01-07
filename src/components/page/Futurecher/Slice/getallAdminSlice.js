@@ -13,17 +13,17 @@ export const fetchAdmin = createAsyncThunk(
         const config = { headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`} };
         if (typeof catagory == "number") {
           return axios
-            .get(`https://boiling-mesa-36077.herokuapp.com/user/allAdmin?page=${catagory}`, config)
+            .get(`https://ecommerce-shop-server.vercel.app/user/allAdmin?page=${catagory}`, config)
             .then((res) => res.data);
         }
         if (catagory) {
           return axios
-            .get(`https://boiling-mesa-36077.herokuapp.com/user/allAdmin?keyword=${catagory}` , config)
+            .get(`https://ecommerce-shop-server.vercel.app/user/allAdmin?keyword=${catagory}` , config)
             .then((res) => res.data);
         }
         
         return axios
-          .get("https://boiling-mesa-36077.herokuapp.com/user/allAdmin" , config)
+          .get("https://ecommerce-shop-server.vercel.app/user/allAdmin" , config)
           .then((res) => res.data);
       }
     );

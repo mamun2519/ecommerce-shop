@@ -38,7 +38,7 @@ const SuccessMessage = () => {
 
    
    
-    fetch(`https://boiling-mesa-36077.herokuapp.com/order/new/${user}`, {
+    fetch(`https://ecommerce-shop-server.vercel.app/order/new/${user}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" ,
       "authorization": `Bearer ${localStorage.getItem('UserToken')}` },

@@ -33,7 +33,7 @@ const AddProduct = () => {
     myForm.append("images", productPictue);
     await axios({
       method: "post",
-      url: "https://boiling-mesa-36077.herokuapp.com/product/add",
+      url: "https://ecommerce-shop-server.vercel.app/product/add",
       data: myForm,
       headers: { "Content-Type": "multipart/form-data" ,
       "authorization": `Bearer ${localStorage.getItem('UserToken')}` },

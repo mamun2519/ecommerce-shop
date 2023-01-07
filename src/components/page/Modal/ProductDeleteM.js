@@ -7,7 +7,7 @@ import { fetchProduct } from '../Futurecher/Slice/productSlice';
 const ProductDeleteM = ({closeModal , openModal , isOpen , id}) => {
       const disPatch = useDispatch();
       const deleteMyOrderHendeler = (id) =>{
-            fetch(`https://boiling-mesa-36077.herokuapp.com/product/delete/${id}` , {
+            fetch(`https://ecommerce-shop-server.vercel.app/product/delete/${id}` , {
               method: "DELETE"
             })
             .then(res => res.json())

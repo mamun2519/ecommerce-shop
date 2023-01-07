@@ -10,7 +10,7 @@ const OrderShipped = () => {
   const [orderStatus, setOrderStatus] = useState("");
   const navigate = useNavigate()
   useEffect(() => {
-    fetch(`https://boiling-mesa-36077.herokuapp.com/order/${id}`)
+    fetch(`https://ecommerce-shop-server.vercel.app/order/${id}`)
       .then((res) => res.json())
       .then((data) => setShippedInfo(data?.order));
   }, [shippedInfo]);
@@ -20,7 +20,7 @@ const OrderShipped = () => {
   };
 
   const confromOrderDelivaryHendeler = () => {
-    fetch(`https://boiling-mesa-36077.herokuapp.com/order/${id}`, {
+    fetch(`https://ecommerce-shop-server.vercel.app/order/${id}`, {
       method: "PUT",
       body: JSON.stringify({ status: orderStatus }),
       headers: {

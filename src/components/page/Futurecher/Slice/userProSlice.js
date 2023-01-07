@@ -15,7 +15,7 @@ export const fetchUserAvater = createAsyncThunk(
         const config = { headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`} };
        
         return axios
-        .get(`https://boiling-mesa-36077.herokuapp.com/user/single/${id}` , config)
+        .get(`https://ecommerce-shop-server.vercel.app/user/single/${id}` , config)
         .then((res) => res.data);
       }
     );

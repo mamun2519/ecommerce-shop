@@ -14,7 +14,7 @@ const MyProfile = () => {
   const [myProfile , setMyProfile] = useState({})
 
   useEffect(()=>{
-    fetch(`https://boiling-mesa-36077.herokuapp.com/user/single/${userId}`)
+    fetch(`https://ecommerce-shop-server.vercel.app/user/single/${userId}`)
     .then(res => res.json())
     .then(data => setMyProfile(data?.user))
   },[])

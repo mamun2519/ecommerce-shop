@@ -8,7 +8,7 @@ const initistialProductState = {
 }
 export const fetchSingleProduct = createAsyncThunk('/products/fetch' , (id) =>{
       if(id){
-            return axios.get(`https://boiling-mesa-36077.herokuapp.com/product/get/${id}`)
+            return axios.get(`https://ecommerce-shop-server.vercel.app/product/get/${id}`)
             .then((res) => res.data)
       }
       

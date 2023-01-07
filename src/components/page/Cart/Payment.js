@@ -22,7 +22,7 @@ const Payment = () => {
   
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://boiling-mesa-36077.herokuapp.com/order/create-payment-intent", {
+    fetch("https://ecommerce-shop-server.vercel.app/order/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" ,
       "authorization": `Bearer ${localStorage.getItem('UserToken')}`
