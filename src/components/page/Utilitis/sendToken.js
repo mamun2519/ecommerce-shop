@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const sendToken = async(myForm) => {
+const sendToken = async (myForm) => {
     await axios({
       method: "post",
       url: "https://ecommerce-shop-server.vercel.app/user/create",
