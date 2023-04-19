@@ -16,7 +16,7 @@ const AdminRemoveModal = ({ closeModal, openModal, isOpen, id }) => {
   const [users, lodaing] = useAuthState(auth);
   const disPatch = useDispatch();
   useEffect(() => {
-    fetch(`https://ecommerce-shop-server.vercel.app/user/single/${id}`)
+    fetch(`https://ecommerce-shop-server-w8qm.vercel.app/user/single/${id}`)
       .then((res) => res.json())
       .then((data) => setUser(data?.user));
   }, []);
@@ -30,7 +30,7 @@ const AdminRemoveModal = ({ closeModal, openModal, isOpen, id }) => {
 
   const removeUserAdminHendeler = (user) => {
     fetch(
-      `https://ecommerce-shop-server.vercel.app/user/admin/${user?.email}?roleAction=${role}`,
+      `https://ecommerce-shop-server-w8qm.vercel.app/user/admin/${user?.email}?roleAction=${role}`,
       {
         method: "PUT",
         headers: {

@@ -9,7 +9,7 @@ import { fetchAdmin } from '../Futurecher/Slice/getallAdminSlice';
 const UserDeleteM = ({closeModal , openModal , isUser , id}) => {
       const disPatch = useDispatch();
       const deleteMyOrderHendeler = (id) =>{
-            fetch(`https://ecommerce-shop-server.vercel.app/user/delete/${id}` , {
+            fetch(`https://ecommerce-shop-server-w8qm.vercel.app/user/delete/${id}` , {
               method: "DELETE"
             })
             .then(res => res.json())

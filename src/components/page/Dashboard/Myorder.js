@@ -8,7 +8,7 @@ const Myorder = () => {
   let [isOpen, setIsOpen] = useState(false)
   useEffect(() => {
    
-      fetch(`https://ecommerce-shop-server.vercel.app/order/myOrder/${userId}` ,  {
+      fetch(`https://ecommerce-shop-server-w8qm.vercel.app/order/myOrder/${userId}` ,  {
        headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`}
       })
       .then(res => res.json())

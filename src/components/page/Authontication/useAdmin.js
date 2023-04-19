@@ -9,7 +9,7 @@ const useAdmins = (user) =>{
       useEffect(()=>{
             const email = user?.email
             if(email){
-                  fetch(`https://ecommerce-shop-server.vercel.app/user/chackAdmin/${email}` , {
+                  fetch(`https://ecommerce-shop-server-w8qm.vercel.app/user/chackAdmin/${email}` , {
                         method: "GET",
                         headers:{
                               "authorization": `Bearer ${localStorage.getItem('UserToken')}`

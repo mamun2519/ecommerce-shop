@@ -33,7 +33,7 @@ const AddProduct = () => {
     myForm.append("images", productPictue);
     await axios({
       method: "post",
-      url: "https://ecommerce-shop-server.vercel.app/product/add",
+      url: "https://ecommerce-shop-server-w8qm.vercel.app/product/add",
       data: myForm,
       headers: { "Content-Type": "multipart/form-data" ,
       "authorization": `Bearer ${localStorage.getItem('UserToken')}` },

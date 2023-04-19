@@ -15,17 +15,17 @@ export const fetchUser = createAsyncThunk(
         const config = { headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`} };
         if (typeof catagory == "number") {
           return axios
-            .get(`https://ecommerce-shop-server.vercel.app/user/all?page=${catagory}`, config)
+            .get(`https://ecommerce-shop-server-w8qm.vercel.app/user/all?page=${catagory}`, config)
             .then((res) => res.data);
         }
         if (catagory) {
           return axios
-            .get(`https://ecommerce-shop-server.vercel.app/user/all?keyword=${catagory}` , config)
+            .get(`https://ecommerce-shop-server-w8qm.vercel.app/user/all?keyword=${catagory}` , config)
             .then((res) => res.data);
         }
         
         return axios
-          .get("https://ecommerce-shop-server.vercel.app/user/all" , config)
+          .get("https://ecommerce-shop-server-w8qm.vercel.app/user/all" , config)
           .then((res) => res.data);
       }
     );

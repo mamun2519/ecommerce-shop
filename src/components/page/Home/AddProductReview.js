@@ -37,7 +37,7 @@ const AddProductReview = ({ product }) => {
       time: new Date(),
     };
     fetch(
-      `https://ecommerce-shop-server.vercel.app/product/review/${product?.product?.product?._id}`,
+      `https://ecommerce-shop-server-w8qm.vercel.app/product/review/${product?.product?.product?._id}`,
       {
         method: "POST",
         body: JSON.stringify(reviews),

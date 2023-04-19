@@ -11,7 +11,7 @@ const OrderReceipt = () => {
   const { id } = useParams();
   const navigate = useNavigate()
   useEffect(() => {
-    fetch(`https://ecommerce-shop-server.vercel.app/order/${id}`)
+    fetch(`https://ecommerce-shop-server-w8qm.vercel.app/order/${id}`)
       .then((res) => res.json())
       .then((data) => setOrder(data.order));
   }, []);

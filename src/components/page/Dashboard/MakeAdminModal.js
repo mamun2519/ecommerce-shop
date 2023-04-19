@@ -19,7 +19,7 @@ const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
   const disPatch = useDispatch();
   useEffect(() => {
   
-      fetch(`https://ecommerce-shop-server.vercel.app/user/single/${id}`)
+      fetch(`https://ecommerce-shop-server-w8qm.vercel.app/user/single/${id}`)
       .then((res) => res.json())
       .then((data) => setUser(data?.user));
 
@@ -34,7 +34,7 @@ const MakeAdminModal = ({ closeModal, openModal, isOpen, id }) => {
   console.log(user);
   const makeUserAdminHendeler = (user) => {
     fetch(
-      `https://ecommerce-shop-server.vercel.app/user/admin/${user?.email}?roleAction=${role}`,
+      `https://ecommerce-shop-server-w8qm.vercel.app/user/admin/${user?.email}?roleAction=${role}`,
       {
         method: "PUT",
         headers: {

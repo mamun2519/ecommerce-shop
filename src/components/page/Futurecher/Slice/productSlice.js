@@ -11,19 +11,19 @@ export const fetchProduct = createAsyncThunk("/products/fetch", (catagory) => {
   const config = { headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`} };
   if (typeof catagory == "number") {
     return axios
-      .get(`https://ecommerce-shop-server.vercel.app/product/get?page=${catagory}` , config)
+      .get(`https://ecommerce-shop-server-w8qm.vercel.app/product/get?page=${catagory}` , config)
       .then((res) => res.data);
   }
   if (catagory) {
     if(catagory == "Smart Hudi" || catagory == "Burka" || catagory == "Arabic Hijab" || catagory == "Saree" || catagory == "Shoe" || catagory == "Cosmatic" || catagory == "T-shirts"){
       return axios
-      .get(`https://ecommerce-shop-server.vercel.app/product/get?category=${catagory}` , config)
+      .get(`https://ecommerce-shop-server-w8qm.vercel.app/product/get?category=${catagory}` , config)
       .then((res) => res.data);
 
     }
     else{
       return axios
-      .get(`https://ecommerce-shop-server.vercel.app/product/get?keyword=${catagory}` , config)
+      .get(`https://ecommerce-shop-server-w8qm.vercel.app/product/get?keyword=${catagory}` , config)
       .then((res) => res.data);
 
     }
@@ -31,10 +31,10 @@ export const fetchProduct = createAsyncThunk("/products/fetch", (catagory) => {
   }
   if (catagory === "all") {
     return axios
-      .get("https://ecommerce-shop-server.vercel.app/product/get" ,  config)
+      .get("https://ecommerce-shop-server-w8qm.vercel.app/product/get" ,  config)
       .then((res) => res.data);
   }
-  return axios.get("https://ecommerce-shop-server.vercel.app/product/get" ,  config).then((res) => res.data);
+  return axios.get("https://ecommerce-shop-server-w8qm.vercel.app/product/get" ,  config).then((res) => res.data);
 });
 export const productsSlice = createSlice({
   name: "products",

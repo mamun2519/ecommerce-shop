@@ -3,7 +3,8 @@ import axios from "axios";
 const sendToken = async (myForm) => {
     await axios({
       method: "post",
-      url: "https://ecommerce-shop-server.vercel.app/user/create",
+      // url: "https://ecommerce-shop-server-w8qm.vercel.app/user/create",
+      url: "https://ecommerce-shop-server-w8qm.vercel.app/user/create",
       data: myForm,
       headers: { "Content-Type": "multipart/form-data" },
     })

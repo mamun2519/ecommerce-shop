@@ -7,7 +7,7 @@ import { fetchProduct } from '../Futurecher/Slice/productSlice';
 const ProductDeleteM = ({closeModal , openModal , isOpen , id}) => {
       const disPatch = useDispatch();
       const deleteMyOrderHendeler = (id) =>{
-            fetch(`https://ecommerce-shop-server.vercel.app/product/delete/${id}` , {
+            fetch(`https://ecommerce-shop-server-w8qm.vercel.app/product/delete/${id}` , {
               method: "DELETE"
             })
             .then(res => res.json())

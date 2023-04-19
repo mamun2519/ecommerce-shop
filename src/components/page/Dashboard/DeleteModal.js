@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const DeleteModal = ({closeModal , openModal , isOpen , id}) => {
 
      const deleteMyOrderHendeler = (id) =>{
-      fetch(`https://ecommerce-shop-server.vercel.app/order/${id}` , {
+      fetch(`https://ecommerce-shop-server-w8qm.vercel.app/order/${id}` , {
         method: "DELETE"
       })
       .then(res => res.json())

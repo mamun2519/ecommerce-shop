@@ -22,7 +22,7 @@ const Payment = () => {
   
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://ecommerce-shop-server.vercel.app/order/create-payment-intent", {
+    fetch("https://ecommerce-shop-server-w8qm.vercel.app/order/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" ,
       "authorization": `Bearer ${localStorage.getItem('UserToken')}`
