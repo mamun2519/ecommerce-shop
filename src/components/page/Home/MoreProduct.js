@@ -7,8 +7,8 @@ const MoreProduct = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch("https://ecommerce-shop-server-w8qm.vercel.app/product/get" , {
-      headers: {"authorization": `Bearer ${localStorage.getItem('UserToken')}`}
+    fetch("http://207.244.230.118:5000/product/get", {
+      headers: { authorization: `Bearer ${localStorage.getItem("UserToken")}` },
     })
       .then((res) => res.json())
       .then((data) => setProduct(data.products));

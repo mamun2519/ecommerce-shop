@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { cartClear } from '../Futurecher/Slice/cartSlice';
-import { clearShippingTotalCostDiscount } from '../Futurecher/Slice/shippingPriceSlice';
-import { clearSubTotal } from '../Futurecher/Slice/SubTotalPriceSlice';
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { cartClear } from "../Futurecher/Slice/cartSlice";
+import { clearShippingTotalCostDiscount } from "../Futurecher/Slice/shippingPriceSlice";
+import { clearSubTotal } from "../Futurecher/Slice/SubTotalPriceSlice";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const SuccessMessage = () => {
   const orderItems = useSelector((state) => state.cart.cart);
   const parseInfo = localStorage.getItem("ShippingInfo");
   const shippingInfo = JSON.parse(parseInfo);
- const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const user = localStorage.getItem("UserId");
   const subTotalPrice = parseInt(localStorage.getItem("SubTotalPrice"));
@@ -24,7 +24,7 @@ const SuccessMessage = () => {
     id: paymentId,
     status: "paid",
   };
-  useEffect( () => {
+  useEffect(() => {
     const data = {
       shippingInfo,
       orderItems,
@@ -36,18 +36,17 @@ const SuccessMessage = () => {
       discount: discount || 0,
     };
 
-   
-   
-    fetch(`https://ecommerce-shop-server-w8qm.vercel.app/order/new/${user}`, {
+    fetch(`http://207.244.230.118:5000/order/new/${user}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" ,
-      "authorization": `Bearer ${localStorage.getItem('UserToken')}` },
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("UserToken")}`,
+      },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-       
           localStorage.removeItem("SubTotalPrice");
           localStorage.removeItem("ShippingPrice");
           localStorage.removeItem("TotalCost");
@@ -56,29 +55,38 @@ const SuccessMessage = () => {
           disPatch(cartClear());
           disPatch(clearShippingTotalCostDiscount());
           disPatch(clearSubTotal());
-         
         }
       });
-
- 
-  
   }, []);
-      return (
-            <div className="card lg:w-2/3 w-full  m-auto  border p-3">
-            <div class="">
-              <div class="p-2 flex justify-center">
-               
-                 <div>
-                <div className='flex justify-center'> <img  className='w-60' src="/Assist/picture/paymenSuccess.gif" alt="" /></div>
-               <p className='lg:text-2xl text-xl text-center'>Congraculation Your Payment SuccessFull</p>
-               <div className='text-center mt-3'>
-               <button onClick={()=>navigate('/dashboard')} className='px-6 bg-[#062C30] rounded-lg py-2 text-white'>Go DashBoard</button>
-               </div>
-                 </div>
-              </div>
+  return (
+    <div className="card lg:w-2/3 w-full  m-auto  border p-3">
+      <div class="">
+        <div class="p-2 flex justify-center">
+          <div>
+            <div className="flex justify-center">
+              {" "}
+              <img
+                className="w-60"
+                src="/Assist/picture/paymenSuccess.gif"
+                alt=""
+              />
+            </div>
+            <p className="lg:text-2xl text-xl text-center">
+              Congraculation Your Payment SuccessFull
+            </p>
+            <div className="text-center mt-3">
+              <button
+                onClick={() => navigate("/dashboard")}
+                className="px-6 bg-[#062C30] rounded-lg py-2 text-white"
+              >
+                Go DashBoard
+              </button>
             </div>
           </div>
-      );
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default SuccessMessage;

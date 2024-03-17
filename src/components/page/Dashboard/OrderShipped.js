@@ -8,9 +8,9 @@ const OrderShipped = () => {
   const [shippedInfo, setShippedInfo] = useState({});
   const orderStatusRef = useRef();
   const [orderStatus, setOrderStatus] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   useEffect(() => {
-    fetch(`https://ecommerce-shop-server-w8qm.vercel.app/order/${id}`)
+    fetch(`http://207.244.230.118:5000/order/${id}`)
       .then((res) => res.json())
       .then((data) => setShippedInfo(data?.order));
   }, [shippedInfo]);
@@ -20,7 +20,7 @@ const OrderShipped = () => {
   };
 
   const confromOrderDelivaryHendeler = () => {
-    fetch(`https://ecommerce-shop-server-w8qm.vercel.app/order/${id}`, {
+    fetch(`http://207.244.230.118:5000/order/${id}`, {
       method: "PUT",
       body: JSON.stringify({ status: orderStatus }),
       headers: {
@@ -38,7 +38,7 @@ const OrderShipped = () => {
   console.log(shippedInfo);
   return (
     <div className=" px-4 lg:px-0">
-      <PageTitle title='Order Shipped'></PageTitle>
+      <PageTitle title="Order Shipped"></PageTitle>
       <div className=" grid grid-cols-2  lg:grid-cols-3 gap-5">
         <div className="col-span-2">
           <div className="relative   min-w-0 break-words bg-white w-full mb-6 shadow-md border rounded">
@@ -285,8 +285,13 @@ const OrderShipped = () => {
           </div>
         </div>
         <div>
-            <button onClick={()=>navigate('/dashboard/manageOrder')} className="bg-[#062C30] text-white px-6 py-2 rounded-lg">Back</button>
-      </div>
+          <button
+            onClick={() => navigate("/dashboard/manageOrder")}
+            className="bg-[#062C30] text-white px-6 py-2 rounded-lg"
+          >
+            Back
+          </button>
+        </div>
       </div>
     </div>
   );
