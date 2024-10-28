@@ -15,37 +15,21 @@ export const fetchManageOrder = createAsyncThunk(
     };
     if (typeof catagory == "number") {
       return axios
-<<<<<<< HEAD
         .get(`http://localhost:5000/order?page=${catagory}`, config)
-=======
-        .get(`http://207.244.230.118:5000/order?page=${catagory}`, config)
->>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
         .then((res) => res.data);
     }
     // if (catagory) {
     //   return axios
-<<<<<<< HEAD
     //     .get(`http://localhost:5000/product/get?keyword=${catagory}`)
-=======
-    //     .get(`http://207.244.230.118:5000/product/get?keyword=${catagory}`)
->>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
     //     .then((res) => res.data);
     // }
     // if (catagory === "all") {
     //   return axios
-<<<<<<< HEAD
     //     .get("http://localhost:5000/product/get")
     //     .then((res) => res.data);
     // }
     return axios
       .get("http://localhost:5000/order", config)
-=======
-    //     .get("http://207.244.230.118:5000/product/get")
-    //     .then((res) => res.data);
-    // }
-    return axios
-      .get("http://207.244.230.118:5000/order", config)
->>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
       .then((res) => res.data);
   }
 );

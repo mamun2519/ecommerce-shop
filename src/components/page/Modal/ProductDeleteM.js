@@ -7,11 +7,7 @@ import { fetchProduct } from "../Futurecher/Slice/productSlice";
 const ProductDeleteM = ({ closeModal, openModal, isOpen, id }) => {
   const disPatch = useDispatch();
   const deleteMyOrderHendeler = (id) => {
-<<<<<<< HEAD
     fetch(`http://localhost:5000/product/delete/${id}`, {
-=======
-    fetch(`http://207.244.230.118:5000/product/delete/${id}`, {
->>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
       method: "DELETE",
     })
       .then((res) => res.json())

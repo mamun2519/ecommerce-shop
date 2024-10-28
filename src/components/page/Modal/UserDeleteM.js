@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Dialog, Transition } from '@headlessui/react';
-import { Fragment } from 'react'
-import { toast } from 'react-toastify';
-import { useDispatch } from 'react-redux';
-import { fetchProduct } from '../Futurecher/Slice/productSlice';
-import { fetchUser } from '../Futurecher/Slice/userSlice';
-import { fetchAdmin } from '../Futurecher/Slice/getallAdminSlice';
-const UserDeleteM = ({closeModal , openModal , isUser , id}) => {
-      const disPatch = useDispatch();
-      const deleteMyOrderHendeler = (id) =>{
-            fetch(`http://localhost:5000/user/delete/${id}` , {
-              method: "DELETE"
-            })
-            .then(res => res.json())
-            .then(data => {
-              if(data.success){
-                toast(data?.message)
-                closeModal()
-                disPatch(fetchUser());
-                disPatch(fetchAdmin());
-              }
-            })
-           }
-      return (
-            <div>
-                  <Transition appear show={isUser} as={Fragment}>
-=======
 import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
@@ -54,7 +25,6 @@ const UserDeleteM = ({ closeModal, openModal, isUser, id }) => {
   return (
     <div>
       <Transition appear show={isUser} as={Fragment}>
->>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}

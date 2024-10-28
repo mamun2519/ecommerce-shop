@@ -21,11 +21,7 @@ const UpdateProfile = () => {
   const userId = localStorage.getItem("UserId");
   useEffect(() => {
     if (userId) {
-<<<<<<< HEAD
       fetch(`http://localhost:5000/user/single/${userId}`)
-=======
-      fetch(`http://207.244.230.118:5000/user/single/${userId}`)
->>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
         .then((res) => res.json())
         .then((data) => {
           if (data.success) {

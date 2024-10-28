@@ -10,11 +10,7 @@ const OrderShipped = () => {
   const [orderStatus, setOrderStatus] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
-<<<<<<< HEAD
     fetch(`http://localhost:5000/order/${id}`)
-=======
-    fetch(`http://207.244.230.118:5000/order/${id}`)
->>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
       .then((res) => res.json())
       .then((data) => setShippedInfo(data?.order));
   }, [shippedInfo]);
@@ -24,11 +20,7 @@ const OrderShipped = () => {
   };
 
   const confromOrderDelivaryHendeler = () => {
-<<<<<<< HEAD
     fetch(`http://localhost:5000/order/${id}`, {
-=======
-    fetch(`http://207.244.230.118:5000/order/${id}`, {
->>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
       method: "PUT",
       body: JSON.stringify({ status: orderStatus }),
       headers: {

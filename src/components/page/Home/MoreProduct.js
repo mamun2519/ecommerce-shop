@@ -7,11 +7,7 @@ const MoreProduct = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-<<<<<<< HEAD
     fetch("http://localhost:5000/product/get", {
-=======
-    fetch("http://207.244.230.118:5000/product/get", {
->>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
       headers: { authorization: `Bearer ${localStorage.getItem("UserToken")}` },
     })
       .then((res) => res.json())
