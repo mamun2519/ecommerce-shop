@@ -36,11 +36,7 @@ const SuccessMessage = () => {
       discount: discount || 0,
     };
 
-<<<<<<< HEAD
     fetch(`http://localhost:5000/order/new/${user}`, {
-=======
-    fetch(`http://207.244.230.118:5000/order/new/${user}`, {
->>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
       method: "POST",
       headers: {
         "Content-Type": "application/json",
