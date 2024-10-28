@@ -20,7 +20,11 @@ const Payment = () => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
+<<<<<<< HEAD
     fetch("http://localhost:5000/order/create-payment-intent", {
+=======
+    fetch("http://207.244.230.118:5000/order/create-payment-intent", {
+>>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
       method: "POST",
       headers: {
         "Content-Type": "application/json",

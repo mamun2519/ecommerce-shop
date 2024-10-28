@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react'
@@ -25,6 +26,35 @@ const UserDeleteM = ({closeModal , openModal , isUser , id}) => {
       return (
             <div>
                   <Transition appear show={isUser} as={Fragment}>
+=======
+import React from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment } from "react";
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { fetchProduct } from "../Futurecher/Slice/productSlice";
+import { fetchUser } from "../Futurecher/Slice/userSlice";
+import { fetchAdmin } from "../Futurecher/Slice/getallAdminSlice";
+const UserDeleteM = ({ closeModal, openModal, isUser, id }) => {
+  const disPatch = useDispatch();
+  const deleteMyOrderHendeler = (id) => {
+    fetch(`http://207.244.230.118:5000/user/delete/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          toast(data?.message);
+          closeModal();
+          disPatch(fetchUser());
+          disPatch(fetchAdmin());
+        }
+      });
+  };
+  return (
+    <div>
+      <Transition appear show={isUser} as={Fragment}>
+>>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
@@ -54,18 +84,26 @@ const UserDeleteM = ({closeModal , openModal , isUser , id}) => {
                     as="h3"
                     className="text-lg font-medium flex justify-center leading-6 text-gray-900"
                   >
-                    <div className='text-center'>
-                      <h1 className='text-xl'> Are You Sure Delete?</h1>
-                      <span className='text-sm text-red-500'> If you delete it , it will be permanently deleted.</span>                    </div>
-                 
+                    <div className="text-center">
+                      <h1 className="text-xl"> Are You Sure Delete?</h1>
+                      <span className="text-sm text-red-500">
+                        {" "}
+                        If you delete it , it will be permanently deleted.
+                      </span>{" "}
+                    </div>
                   </Dialog.Title>
-                 
 
                   <div className="mt-4 flex justify-center gap-5">
-                    <button onClick={()=> closeModal()} className='bg-[#062C30] text-white rounded px-4 py-1'>
+                    <button
+                      onClick={() => closeModal()}
+                      className="bg-[#062C30] text-white rounded px-4 py-1"
+                    >
                       No
                     </button>
-                    <button onClick={()=>deleteMyOrderHendeler(id)}  className=' bg-red-500  text-white rounded px-4 py-1'>
+                    <button
+                      onClick={() => deleteMyOrderHendeler(id)}
+                      className=" bg-red-500  text-white rounded px-4 py-1"
+                    >
                       Yes
                     </button>
                   </div>
@@ -75,8 +113,8 @@ const UserDeleteM = ({closeModal , openModal , isUser , id}) => {
           </div>
         </Dialog>
       </Transition>
-            </div>
-      );
+    </div>
+  );
 };
 
 export default UserDeleteM;

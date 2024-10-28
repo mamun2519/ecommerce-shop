@@ -11,7 +11,11 @@ const OrderReceipt = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   useEffect(() => {
+<<<<<<< HEAD
     fetch(`http://localhost:5000/order/${id}`)
+=======
+    fetch(`http://207.244.230.118:5000/order/${id}`)
+>>>>>>> 9e080e4f0e88e48ea1ed5c2ec24c25c8a6de7c7e
       .then((res) => res.json())
       .then((data) => setOrder(data.order));
   }, []);
