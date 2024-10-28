@@ -3,7 +3,11 @@ import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { BiCategoryAlt, BiLockOpenAlt } from "react-icons/bi";
-import { MdAddPhotoAlternate, MdDescription, MdOutlineProductionQuantityLimits } from "react-icons/md";
+import {
+  MdAddPhotoAlternate,
+  MdDescription,
+  MdOutlineProductionQuantityLimits,
+} from "react-icons/md";
 import { TiDelete } from "react-icons/ti";
 import { RiPriceTagLine } from "react-icons/ri";
 import { FiDollarSign } from "react-icons/fi";
@@ -14,7 +18,7 @@ import PageTitle from "../Utilitis/PageTitle";
 
 const AddProduct = () => {
   const [productPictue, setProductPicture] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const {
     register,
     formState: { errors },
@@ -33,10 +37,12 @@ const AddProduct = () => {
     myForm.append("images", productPictue);
     await axios({
       method: "post",
-      url: "https://ecommerce-shop-server-w8qm.vercel.app/product/add",
+      url: "http://localhost:5000/product/add",
       data: myForm,
-      headers: { "Content-Type": "multipart/form-data" ,
-      "authorization": `Bearer ${localStorage.getItem('UserToken')}` },
+      headers: {
+        "Content-Type": "multipart/form-data",
+        authorization: `Bearer ${localStorage.getItem("UserToken")}`,
+      },
     })
       .then((res) => {
         toast("Order Added Successful");
@@ -58,7 +64,7 @@ const AddProduct = () => {
 
   return (
     <div className="mb-5 px-4 lg:px-0">
-      <PageTitle title='Add Product'></PageTitle>
+      <PageTitle title="Add Product"></PageTitle>
       <div className="w-full  mx-auto border  shadow-md rounded-lg p-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="">
@@ -250,12 +256,14 @@ const AddProduct = () => {
                     placeholder="Enter brand"
                     class="block w-full px-4 py-2 mt-2 pl-12  bg-white border rounded-md   focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                   >
-                    <option value="Aarong" selected>Aarong</option>
+                    <option value="Aarong" selected>
+                      Aarong
+                    </option>
                     <option value="Richman">Richman</option>
                     <option value="Dorjibari">Dorjibari</option>
                     <option value="Smartex">Smartex</option>
                     <option value="Texmart">Texmart</option>
-                    </select>
+                  </select>
                   <label class="label">
                     {errors.brand?.type === "required" && (
                       <span className="text-red-500">
@@ -347,7 +355,12 @@ const AddProduct = () => {
         </form>
       </div>
       <div className="mt-5">
-            <button onClick={()=>navigate('/dashboard/manageProduct')} className="bg-[#062C30] text-white px-6 py-2 rounded-lg">Back</button>
+        <button
+          onClick={() => navigate("/dashboard/manageProduct")}
+          className="bg-[#062C30] text-white px-6 py-2 rounded-lg"
+        >
+          Back
+        </button>
       </div>
     </div>
   );

@@ -1,25 +1,22 @@
-import { Dialog, Transition } from '@headlessui/react';
-import React from 'react';
-import { Fragment } from 'react'
-import { toast } from 'react-toastify';
-const DeleteModal = ({closeModal , openModal , isOpen , id}) => {
-
-     const deleteMyOrderHendeler = (id) =>{
-      fetch(`https://ecommerce-shop-server-w8qm.vercel.app/order/${id}` , {
-        method: "DELETE"
-      })
-      .then(res => res.json())
-      .then(data => {
-        if(data.success){
-          toast(data?.message)
-          closeModal()
+import { Dialog, Transition } from "@headlessui/react";
+import React from "react";
+import { Fragment } from "react";
+import { toast } from "react-toastify";
+const DeleteModal = ({ closeModal, openModal, isOpen, id }) => {
+  const deleteMyOrderHendeler = (id) => {
+    fetch(`http://localhost:5000/order/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          toast(data?.message);
+          closeModal();
         }
-      })
-     }
-      return (
-            <div>
-            
-
+      });
+  };
+  return (
+    <div>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -50,18 +47,26 @@ const DeleteModal = ({closeModal , openModal , isOpen , id}) => {
                     as="h3"
                     className="text-lg font-medium flex justify-center leading-6 text-gray-900"
                   >
-                    <div className='text-center'>
-                      <h1 className='text-xl'> Are You Sure Delete?</h1>
-                      <span className='text-sm text-red-500'> If you delete it , it will be permanently deleted.</span>                    </div>
-                 
+                    <div className="text-center">
+                      <h1 className="text-xl"> Are You Sure Delete?</h1>
+                      <span className="text-sm text-red-500">
+                        {" "}
+                        If you delete it , it will be permanently deleted.
+                      </span>{" "}
+                    </div>
                   </Dialog.Title>
-                 
 
                   <div className="mt-4 flex justify-center gap-5">
-                    <button onClick={()=> closeModal()} className=' bg-red-400 text-white rounded px-4 py-1'>
+                    <button
+                      onClick={() => closeModal()}
+                      className=" bg-red-400 text-white rounded px-4 py-1"
+                    >
                       No
                     </button>
-                    <button onClick={()=>deleteMyOrderHendeler(id)}  className=' bg-red-400 text-white rounded px-4 py-1'>
+                    <button
+                      onClick={() => deleteMyOrderHendeler(id)}
+                      className=" bg-red-400 text-white rounded px-4 py-1"
+                    >
                       yes
                     </button>
                   </div>
@@ -71,9 +76,8 @@ const DeleteModal = ({closeModal , openModal , isOpen , id}) => {
           </div>
         </Dialog>
       </Transition>
-</div>
-          
-      );
+    </div>
+  );
 };
 
 export default DeleteModal;

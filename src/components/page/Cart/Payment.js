@@ -14,55 +14,49 @@ const stripePromise = loadStripe(
 const Payment = () => {
   const navigate = useNavigate();
 
-
-  const clientSecret = useSelector((state) => state.clientSecret.clientSecret)
+  const clientSecret = useSelector((state) => state.clientSecret.clientSecret);
   const disPatch = useDispatch();
-  const totalPrice = parseInt(localStorage.getItem("TotalCost"))
-   
-  
+  const totalPrice = parseInt(localStorage.getItem("TotalCost"));
+
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://ecommerce-shop-server-w8qm.vercel.app/order/create-payment-intent", {
+    fetch("http://localhost:5000/order/create-payment-intent", {
       method: "POST",
-      headers: { "Content-Type": "application/json" ,
-      "authorization": `Bearer ${localStorage.getItem('UserToken')}`
-    },
-      body: JSON.stringify({ price:totalPrice }),
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("UserToken")}`,
+      },
+      body: JSON.stringify({ price: totalPrice }),
     })
       .then((res) => res.json())
       .then((data) => disPatch(addToSecretClient(data.clientSecrets)));
   }, []);
-
-
 
   const appearance = {
     theme: "stripe",
   };
 
   const options = {
-     clientSecret,
+    clientSecret,
     appearance,
   };
- 
 
-  
   return (
     <div className="max-w-7xl m-auto px-2">
-      <PageTitle title='Payment'></PageTitle>
+      <PageTitle title="Payment"></PageTitle>
       <div class="card w-full bg-base-400 border my-5">
-       
         <div class="py-8 px-2">
           <ul class="progressBar ">
             <li class="active">Shipping</li>
             <li class="active">Order</li>
             <li className="activ">Payment</li>
           </ul>
-          <div data-aos="fade-up"
-            data-aos-duration="1000" className="mt-20">
-            {clientSecret &&  <Elements options={options} stripe={stripePromise}>
-              <CheckoutForm />
-            </Elements>}
-            
+          <div data-aos="fade-up" data-aos-duration="1000" className="mt-20">
+            {clientSecret && (
+              <Elements options={options} stripe={stripePromise}>
+                <CheckoutForm />
+              </Elements>
+            )}
           </div>
         </div>
 

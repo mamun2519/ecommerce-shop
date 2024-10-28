@@ -10,24 +10,26 @@ const initistialManageOrderState = {
 export const fetchManageOrder = createAsyncThunk(
   "/manageOrders/fetch",
   (catagory) => {
-    const config = { headers: { "authorization": `Bearer ${localStorage.getItem('UserToken')}`} }
+    const config = {
+      headers: { authorization: `Bearer ${localStorage.getItem("UserToken")}` },
+    };
     if (typeof catagory == "number") {
       return axios
-        .get(`https://ecommerce-shop-server-w8qm.vercel.app/order?page=${catagory}` , config )
+        .get(`http://localhost:5000/order?page=${catagory}`, config)
         .then((res) => res.data);
     }
     // if (catagory) {
     //   return axios
-    //     .get(`https://ecommerce-shop-server-w8qm.vercel.app/product/get?keyword=${catagory}`)
+    //     .get(`http://localhost:5000/product/get?keyword=${catagory}`)
     //     .then((res) => res.data);
     // }
     // if (catagory === "all") {
     //   return axios
-    //     .get("https://ecommerce-shop-server-w8qm.vercel.app/product/get")
+    //     .get("http://localhost:5000/product/get")
     //     .then((res) => res.data);
     // }
     return axios
-      .get("https://ecommerce-shop-server-w8qm.vercel.app/order" , config )
+      .get("http://localhost:5000/order", config)
       .then((res) => res.data);
   }
 );

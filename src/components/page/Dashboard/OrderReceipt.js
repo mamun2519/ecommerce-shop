@@ -9,9 +9,9 @@ const OrderReceipt = () => {
   const [user] = useAuthState(auth);
   const [order, setOrder] = useState({});
   const { id } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   useEffect(() => {
-    fetch(`https://ecommerce-shop-server-w8qm.vercel.app/order/${id}`)
+    fetch(`http://localhost:5000/order/${id}`)
       .then((res) => res.json())
       .then((data) => setOrder(data.order));
   }, []);
@@ -31,7 +31,7 @@ const OrderReceipt = () => {
   };
   return (
     <div className="mb-40 px-4 lg:px-0">
-      <PageTitle title='Order Receipt'></PageTitle>
+      <PageTitle title="Order Receipt"></PageTitle>
       <div
         id="receipt"
         className="border rounded-md shadow-md relative w-full lg:w-9/12 mx-auto "
@@ -190,7 +190,12 @@ const OrderReceipt = () => {
       </div>
 
       <div>
-            <button onClick={()=>navigate('/dashboard/myorders')} className="bg-red-500 text-white px-6 py-2 rounded-lg">Back</button>
+        <button
+          onClick={() => navigate("/dashboard/myorders")}
+          className="bg-red-500 text-white px-6 py-2 rounded-lg"
+        >
+          Back
+        </button>
       </div>
     </div>
   );

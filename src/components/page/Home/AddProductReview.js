@@ -37,14 +37,13 @@ const AddProductReview = ({ product }) => {
       time: new Date(),
     };
     fetch(
-      `https://ecommerce-shop-server-w8qm.vercel.app/product/review/${product?.product?.product?._id}`,
+      `http://localhost:5000/product/review/${product?.product?.product?._id}`,
       {
         method: "POST",
         body: JSON.stringify(reviews),
         headers: {
-          "Content-type": "application/json"
-          ,
-          "authorization": `Bearer ${localStorage.getItem('UserToken')}`
+          "Content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("UserToken")}`,
         },
       }
     )

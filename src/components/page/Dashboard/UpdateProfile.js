@@ -10,19 +10,18 @@ import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { fetchUserAvater } from "../Futurecher/Slice/userProSlice";
 import { MdCastForEducation, MdDateRange } from "react-icons/md";
-import { SiAboutdotme} from "react-icons/si";
-import { MdOutlineAccountBox} from "react-icons/md";
+import { SiAboutdotme } from "react-icons/si";
+import { MdOutlineAccountBox } from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa";
 import PageTitle from "../Utilitis/PageTitle";
 const UpdateProfile = () => {
-  
   const [user] = useAuthState(auth);
   const [cover, setCover] = useState("");
   const [profile, setProfile] = useState("");
   const userId = localStorage.getItem("UserId");
   useEffect(() => {
     if (userId) {
-      fetch(`https://ecommerce-shop-server-w8qm.vercel.app/user/single/${userId}`)
+      fetch(`http://localhost:5000/user/single/${userId}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.success) {
@@ -38,7 +37,7 @@ const UpdateProfile = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const disPatch = useDispatch()
+  const disPatch = useDispatch();
   const changeCoverPictureHendeler = (e) => {
     const reader = new FileReader();
     reader.onload = () => {
@@ -71,14 +70,14 @@ const UpdateProfile = () => {
 
     await axios({
       method: "put",
-      url: `https://ecommerce-shop-server-w8qm.vercel.app/user/update/${userId}`,
+      url: `http://localhost:5000/user/update/${userId}`,
       data: myForm,
       headers: { "Content-Type": "multipart/form-data" },
     })
       .then((res) => {
         if (res.data.success) {
           toast("Profile Update Success");
-          disPatch(fetchUserAvater(userId))
+          disPatch(fetchUserAvater(userId));
         }
         console.log(res);
       })
@@ -89,7 +88,7 @@ const UpdateProfile = () => {
 
   return (
     <div className="mb-5 px-4 lg:px-0">
-      <PageTitle title='Update Profile'></PageTitle>
+      <PageTitle title="Update Profile"></PageTitle>
       <div className="w-full lg:w-9/12 mx-auto border  shadow-md rounded-lg p-5">
         <div className="">
           <img
@@ -159,7 +158,7 @@ const UpdateProfile = () => {
                 <div class="">
                   <div class="flex items-center justify-between relative">
                     <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A] ">
-                    <AiOutlineMail />
+                      <AiOutlineMail />
                     </div>
                   </div>
 
@@ -192,7 +191,7 @@ const UpdateProfile = () => {
                 <div class="">
                   <div class="flex items-center justify-between relative">
                     <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
-                    <MdCastForEducation />
+                      <MdCastForEducation />
                     </div>
                   </div>
 
@@ -322,7 +321,7 @@ const UpdateProfile = () => {
                 <div class="">
                   <div class="flex items-center justify-between relative">
                     <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
-                      <MdDateRange/>
+                      <MdDateRange />
                     </div>
                   </div>
 
@@ -358,7 +357,7 @@ const UpdateProfile = () => {
                 <div class="">
                   <div class="flex items-center justify-between relative">
                     <div className="border p-2   w-9 rounded absolute top-[12px] left-1 text-[#EC255A]">
-                      <AiOutlineMail/>
+                      <AiOutlineMail />
                     </div>
                   </div>
 
@@ -383,7 +382,7 @@ const UpdateProfile = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center mt-4" >
+            <div className="text-center mt-4">
               <input
                 type="submit"
                 value="Save"
