@@ -21,7 +21,7 @@ const UpdateProfile = () => {
   const userId = localStorage.getItem("UserId");
   useEffect(() => {
     if (userId) {
-      fetch(`http://localhost:5000/user/single/${userId}`)
+      fetch(`https://ecommerce-shop-server.vercel.app/user/single/${userId}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.success) {
@@ -70,7 +70,7 @@ const UpdateProfile = () => {
 
     await axios({
       method: "put",
-      url: `http://localhost:5000/user/update/${userId}`,
+      url: `https://ecommerce-shop-server.vercel.app/user/update/${userId}`,
       data: myForm,
       headers: { "Content-Type": "multipart/form-data" },
     })

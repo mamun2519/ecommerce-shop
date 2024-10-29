@@ -9,7 +9,7 @@ const initistialProductState = {
 export const fetchSingleProduct = createAsyncThunk("/products/fetch", (id) => {
   if (id) {
     return axios
-      .get(`http://localhost:5000/product/get/${id}`)
+      .get(`https://ecommerce-shop-server.vercel.app/product/get/${id}`)
       .then((res) => res.data);
   }
 });

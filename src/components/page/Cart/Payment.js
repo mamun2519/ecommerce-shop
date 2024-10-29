@@ -20,14 +20,17 @@ const Payment = () => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:5000/order/create-payment-intent", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("UserToken")}`,
-      },
-      body: JSON.stringify({ price: totalPrice }),
-    })
+    fetch(
+      "https://ecommerce-shop-server.vercel.app/order/create-payment-intent",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("UserToken")}`,
+        },
+        body: JSON.stringify({ price: totalPrice }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => disPatch(addToSecretClient(data.clientSecrets)));
   }, []);

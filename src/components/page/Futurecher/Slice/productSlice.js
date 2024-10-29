@@ -13,7 +13,10 @@ export const fetchProduct = createAsyncThunk("/products/fetch", (catagory) => {
   };
   if (typeof catagory == "number") {
     return axios
-      .get(`http://localhost:5000/product/get?page=${catagory}`, config)
+      .get(
+        `https://ecommerce-shop-server.vercel.app/product/get?page=${catagory}`,
+        config
+      )
       .then((res) => res.data);
   }
   if (catagory) {
@@ -27,21 +30,27 @@ export const fetchProduct = createAsyncThunk("/products/fetch", (catagory) => {
       catagory == "T-shirts"
     ) {
       return axios
-        .get(`http://localhost:5000/product/get?category=${catagory}`, config)
+        .get(
+          `https://ecommerce-shop-server.vercel.app/product/get?category=${catagory}`,
+          config
+        )
         .then((res) => res.data);
     } else {
       return axios
-        .get(`http://localhost:5000/product/get?keyword=${catagory}`, config)
+        .get(
+          `https://ecommerce-shop-server.vercel.app/product/get?keyword=${catagory}`,
+          config
+        )
         .then((res) => res.data);
     }
   }
   if (catagory === "all") {
     return axios
-      .get("http://localhost:5000/product/get", config)
+      .get("https://ecommerce-shop-server.vercel.app/product/get", config)
       .then((res) => res.data);
   }
   return axios
-    .get("http://localhost:5000/product/get", config)
+    .get("https://ecommerce-shop-server.vercel.app/product/get", config)
     .then((res) => res.data);
 });
 export const productsSlice = createSlice({

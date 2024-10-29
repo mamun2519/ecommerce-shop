@@ -16,7 +16,7 @@ export const fetchUserAvater = createAsyncThunk(
     };
 
     return axios
-      .get(`http://localhost:5000/user/single/${id}`, config)
+      .get(`https://ecommerce-shop-server.vercel.app/user/single/${id}`, config)
       .then((res) => res.data);
   }
 );

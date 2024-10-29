@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import { toast } from "react-toastify";
 const DeleteModal = ({ closeModal, openModal, isOpen, id }) => {
   const deleteMyOrderHendeler = (id) => {
-    fetch(`http://localhost:5000/order/${id}`, {
+    fetch(`https://ecommerce-shop-server.vercel.app/order/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

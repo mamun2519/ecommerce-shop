@@ -7,7 +7,7 @@ const Myorder = () => {
   const userId = localStorage.getItem("UserId");
   let [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    fetch(`http://localhost:5000/order/myOrder/${userId}`, {
+    fetch(`https://ecommerce-shop-server.vercel.app/order/myOrder/${userId}`, {
       headers: { authorization: `Bearer ${localStorage.getItem("UserToken")}` },
     })
       .then((res) => res.json())

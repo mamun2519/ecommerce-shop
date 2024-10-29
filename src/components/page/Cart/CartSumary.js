@@ -26,7 +26,7 @@ const CartSumary = () => {
 
   const applayPromoCodeHendeler = () => {
     fetch(
-      `http://localhost:5000/order/promo/?totalCost=${totalCost}&code=${promoCode}`,
+      `https://ecommerce-shop-server.vercel.app/order/promo/?totalCost=${totalCost}&code=${promoCode}`,
       {
         method: "POST",
         headers: {

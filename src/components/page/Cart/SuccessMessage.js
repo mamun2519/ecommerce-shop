@@ -36,7 +36,7 @@ const SuccessMessage = () => {
       discount: discount || 0,
     };
 
-    fetch(`http://localhost:5000/order/new/${user}`, {
+    fetch(`https://ecommerce-shop-server.vercel.app/order/new/${user}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

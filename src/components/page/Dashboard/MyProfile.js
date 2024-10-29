@@ -14,7 +14,7 @@ const MyProfile = () => {
   const [myProfile, setMyProfile] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/single/${userId}`)
+    fetch(`https://ecommerce-shop-server.vercel.app/user/single/${userId}`)
       .then((res) => res.json())
       .then((data) => setMyProfile(data?.user));
   }, []);
